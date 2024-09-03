@@ -581,8 +581,9 @@ font-size: 18px;
 }
 
 .service-item {
-  max-width: 100%; /* Ensures items don't become too wide */
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px; /* Limit button width on smaller screens */
+  margin-bottom: 10px; /* Space between buttons in column layout */
 }
 
 .service-box {
