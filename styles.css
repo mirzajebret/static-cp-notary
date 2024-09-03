@@ -303,9 +303,7 @@ z-index: 1000;
   transition: transform 0.3s ease;
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
-}
+
 
 .team-member img {
   width: 100%;
@@ -468,9 +466,6 @@ z-index: 1000;
   cursor: pointer;
   display: none; /* Initially hidden */
   z-index: 1000;
-}
-.back-to-top:hover {
-  background-color: #ff4800;
 }
 
 .gallery-container {
