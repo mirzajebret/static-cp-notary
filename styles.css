@@ -582,7 +582,7 @@ font-size: 18px;
 
 .service-item {
   width: 100%;
-  max-width: 300px; /* Limit button width on smaller screens */
+  max-width: 100%; /* Limit button width on smaller screens */
   margin-bottom: 10px; /* Space between buttons in column layout */
 }
 
