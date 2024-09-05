@@ -876,7 +876,12 @@
   .service-box {
     margin-bottom: 20px;
   }
-
+  .service-item h3 {
+    color: #333;
+    margin-top: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
   .team-members {
     flex-direction: column;
     align-items: center;
