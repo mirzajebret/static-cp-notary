@@ -881,6 +881,12 @@
     flex-direction: column;
     align-items: center;
   }
+ .team-members h3{
+    font-size: 3vw;
+  }
+  .team h2{
+    font-size: 4vw;
+  }
 
   .team-member {
     width: 80%;
