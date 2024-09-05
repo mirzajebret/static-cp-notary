@@ -311,7 +311,7 @@
     border: 1px solid #ddd;
     border-radius: 100%;
     overflow: hidden;
-    width: 10%;
+    width: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -766,8 +766,8 @@
   }
 
   .link-pelayanan {
-    width: 25%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 10%;
   }
 
 .hakbar-hide{
