@@ -831,10 +831,11 @@
     align-items: center;
   }
 
-  .service-item {
+   .service-item {
     width: 100%;
     max-width: 100%; /* Limit button width on smaller screens */
-    margin-bottom: 10px; /* Space between buttons in column layout */
+    margin: 10px 0 10px 0;
+    padding: 20px;
   }
 
   .service-box {
