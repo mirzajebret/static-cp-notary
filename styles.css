@@ -281,16 +281,16 @@
   .links-pelayanan {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
   }
 
   .link-pelayanan {
-    width: 15%;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -593,7 +593,143 @@
   .gallery-item:hover img {
     transform: scale(1.1);
   }
+.notaris-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
 
+.notaris-table thead {
+    background-color: #d9eaf5;
+}
+
+.notaris-table th, .notaris-table td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.notaris-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.notaris-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.notaris-table tbody tr td strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.notaris-table tbody tr ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.notaris-table tbody tr ul li {
+    margin-bottom: 5px;
+}.notaris-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.notaris-table thead {
+    background-color: #d9eaf5;
+}
+
+.notaris-table th, .notaris-table td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.notaris-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.notaris-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.notaris-table tbody tr td strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.notaris-table tbody tr ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.notaris-table tbody tr ul li {
+    margin-bottom: 5px;
+}
+
+.tablepress {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Table header styling */
+.tablepress thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table cell styling */
+.tablepress td, .tablepress th {
+  padding: 8px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+/* Alternating row colors */
+.tablepress tbody tr.odd {
+  background-color: #f9f9f9;
+}
+
+.tablepress tbody tr.even {
+  background-color: #ffffff;
+}
+
+/* Responsive table */
+.tablepress-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Adjust table width */
+.tablepress-scroll-wrapper {
+  overflow-x: auto;
+}
+
+/* Header row */
+.tablepress thead th.column-2 {
+  width: 40%;
+}
+
+.tablepress thead th.column-3 {
+  width: 10%;
+}
+
+.tablepress thead th.column-4 {
+  width: 50%;
+}
+
+/* Add hover effect for rows */
+.tablepress tbody tr:hover {
+  background-color: #eaeaea;
+}
   @media (max-width: 768px) {
   .hero {
     flex-direction: column;
