@@ -893,6 +893,13 @@
     font-size: 4vw;
   }
 
+  .contact-form h2 {
+    ont-size: 4vw;
+  }
+  .service h2 {
+    ont-size: 4vw;
+  }
+
   .team-member {
     width: 80%;
     margin-bottom: 30px;
