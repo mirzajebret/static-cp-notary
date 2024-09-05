@@ -115,9 +115,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 5% 8%;
+    padding: 8% 5% 8% ;
+    
     background: linear-gradient(to right, #1c2331, #003366);
     color: white;
+
   }
 
   .hero-text {
@@ -130,6 +132,16 @@
     line-height: 1.3;
   }
 
+  .hero-text h2 {
+    color:#Fff;
+    font-weight: inherit;
+    font-size: 1.2vw;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
   .hero-text p {
     font-size: 18px;
     margin-bottom: 30px;
@@ -759,6 +771,9 @@
   .hero-text h1{
     font-size: 4.5vw;
   }
+  .hero-text h2{
+    font-size: 3.6vw;
+  }
 
   .hero-text p{
     font-size: 3vw;
@@ -831,7 +846,7 @@
     align-items: center;
   }
 
-   .service-item {
+  .service-item {
     width: 100%;
     max-width: 100%; /* Limit button width on smaller screens */
     margin: 10px 0 10px 0;
