@@ -2,21 +2,18 @@
 function searchServices() {
     var input = document.getElementById('searchInput');
     var filter = input.value.toLowerCase();
-    var serviceBoxes = document.getElementsByClassName('service-box');
+    var items = document.querySelectorAll('.tabel-layanan .item');
     
-    for (var i = 0; i < serviceBoxes.length; i++) {
-      var h3 = serviceBoxes[i].getElementsByTagName("h3")[0];
-      var ul = serviceBoxes[i].getElementsByTagName("ul")[0];
-      var serviceText = h3.textContent || h3.innerText;
-      var ulText = ul.textContent || ul.innerText;
-      
-      if (serviceText.toLowerCase().indexOf(filter) > -1 || ulText.toLowerCase().indexOf(filter) > -1) {
-        serviceBoxes[i].style.display = "";
-      } else {
-        serviceBoxes[i].style.display = "none";
-      }
-    }
-  }
+    items.forEach(function(item) {
+        var text = item.textContent || item.innerText;
+        if (text.toLowerCase().indexOf(filter) > -1) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
   
   document.addEventListener('DOMContentLoaded', function() {
       // Load header and footer
