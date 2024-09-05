@@ -759,7 +759,7 @@
 .tablepress tbody tr:hover {
   background-color: #eaeaea;
 }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
   .hero {
     flex-direction: column;
     text-align: center;
