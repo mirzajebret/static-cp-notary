@@ -365,7 +365,7 @@
   }
 
 
-  #tabel-layanan {
+  .tabel-layanan {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
@@ -412,6 +412,7 @@
 
   .team-member {
     width: 30%;
+
     background-color: #2e3a59;
     border-radius: 8px;
     padding: 20px;
@@ -421,9 +422,12 @@
 
 
   .team-member img {
+    object-fit: cover;
+    max-height: 400px;
+    height: 100%;
+    max-width: 450px;
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 100%;
   }
 
   .team-member h3 {
@@ -588,7 +592,6 @@
     cursor: pointer;
     display: none; /* Initially hidden */
     z-index: 1000;
-    border-radius: 100%;
   }
 
   .whatsapp {
@@ -904,6 +907,10 @@
   }
  .team-members h3{
     font-size: 3vw;
+  }
+
+  .team-member img{
+    max-height: 300px;
   }
   .team h2{
     font-size: 4vw;
