@@ -14,7 +14,6 @@ function searchServices() {
     });
 }
 
-  
   document.addEventListener('DOMContentLoaded', function() {
       // Load header and footer
       Promise.all([
