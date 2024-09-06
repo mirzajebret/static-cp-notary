@@ -588,6 +588,7 @@
     cursor: pointer;
     display: none; /* Initially hidden */
     z-index: 1000;
+    border-radius: 100%;
   }
 
   .whatsapp {
