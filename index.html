@@ -122,19 +122,19 @@
   
   <section class="contact-form container" id="kontak">
     <h2>Hubungi Kami :</h2>
-    <form>
+    <form action="https://formspree.io/f/mvgpywge" method="POST">
       <label for="name">Nama Lengkap</label>
-      <input type="text" id="name" placeholder="Nama Lengkap" required>
-      
+      <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+  
       <label for="email">Alamat Email</label>
-      <input type="email" id="email" placeholder="Alamat Email" required>
-      
+      <input type="email" id="email" name="email" placeholder="Alamat Email" required>
+  
       <label for="phone">Nomor Telepon</label>
-      <input type="tel" id="phone" placeholder="Nomor Telepon" required>
-      
+      <input type="tel" id="phone" name="phone" placeholder="Nomor Telepon" required>
+  
       <label for="message">Pesan Anda</label>
-      <textarea id="message" placeholder="Pesan Anda" rows="5" required></textarea>
-      
+      <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+  
       <button type="submit">Kirim Pesan</button>
     </form>
   </section>
