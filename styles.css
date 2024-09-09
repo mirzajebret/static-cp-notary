@@ -174,7 +174,7 @@
     color: white;
     height: 750px;
     position: relative; /* Ensure the item can have absolute positioning inside */
-    background: linear-gradient(to right, rgba(0, 0, 30, 0.9), rgba(0, 0, 99, 0.4) 100%), 
+    background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
     url('https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/WhatsApp%20Image%202024-08-29%20at%2009.00.29%20(1).jpeg') no-repeat center center/cover;
   }
 
