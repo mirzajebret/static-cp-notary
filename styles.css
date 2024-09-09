@@ -173,9 +173,10 @@
     padding: 8% 5% 8% ;
     color: white;
     height: 750px;
-    position: relative; /* Ensure the item can have absolute positioning inside */
+    position: relative; 
+    /* background: linear-gradient(to right, #1c2331, #003366); */
     background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
-    url('https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/WhatsApp%20Image%202024-08-29%20at%2009.00.29%20(1).jpeg') no-repeat center center/cover;
+    url('https://i.ibb.co.com/YD7RktH/6-collage-bg.png') no-repeat center center/cover;
   }
 
   .hero-text {
@@ -216,6 +217,8 @@
     width: 100%;
   }
   .hero-image2 img {
+    order: 1;
+
     max-width: 500px;
     width: 100%;
   }
