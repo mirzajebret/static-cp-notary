@@ -109,6 +109,52 @@
     display: inline-block;
     transition: color 0.3s, font-size 0.3s ease;
   }
+/* carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-dots {
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #717171;
+}
 
   /* Hero Section */
   .hero {
@@ -116,10 +162,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 8% 5% 8% ;
-    
     background: linear-gradient(to right, #1c2331, #003366);
     color: white;
-
+    height: 750px;
+  }
+  .hero-wbg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8% 5% 8% ;
+    color: white;
+    height: 750px;
+    position: relative; /* Ensure the item can have absolute positioning inside */
+    background: linear-gradient(to right, rgba(0, 0, 30, 0.9), rgba(0, 0, 99, 0.4) 100%), 
+    url('https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/WhatsApp%20Image%202024-08-29%20at%2009.00.29%20(1).jpeg') no-repeat center center/cover;
   }
 
   .hero-text {
@@ -155,59 +211,15 @@
     margin-bottom: 30px;
   }
 
-  .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Space between buttons */
-    padding: 10px;
-  }
-
-  .hero-buttons a {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    color: #f57c00;
-    border-radius: 5px;
-    border: 2px solid #f57c00;
-    margin-right: 15px;
-    transition: filter 0.6s ease;
-  }
-
-  .hero-buttons a:hover {
-    filter: sepia(100%)  hue-rotate(180deg);
-
-  }
-
   .hero-image img {
     max-width: 450px;
     width: 100%;
   }
-
-
-  /* Stats Section */
-  .stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 5%;
-    background-color: #eaeff4;
+  .hero-image2 img {
+    max-width: 500px;
+    width: 100%;
   }
-
-  .stat-item {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .stat-item h2 {
-    font-size: 36px;
-    color: #f57c00;
-  }
-
-  .stat-item p {
-    font-size: 18px;
-    color: #666;
-  }
+  
   .service h2{
     font-size: 1.5vw;
   }
@@ -224,18 +236,30 @@
     padding: 0 20px; /* Responsive padding */ 
   }
 
+  .hero-content{
+    margin: 65px;
+  }
   .service-section-i .hero-content h1{
-    font-size: 18px; 
-    line-height: 1.2;
+    color: #003366;
+    font-size: 25px; 
     padding-bottom: 5px;
     text-align: center;
   }
+  .service-section-i .hero-content p,
+  .service-section-i .hero-content li{
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 20px; 
+  }
+  .service-section-i .hero-content li strong{
+    color: #003366;
+  }
+
   .service-item img {
     width: 100%;
     height: 300px;
     object-fit: cover;
   }
-
 
   .service-item {
     max-width: 30%; /* Ensures items don't become too wide */
@@ -249,7 +273,7 @@
   }
 
   .service-item h3 {
-    color: #333;
+    color: #003366;
     margin-top: 0;
     padding-bottom: 10px;
     font-size: 1.2em;
@@ -408,7 +432,7 @@
   }
 
   .team-member {
-    width: 20%;
+    width: 100%;
     background-color: #2e3a59;
     border-radius: 8px;
     padding: 10px;
@@ -775,6 +799,10 @@
     text-align: center;
   }
 
+  .hero-wbg {
+    flex-direction: column;
+    text-align: center;
+  }
   .link-pelayanan {
     width: 100%;
     max-width: 10%;
@@ -793,7 +821,7 @@
 }
 
   .hero-text {
-    order: 2; /* Place hero text after hero image */
+    order: 2; 
     max-width: 100%;
     margin-bottom: 30px;
   }
@@ -811,6 +839,10 @@
 
   .hero-image {
     order: 1; /* Place hero image before hero text */
+  }
+  .hero-image2 img {
+    max-width: 300px;
+    width: 100%;
   }
   .hero-buttons {
     flex-direction: column;
@@ -857,16 +889,6 @@
   font-size: 15px;
   }
 
-  .stats {
-    flex-direction: column;
-    padding: 60px 5%;
-    align-items: center;
-  }
-
-  .stat-item {
-    margin-bottom: 20px;
-  }
-
   .services-section {
     margin: 10px 50px;
   }
@@ -876,11 +898,20 @@
     align-items: center;
   }
   .service-section-i .hero-content h1{
-    font-size: 16px; 
+    font-size: 20px; 
     line-height: 1.2;
     padding-bottom: 5px;
-    text-align: center;
   }
+
+  .service-section-i .hero-content p,
+  .service-section-i .hero-content li{
+    font-size: 16px; 
+  }
+
+  .hero-content{
+    margin: 0;
+  }
+
 
   .service-item {
     width: 100%;
