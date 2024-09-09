@@ -797,11 +797,14 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    height: 700px;
+    padding-bottom: 400px;
   }
 
   .hero-wbg {
     flex-direction: column;
     text-align: center;
+    height: 700px;
   }
   .link-pelayanan {
     width: 100%;
