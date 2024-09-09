@@ -65,5 +65,71 @@ function searchServices() {
             });
         }
       }
+
+
+    //  carousel
+    const carouselInner = document.querySelector('.carousel-inner');
+    const dots = document.querySelectorAll('.dot');
+    const items = document.querySelectorAll('.carousel-item');
+    let index = 0;
+    const slideInterval = 3000; // Slide every 3 seconds
+
+    function updateCarousel() {
+        const offset = -index * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        index = (index < items.length - 1) ? index + 1 : 0;
+        updateCarousel();
+    }
+
+    function setSlide(newIndex) {
+        index = newIndex;
+        updateCarousel();
+    }
+
+    // Auto-slide every `slideInterval` milliseconds
+    setInterval(nextSlide, slideInterval);
+
+    // Set up dot click events
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            setSlide(i);
+        });
+    });
+
+    updateCarousel(); // Initialize carousel position and dots 
+  });
+
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    var form = event.target;
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://formspree.io/f/https://formspree.io/f/mvgpywge'); // Replace with your Formspree form ID
+    xhr.setRequestHeader('Accept', 'application/json');
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          form.reset(); // Reset the form fields
+          document.getElementById('form-response').style.display = 'block'; // Show the success message
+        } else {
+          alert('Gagal mengirim pesan. Silakan coba lagi.');
+        }
+      }
+    };
+
+    xhr.send(formData); // Send the form data via AJAX
   });
   
