@@ -72,7 +72,7 @@ function searchServices() {
     const dots = document.querySelectorAll('.dot');
     const items = document.querySelectorAll('.carousel-item');
     let index = 0;
-    const slideInterval = 3000; // Slide every 3 seconds
+    const slideInterval = 5000; // Slide every 5 seconds
 
     function updateCarousel() {
         const offset = -index * 100;
