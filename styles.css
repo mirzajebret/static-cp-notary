@@ -766,7 +766,6 @@
 /* Table cell styling */
 .tablepress td, .tablepress th {
   padding: 8px;
-  border: 1px solid #ddd;
   vertical-align: top;
 }
 
