@@ -1,3 +1,31 @@
+function toggleDropdown(id) {
+  var dropdown = document.getElementById(id);
+  var allDropdowns = document.querySelectorAll('.dropdown-content');
+  
+  // Hide all other dropdowns
+  allDropdowns.forEach(function(d) {
+    if (d !== dropdown) {
+      d.classList.remove('show');
+    }
+  });
+
+  // Toggle the clicked dropdown
+  dropdown.classList.toggle('show');
+}
+
+// Function to handle clicks outside of dropdowns
+function handleClickOutside(event) {
+  var allDropdowns = document.querySelectorAll('.dropdown-content');
+  allDropdowns.forEach(function(d) {
+    if (!d.contains(event.target) && !document.querySelector(`.item[data-dropdown="${d.id}"]`).contains(event.target)) {
+      d.classList.remove('show');
+    }
+  });
+}
+
+// Attach event listener to document
+document.addEventListener('click', handleClickOutside);
+
 // Function to search services
 function searchServices() {
     var input = document.getElementById('searchInput');
@@ -116,7 +144,7 @@ function searchServices() {
     var form = event.target;
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formspree.io/f/https://formspree.io/f/mvgpywge'); // Replace with your Formspree form ID
+    xhr.open('POST', 'https://formspree.io/f/mvgpywge'); // Correct Formspree form ID
     xhr.setRequestHeader('Accept', 'application/json');
 
     xhr.onreadystatechange = function() {
