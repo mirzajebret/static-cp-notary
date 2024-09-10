@@ -811,17 +811,17 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    height: 85vh;
+    height: 75vh;
     padding-bottom: 300px;
   }
 
   .hero-wbg {
     flex-direction: column;
     text-align: center;
-    height: 680px;
+    height: 100%;
   }
   .hero-bg {
-    height: 680px;
+    height: 100%;
   }
   .link-pelayanan {
     width: 100%;
