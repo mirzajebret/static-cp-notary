@@ -164,7 +164,7 @@
     padding: 8% 5% 8% ;
     background: linear-gradient(to right, #1c2331, #003366);
     color: white;
-    height: 750px;
+    height: 85vh;
   }
   .hero-wbg {
     display: flex;
@@ -172,7 +172,7 @@
     justify-content: space-between;
     padding: 8% 5% 8% ;
     color: white;
-    height: 750px;
+    height: 100%;
     position: relative; 
     /* background: linear-gradient(to right, #1c2331, #003366); */
     background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
@@ -184,7 +184,7 @@
     justify-content: space-between;
     padding: 8% 5% 8% ;
     color: white;
-    height: 750px;
+    height: 100%;
     position: relative; 
     /* background: linear-gradient(to right, #1c2331, #003366); */
     background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%);
