@@ -178,6 +178,17 @@
     background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
     url('https://i.ibb.co.com/YD7RktH/6-collage-bg.png') no-repeat center center/cover;
   }
+  .hero-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8% 5% 8% ;
+    color: white;
+    height: 750px;
+    position: relative; 
+    /* background: linear-gradient(to right, #1c2331, #003366); */
+    background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%);
+  }
 
   .hero-text {
     max-width: 50%;
@@ -807,6 +818,9 @@
   .hero-wbg {
     flex-direction: column;
     text-align: center;
+    height: 680px;
+  }
+  .hero-bg {
     height: 680px;
   }
   .link-pelayanan {
