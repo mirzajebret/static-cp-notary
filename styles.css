@@ -152,6 +152,7 @@
 
   /* Hero Section */
   .hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,6 +160,7 @@
     background: linear-gradient(to right, #1c2331, #003366);
     color: white;
     height: 88vh;
+    overflow: hidden;
   }
   .hero-wbg {
     display: flex;
@@ -173,17 +175,11 @@
     url('https://i.ibb.co.com/YD7RktH/6-collage-bg.png') no-repeat center center/cover;
   }
   .hero-bg {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8% 5% 8% ;
-    color: white;
-    height: 100%;
-    position: relative; 
-    /* background: linear-gradient(to right, #1c2331, #003366); */
-    /* background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%); */
-  }
+    background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-carousel-4.jpeg?raw=true') no-repeat center center;
+    background-size: 50%; /* Default background size */
+    height: 100%; /* Ensure the section takes up the full height of the parent */
+    background-attachment: fixed; /* Optional: Fix the background during scrolling */
+}
 
   .hero-text {
     max-width: 50%;
@@ -245,6 +241,34 @@
     justify-content: space-around;
     padding: 0 20px; /* Responsive padding */ 
   }
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.hero-vcontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-vcontent h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-vcontent p {
+  font-size: 1rem;
+}
 
   .hero-content{
     margin: 65px;
@@ -839,7 +863,7 @@
     height: 100%;
   }
   .hero-bg {
-    height: 100%;
+    background-size: 130%;
   }
   .link-pelayanan {
     width: 100%;
