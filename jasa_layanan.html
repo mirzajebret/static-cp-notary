@@ -12,40 +12,469 @@
 
 <body>
   <div id="header"></div>
+  
   <section class="services-section">
     <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Cari layanan...">
       <h2>Jasa Notaris</h2>
+    
+
     <div class="judul-layanan">
+      <!-- <h1 style="text-align: center;">Jasa PPAT</h1> -->
     </div>
     <div class="tabel-layanan" id="tabel-notaris">
-      <div class="item">Fotocopy Sesuai Aslinya</div>
-      <div class="item">Waarmerking/Register</div>
-      <div class="item">Legalisasi</div>
-      <div class="item">Perjanjian Kredit</div>
-      <div class="item">Pembuatan SKMHT</div>
-      <div class="item">Pembuatan Akta Kuasa</div>
-      <div class="item">Akta Perkumpulan</div>
-      <div class="item">Akta Perjanjian Sewa Menyewa</div>
-      <div class="item">Perjanjian Kerjasama Antar Perusahaan</div>
-      <div class="item">Akta Pendirian Perusahaan</div>
-      <div class="item">Akta Jaminan Fidusia</div>
-      <div class="item">Akta Perusahaan Terbuka</div>
-      <div class="item">Akta Koperasi</div>
-      <div class="item">Akta Yayasan</div>
+
+      <div class="item" data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking')">Waarmerking/Register
+      <div id="waarmarking" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                    <li>Surat Keterangan Ahli Waris dari Kelurahan diketahui Camat</li>
+                    <li>Fotokopi KTP Para Pihak Dalam Perjanjian</li>
+                    <li>Fotokopi dan Asli Akta Kelahiran masing-masing Ahli Waris</li>
+                    <li>Fotokopi dan Asli Surat Keterangan Kematian/Akta Kematian</li>
+                    <li>Fotocopy dan Asli Buku Tabungan dan Deposito</li>
+                </ul>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="legalisasi" onclick="toggleDropdown('legalisasi')">Legalisasi
+      <div id="legalisasi" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Proses pengesahan tandatangan dihadapan notaris.</li>
+                  <li> Dokumen tersebut biasanya dibuat dibawah tangan oleh pihak/para pihak tetapi penandatangannya di hadapan notaris.</li>
+                </ul>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+      <div class="item" data-dropdown="perjanjianKredit" onclick="toggleDropdown('perjanjianKredit')">Perjanjian Kredit
+      <div id="perjanjianKredit" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Perjanjian Kredit di bawah tangan biasanya PK tersebut diberikan oleh pihak Bank.</li>
+                  <li>PK Notaris akta yang dibuat oleh notaris.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+
+      <div class="item" data-dropdown="aktaKuasa" onclick="toggleDropdown('aktaKuasa')">Pembuatan Akta Kuasa
+      <div id="aktaKuasa" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotocopy Kartu Advokat yang Masih Berlaku</li>
+                  <li>Fotocopy Surat Perpanjangan Kartu Advokat Apabila Masih Dalam Proses Perpanjangan</li>
+                  <li>Fotocopy Berita Acara Pengambilan Sumpah</li>
+                  <li>1 (Satu) Asli Surat Kuasa Untuk Berkas</li>
+                  <li>2 (Dua) Fotocopy Surat Kuasa Untuk Arsip</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="suratKuasa" onclick="toggleDropdown('suratKuasa')">Surat Kuasa Antar Para Pihak
+      <div id="suratKuasa" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotocopy Kartu Tanda Penduduk (Ktp) Untuk Masing-Masing Pihak</li>
+                  <li>Fotocopy Surat Perpanjangan Kartu Advokat Apabila Masih Dalam Proses Perpanjangan</li>
+                  <li>1 (Satu) Asli Surat Kuasa Untuk Berkas</li>
+                  <li>2 (Dua) Fotocopy Surat Kuasa Untuk Arsip</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="perjanjianAkta" onclick="toggleDropdown('perjanjianAkta')">Perjanjian Akta Perikatan
+      <div id="perjanjianAkta" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Kesepakatan mereka yang mengikatkan dirinya.</li>
+                  <li>Kecakapan untuk membuat suatu perikatan</li>
+                  <li>Suatu pokok persoalan tertentu</li>
+                  <li>Suatu sebab yang tidak terlarang.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="kerjasamaPerusahaan" onclick="toggleDropdown('kerjasamaPerusahaan')">Perjanjian Kerjasama Antar Perusahaan
+      <div id="kerjasamaPerusahaan" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Ikatan Terjadi Karena Masing-Masing Telah Sepakat Secara Bersama-Sama.</li>
+                  <li>Pihak Yang Membuat Kesepakatan Telah Cakap Dan Paham Mengenai Perbuatan Hukum, Dalam Arti Sudah Dewasa, Tidak Dalam Pemaksaan, Dan Tidak Dalam Wali Siapapun.</li>
+                  <li>Objek Yang Diperjanjikan Harus Jelas Dan Pasti</li>
+                  <li>Dibuat Atas Sebab Yang Sesuai Dengan Ketentuan Hukum, Tidak Melanggar Undang-Undang, Ketertiban Umum, Serta Kesusilaan.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="pendirianPT" onclick="toggleDropdown('pendirianPT')">Akta Perusahaan Terbuka
+      <div id="pendirianPT" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Foto Copy KTP Para Pendiri.</li>
+                  <li>Foto Copy NPWP Pribadi Penanggung Jawab.</li>
+                  <li>Foto Copy Kartu Keluarga Penanggung Jawab.</li>
+                  <li>Surat keterangan domisili dari pengelola gedung jika berdomisili di Gedung Perkantoran dan surat sewa, IMB, lunas PBB terakhir.</li>
+                  <li>Pas Photo ukuran 3 x 4 = 2 lembar (latar blakang merah).</li>
+                  <li>Jumlah Modal Dasar & Modal Setor.</li>
+                  <li>Komposisi saham.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="pendirianPTPMA" onclick="toggleDropdown('pendirianPTPMA')">Pendirian PT PMA (Penanaman Modal Asing)
+      <div id="pendirianPTPMA" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Foto Copy KTP dan NPWP bagi WNI (jika peserta/pemegang saham adalah Individu).</li>
+                  <li>Foto Copy Passport WNA (jika peserta/pemegang saham adalah Individu).</li>
+                  <li>Surat Keterangan Domisili dari Pengelola Gedung (jika berdomisili di Gedung Perkantoran).</li>
+                  <li>Surat keterangan domisili dari pengelola gedung jika berdomisili di Gedung Perkantoran dan surat sewa, IMB, lunas PBB terakhir.</li>
+                  <li>Bidang Usaha, Alamat dan No. Telp Kantor</li>
+                  <li>Struktur Permodalan dan Komposisi Pemegang Saham/Susunan pengurus.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="pendirianYayasan" onclick="toggleDropdown('pendirianYayasan')">Pendirian Yayasan
+      <div id="pendirianYayasan" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Menyiapkan 3 (tiga) pilihan nama Yayasan. Tidak boleh dalam Bahasa lain selain Bahasa Indonesia.</li>
+                  <li>Tiap nama harus terdiri dari 3 suku kata.</li>
+                  <li>Fotokopi KTP dan NPWP Pendiri. Pendiri Yayasan minimum boleh satu orang.</li>
+                  <li>Alamat Yayasan *wilayah kabupaten/kotamadya lokasi kantor Yayasan akan dipakai sebagai Domisili Yayasan pada Anggaran Dasar.</li>
+                  <li>Email Yayasan (mohon disiapkan).</li>
+                  <li>Nomor telepon salah satu Direksi penanggung jawab/Dirut/Nomor telepon Yayasan.</li>
+                  <li>Jumlah nominal Kekayaan Yayasan *(minimum Rp. 10 juta).</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="pendirianCV" onclick="toggleDropdown('pendirianCV')">Pendirian CV
+      <div id="pendirianCV" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Menyiapkan 3 (tiga) pilihan nama CV. Tidak boleh dalam Bahasa lain selain Bahasa Indonesia.</li>
+                  <li>Tiap nama harus terdiri dari 3 suku kata.</li>
+                  <li>Fotokopi KTP dan NPWP Pendiri/Pesero Aktif CV dan Pesero Pasif CV.</li>
+                  <li>Surat Keterangan Sewa Kantor dan fotokopi IMB (bila kantor berbentuk ruko) *wilayah kabupaten/kotamadya lokasi kantor akan dipakai sebagai Domisili CV pada Anggaran Dasar.</li>
+                  <li>Email CV (mohon disiapkan).</li>
+                  <li>Nomor telepon salah satu Pesero Aktif/Nomor telepon CV.</li>
+                  <li>Menentukan besaran Modal Dasar CV.</li>
+                  <li>Menentukan besaran Persentase Saham yang dimiliki masing-masing Pesero Aktif dan Pasif Dihitung dari Besaran Modal Dasar</li>
+                  <li>Menentukan prosentase pembagian keuntungan antar para Pesero masuk ke dalam Anggaran Dasar (Opsional).</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaKoperasi" onclick="toggleDropdown('aktaKoperasi')">Akta Koperasi
+      <div id="aktaKoperasi" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Daftar nama pendiri.</li>
+                  <li>Nama dan tempat kedudukan.</li>
+                  <li>Maksud dan tujuan serta bidang usaha.</li>
+                  <li>Ketentuan mengenai keanggotaan.</li>
+                  <li>Ketentuan mengenai Rapat Anggota.</li>
+                  <li>Ketentuan mengenai pengelolaan.</li>
+                  <li>Ketentuan mengenai permodalan.</li>
+                  <li>Ketentuan mengenai jangka waktu berdirinya.</li>
+                  <li>Ketentuan mengenai pembagian sisa hasil usaha.</li>
+                  <li>Ketentuan mengenai sanksi-sanksi.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaPerkumpulan" onclick="toggleDropdown('aktaPerkumpulan')">Akta Perkumpulan
+      <div id="aktaPerkumpulan" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Memiliki 3 Orang Anggota.</li>
+                  <li>Memiliki Akta Pendirian.</li>
+                  <li>Program Kerja Dan Sumber Pendanaan.</li>
+                  <li>Surat Keterangan Domisili.</li>
+                  <li>NPWP Atas Nama Perkumpulan.</li>
+                  <li>Surat Pernyataan Sedang Tidak Berada Dalam Perkara.</li>
+                  <li>Pengadilan Dan Tidak Mengalami Sengketa Pengurusan.</li>
+                  <li>Pengajuan Pengesahan.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaSewa" onclick="toggleDropdown('aktaSewa')">Akta Perjanjian Sewa Menyewa
+      <div id="aktaSewa" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Memiliki 3 Orang Anggota.</li>
+                  <li>Memiliki Akta Pendirian.</li>
+                  <li>Program Kerja Dan Sumber Pendanaan.</li>
+                  <li>Surat Keterangan Domisili.</li>
+                  <li>NPWP Atas Nama Perkumpulan.</li>
+                  <li>Surat Pernyataan Sedang Tidak Berada Dalam Perkara.</li>
+                  <li>Pengadilan Dan Tidak Mengalami Sengketa Pengurusan.</li>
+                  <li>Pengajuan Pengesahan.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaFidusia" onclick="toggleDropdown('aktaFidusia')">Akta Jaminan Fidusia
+      <div id="aktaFidusia" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Jaminan Fidusia adalah pengalihan hak kepemilikan sebuah benda yang registrasi hak kepemilikannya masih berada dalam kekuasaan pemilik benda tersebut.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
       <div class="item">Akta Notaris Lainnya</div>
     </div>
   </section>
   <section class="services-section" id="tabel-ppat">
-    <div class="judul-layanan">
-      <h2>Jasa PPAT</h2>
-    </div>
-    <div class="tabel-layanan" >
-      <div class="item">Pembuatan APHT</div>
-      <div class="item">Akta Jual Beli</div>
-      <div class="item">Akta Hibah</div>
-      <div class="item">Akta Pembagian Hak Bersama</div>
-      <div class="item">Akta Waris</div>
-      <div class="item">Akta Tukar - Menukar</div>
+    <h2>Jasa PPAT</h2>
+    
+    <div class="tabel-layanan">
+      <div class="item" data-dropdown="aktaJualBeli" onclick="toggleDropdown('aktaJualBeli')">Jasa Pembuatan Akta Jual Beli
+      <div id="aktaJualBeli" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotokopi KTP penjual dan pembeli</li>
+                  <li>Fotokopi KK penjual dan pembeli</li>
+                  <li>Fotokopi NPWP penjual dan pembeli</li>
+                  <li>Sertifikat tanah asli</li>
+                  <li>Surat Persetujuan dari suami/istri (jika ada)</li>
+                  <li>Surat Keterangan Waris (jika tanah warisan)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaHibah" onclick="toggleDropdown('aktaHibah')">Jasa Pembuatan Akta Hibah
+      <div id="aktaHibah" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotokopi KTP pemberi dan penerima hibah</li>
+                  <li>Fotokopi KK pemberi dan penerima hibah</li>
+                  <li>Sertifikat tanah asli</li>
+                  <li>Surat persetujuan suami/istri (jika ada)</li>
+                  <li>Surat Keterangan Waris (jika tanah warisan)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="aktaWaris" onclick="toggleDropdown('aktaWaris')">Jasa Pembuatan Akta Waris
+      <div id="aktaWaris" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotokopi KTP seluruh ahli waris</li>
+                  <li>Fotokopi KK seluruh ahli waris</li>
+                  <li>Surat Keterangan Kematian dari kelurahan</li>
+                  <li>Surat Keterangan Waris</li>
+                  <li>Sertifikat tanah asli (jika ada aset tanah)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="skmht" onclick="toggleDropdown('skmht')">Jasa Pembuatan SKMHT
+      <div id="skmht" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Tidak memuat kuasa untuk memberikan tindakan hukum lainnya, melainkan hanya terkait pembebanan hak tanggungan.</li>
+                  <li>Tidak mencantumkan adanya kuasa substitusi.</li>
+                  <li>Menuliskan secara jelas objek tanggung, jumlah kredit serta identitas kreditur dan debitur.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="apht" onclick="toggleDropdown('apht')">Jasa Pembuatan APHT
+      <div id="apht" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Membuat perjanjian pemberian hak tanggungan yang menjamin bahwa peminjam akan membayar hutang.</li>
+                  <li>Mengisi informasi wajib, seperti: identitas pemberi dan pemegang hak tanggungan, alamat kedua pihak, penjelasan rinci mengenai utang piutang, dan nilai tanggungan meliputi objek hak tanggungan.</li>
+                  <li>Jika pihak peminjam tidak mampu melunasi hutangnya, maka objek hak tanggungan akan menjadi milik pihak pemberi.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="hakBersama" onclick="toggleDropdown('hakBersama')">Akta Pembagian Hak Bersama
+      <div id="hakBersama" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotokopi identitas pemohon (KTP, KK) dan kuasa apabila dikuasakan, yang telah dicocokkan dengan aslinya.</li>
+                  <li>Fotokopi akta pendirian dan pengesahan badan hukum yang telah dicocokkan dengan aslinya.</li>
+                  <li>Sertifikat asli.</li>
+                  <li>Izin pemindahan hak apabila di dalam sertifikat / keputusannya dicantumkan tanda yang menyatakan bahwa hak tersebut hanya boleh dipindahtangankan jika telah diperoleh izin dari instansi yang berwenang.</li>
+                  <li>Fotokopi SPPT dan PBB tahun berjalan yang telah dicocokkan dengan aslinya, penyerahan bukti SSB (BPHTB) dan bukti bayar uang pemasukan (pada saat pendaftaran hak).</li>
+                  <li>Penyerahan bukti SSB (BPHTB) dan bukti SSP/PPH.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <div class="item" data-dropdown="tukarMenukar" onclick="toggleDropdown('tukarMenukar')">Akta Tukar - Menukar
+      <div id="tukarMenukar" class="dropdown-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="column-4">
+                <ul>
+                  <li>Fotokopi identitas pemohon (KTP, KK) dan kuasa apabila dikuasakan, yang telah dicocokkan dengan aslinya oleh petugas Administrasi.</li>
+                  <li>Fotokopi akta pendirian dan pengesahan badan hukum yang telah dicocokkan dengan aslinya oleh petugas Administrasi, bagi badan hukum.</li>
+                  <li>Sertifikat asli.</li>
+                  <li>Izin pemindahan hak apabila di dalam sertifikat / keputusannya dicantumkan tanda yang menyatakan bahwa hak tersebut hanya boleh dipindahtangankan jika telah diperoleh izin dari instansi yang berwenang.</li>
+                  <li>Fotokopi SPPT dan PBB tahun berjalan yang telah dicocokkan dengan aslinya, penyerahan bukti SSB (BPHTB) dan bukti bayar uang pemasukan (pada saat pendaftaran hak).</li>
+                  <li>Penyerahan bukti SSB (BPHTB) dan bukti SSP/PPH.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
       <div class="item">Akta PPAT Lainnya</div>
     </div>
   </section>
@@ -54,21 +483,201 @@
       <h2>Jasa Lainnya</h2>
     </div>
     <div class="tabel-layanan" id="tabel-lainnya">
-      <div class="item">Pengecekan Sertifikat</div>
-      <div class="item">Roya</div>
-      <div class="item">Balik Nama Sertifikat</div>
-      <div class="item">Pemecahan Sertifikat</div>
-      <div class="item">Perpanjangan Sertifikat</div>
-      <div class="item">Pembuatan Perijinan Perusahaan</div>
-      <div class="item">Penggantian Sertifikat Hilang</div>
-      <div class="item">Pensertifikatan Tanah Adat</div>
-      <div class="item">Pensertifikatan Tanah Negara</div>
-      <div class="item">Pengurusan Perpajakan</div>
-      <div class="item">Pengurusan Perijinan Pengadilan Negeri</div>
-      <div class="item">Dan Jasa Pengurusan Perijinan Lainnya</div>
+      
+      <div class="item" data-dropdown="pengecekanSertifikat" onclick="toggleDropdown('pengecekanSertifikat')">Pengecekan Sertifikat
+        <div id="pengecekanSertifikat" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses pemeriksaan keaslian sertifikat tanah atau properti untuk memastikan bahwa dokumen tersebut sah dan tidak dipalsukan. Ini termasuk verifikasi informasi dengan catatan resmi dan memastikan tidak ada masalah hukum atau administratif terkait sertifikat tersebut.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="roya" onclick="toggleDropdown('roya')">Roya
+        <div id="roya" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses penghapusan hak tanggungan atau beban yang ada pada sertifikat tanah, seperti hipotek atau hak gadai. Ini diperlukan untuk memastikan bahwa sertifikat tanah bebas dari klaim pihak ketiga sebelum dapat dipindahtangankan atau digunakan untuk transaksi lainnya.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="balikNama" onclick="toggleDropdown('balikNama')">Balik Nama Sertifikat
+        <div id="balikNama" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses administrasi untuk mengubah nama pemilik yang tertera pada sertifikat tanah. Biasanya dilakukan setelah pembelian, penjualan, atau perubahan hak milik yang memerlukan pembaruan informasi pemilik di dokumen resmi sertifikat.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="pemecahanSertifikat" onclick="toggleDropdown('pemecahanSertifikat')">Pemecahan Sertifikat
+        <div id="pemecahanSertifikat" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses yang memungkinkan pemisahan satu sertifikat tanah menjadi beberapa sertifikat baru, biasanya untuk keperluan pembagian tanah atau untuk menjual sebagian dari tanah yang terdaftar di dalam sertifikat yang sama.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="perpanjanganSertifikat" onclick="toggleDropdown('perpanjanganSertifikat')">Perpanjangan Sertifikat
+        <div id="perpanjanganSertifikat" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses memperpanjang masa berlaku sertifikat yang mungkin memerlukan pembaruan atau perpanjangan dokumen tertentu, terutama untuk sertifikat yang memiliki masa berlaku terbatas atau yang memerlukan pembaharuan berdasarkan ketentuan hukum yang berlaku.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="perijinanPerusahaan" onclick="toggleDropdown('perijinanPerusahaan')">Pembuatan Perijinan Perusahaan
+        <div id="perijinanPerusahaan" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses pengurusan semua izin dan dokumen yang diperlukan untuk mendirikan dan menjalankan perusahaan, termasuk izin usaha, NPWP, dan perizinan lainnya yang diperlukan sesuai dengan regulasi lokal dan nasional.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="penggantianSertifikatHilang" onclick="toggleDropdown('penggantianSertifikatHilang')">Penggantian Sertifikat Hilang
+        <div id="penggantianSertifikatHilang" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses untuk mengganti sertifikat yang hilang atau rusak. Ini biasanya melibatkan pengajuan laporan kehilangan, verifikasi identitas pemilik, dan penerbitan sertifikat pengganti untuk memastikan kepemilikan tetap sah.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="pensertifikatanTanahAdat" onclick="toggleDropdown('pensertifikatanTanahAdat')">Pensertifikatan Tanah Adat
+        <div id="pensertifikatanTanahAdat" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses sertifikasi tanah yang diakui secara adat. Ini termasuk pengakuan hak tanah oleh komunitas adat dan pengesahan dokumen untuk memastikan bahwa tanah adat memiliki status hukum yang diakui oleh negara.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="pensertifikatanTanahNegara" onclick="toggleDropdown('pensertifikatanTanahNegara')">Pensertifikatan Tanah Negara
+        <div id="pensertifikatanTanahNegara" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses sertifikasi untuk tanah yang dimiliki oleh negara. Ini termasuk pengakuan dan pendaftaran hak atas tanah negara untuk keperluan administrasi dan hukum, agar tanah tersebut memiliki status hukum yang sah.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="pengurusanPerpajakan" onclick="toggleDropdown('pengurusanPerpajakan')">Pengurusan Perpajakan
+        <div id="pengurusanPerpajakan" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses administrasi yang terkait dengan pajak, termasuk pendaftaran wajib pajak, pelaporan pajak, dan pemenuhan kewajiban perpajakan sesuai dengan peraturan yang berlaku. Ini memastikan bahwa semua kewajiban pajak dipenuhi dengan benar.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="perijinanPengadilan" onclick="toggleDropdown('perijinanPengadilan')">Pengurusan Perijinan Pengadilan Negeri
+        <div id="perijinanPengadilan" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Proses pengurusan izin yang dikeluarkan oleh pengadilan negeri, yang mungkin diperlukan untuk berbagai keperluan hukum atau administratif, termasuk izin yang berkaitan dengan sengketa tanah atau hukum sipil.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="item" data-dropdown="jasaPerijinanLainnya" onclick="toggleDropdown('jasaPerijinanLainnya')">Dan Jasa Pengurusan Perijinan Lainnya
+        <div id="jasaPerijinanLainnya" class="dropdown-content">
+          <table>
+            <tbody>
+              <tr>
+                <td class="column-4">
+                  <ul>
+                    <li>Berbagai layanan tambahan untuk pengurusan perijinan yang tidak termasuk dalam kategori khusus lainnya. Ini mencakup berbagai izin dan lisensi yang diperlukan untuk berbagai jenis usaha atau kegiatan sesuai dengan kebutuhan khusus.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
     </div>
   </section>
-</section>
   <a href="https://wa.me/6287736688999" style="font-size:24px"> <i class="fa fa-whatsapp whatsapp"></i></a>
   <button id="back-to-top" class="back-to-top">▲</button>
   <div id="footer"></div>
