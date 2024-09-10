@@ -164,7 +164,7 @@
     padding: 8% 5% 8% ;
     background: linear-gradient(to right, #1c2331, #003366);
     color: white;
-    height: 85vh;
+    height: 88vh;
   }
   .hero-wbg {
     display: flex;
@@ -811,7 +811,7 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    height: 75vh;
+    height: 74vh;
     padding-bottom: 300px;
   }
 
