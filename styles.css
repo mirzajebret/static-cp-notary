@@ -180,6 +180,11 @@
     height: 100%; /* Ensure the section takes up the full height of the parent */
     background-attachment: fixed; /* Optional: Fix the background during scrolling */
 }
+  .hero-bg2 {
+    background-size: 150%; /* Default background size */
+    height: 100%; /* Ensure the section takes up the full height of the parent */
+    background-attachment: fixed; /* Optional: Fix the background during scrolling */
+}
 
   .hero-text {
     max-width: 50%;
