@@ -719,8 +719,8 @@
  }
 .fa-x {
   bottom: 140px;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
