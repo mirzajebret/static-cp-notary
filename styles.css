@@ -436,6 +436,7 @@
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 50px;
+    
   }
   .dropdown-content {
     display: none;
@@ -460,7 +461,7 @@
     font-size: 1.1em;
     transition: background-color 0.3s;
     /* dropdown */
-    cursor: pointer;
+    cursor: Default;
     padding: 10px;
   }
   .item p{
@@ -894,6 +895,16 @@
 .tablepress tbody tr:hover {
   background-color: #eaeaea;
 }
+
+.search{
+  padding: 0 10px 0 10px;
+  position: fixed;
+  width: 100%;
+  color: #fff;
+  background-color: #1c2331;
+  z-index: 1;
+}
+
   @media (max-width: 900px) {
   .hero {
     flex-direction: column;
