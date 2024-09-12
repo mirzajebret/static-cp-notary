@@ -861,7 +861,9 @@
     height: 78vh;
     padding-bottom: 300px;
   }
-
+  .profile-header h1 {
+    font-size: 2.5vh;
+  }
   .hero-wbg {
     flex-direction: column;
     text-align: center;
