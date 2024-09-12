@@ -463,11 +463,16 @@
     cursor: pointer;
     padding: 10px;
   }
+  .item p{
+    color: #07bd07;
+    text-align: center;
+    padding-top: 15px;
+  }
 
-  .tabel-layanan li {
+  .dropdown-content li {
     margin-left: 20px;
     text-align: left;
-
+    list-style-type:none
   }
 
   .item:hover {
@@ -665,13 +670,13 @@
 
   .back-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
-    background-color: #ff7300;
-    color: white;
+    background-color: transparent;
+    color: #ff7300;
     border: none;
-    font-size: 1em;
-    padding: 15px 15px;
+    font-size: 2em;
+    padding: 9px ;
     cursor: pointer;
     display: none; /* Initially hidden */
     z-index: 1000;
@@ -679,7 +684,7 @@
 
   .whatsapp {
     position: fixed;
-    bottom: 80px;
+    bottom: 20px;
     right: 20px;
     background-color: #07bd07;
     border-radius: 100%;
@@ -690,7 +695,42 @@
     cursor: pointer;
     z-index: 1000;
   }
+  .socmed {
+    position: fixed;
+    left: 20px; /* Change from 'right' to 'left' */
+    right: auto; /* Ensure 'right' is not applied */
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
 
+.fa-instagram {
+  bottom: 80px;
+  background-color: #e22d69;
+  
+ }
+.fa-x {
+  bottom: 140px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.fa-facebook-f {
+  bottom: 20px;
+  background-color: #4267B2;
+ }
+ 
   .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -861,9 +901,11 @@
     height: 78vh;
     padding-bottom: 300px;
   }
+
   .profile-header h1 {
     font-size: 2.5vh;
   }
+
   .hero-wbg {
     flex-direction: column;
     text-align: center;
