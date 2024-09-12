@@ -7,19 +7,18 @@
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logohero-bg.jpg">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logohero-bg.jpg">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div id="header"></div>
-  
-  <section class="services-section">
+  <div class="search">
     <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Cari layanan...">
+  </div>
+<!-- JASA NOTARIS  -->
+  <section class="services-section">
       <h2>Jasa Notaris</h2>
     <div class="judul-layanan">
     </div>
-
-    <!-- JASA NOTARIS  -->
     <div class="tabel-layanan" id="tabel-notaris">
       <div class="item" data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking')">Waarmerking/Register
         <div id="waarmarking" class="dropdown-content">
