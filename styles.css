@@ -904,8 +904,14 @@
   background-color: #1c2331;
   z-index: 1;
 }
-
+.search input{
+  height: 20px;
+}
   @media (max-width: 900px) {
+
+  .search input{
+  height: 15px;
+  }
   .hero {
     flex-direction: column;
     text-align: center;
