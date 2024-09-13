@@ -458,7 +458,6 @@
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    font-size: 1.1em;
     transition: background-color 0.3s;
     /* dropdown */
     cursor: Default;
@@ -1019,6 +1018,10 @@
 
   .services-section {
     margin: 10px 50px;
+  }
+
+  .services-section h2{
+    font-size: 25px;
   }
 
   .service-section-i {
