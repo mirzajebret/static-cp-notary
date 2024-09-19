@@ -347,11 +347,10 @@ h2 {
 }
 
 .link-pelayanan {
-  background-color: #fff;
-  border: 1px solid #ddd;
   border-radius: 100%;
   overflow: hidden;
-  width: 5%;
+  height: 50px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,6 +501,14 @@ h2 {
 /* Contact Form Section */
 .contact-form {
   padding: 60px 5%;
+}
+
+.linkdansocmed {
+  padding: 20px 5%;
+  font-size: 15px;
+}
+.linkdansocmed h2{
+  font-size: 16px;
 }
 
 .contact-form h2 {
@@ -873,10 +880,6 @@ background-color: #4267B2;
 }
 .hero-bg {
   background-size: 130%;
-}
-.link-pelayanan {
-  width: 100%;
-  max-width: 10%;
 }
 
 .hakbar-hide{
