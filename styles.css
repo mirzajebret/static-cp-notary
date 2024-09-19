@@ -337,6 +337,7 @@ h2 {
   font-size: 2rem;
   color: #333;
 }
+
 /* Styling for the service cards */
 .links-pelayanan {
   display: flex;
@@ -505,8 +506,7 @@ h2 {
 
 .contact-form h2 {
   text-align: center;
-  font-size: 1.5vw;
-  margin-bottom: 40px;
+  font-size: 1vw;
   color: #2e3a59;
 }
 
