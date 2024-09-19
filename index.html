@@ -1,1043 +1,244 @@
-/* Reset some basic elements for consistency */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f6;
-}
-
-#header {
-background-color: #1c2331;
-padding: 20px 5%;
-color: white;
-position: sticky;
-top: 0;
-transition:  0.3s ease;
-z-index: 1000;
-}
-
-#header.shrink{
-  padding: 5px ;
-}
-
-#header.shrink .header-logo img {
-  height: 30px;
-  width: 30px; 
-}
-
-#header.shrink .header-logo h3 {
-  font-size: 14px; /* Smaller font size when scrolled */
-}
-#header.shrink .nav-links a {
-  font-size: 14px; /* Smaller font size when scrolled */
-}
-
-.header-logo {
-  display: flex;
-  align-items: center;
-}
-
-.header-logo img.small-image {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-  transition:  0.3s ease;
-  background-color: transparent;
-}
-
-.header-logo h3 {
-  font-size: 22px;
-  transition: font-size 0.3s ease; 
-}
-
-.header-logo h3 a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.header-logo h3 a:hover {
-  color: #f57c00;
-}
-
-#searchInput {
-  width: 100%; 
-  padding: 20px; 
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px; 
-  font-size: 16px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.menu-button {
-  display: none;
-}
-
-.nav-links a:hover {
-  color: #f57c00;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0 10px;
-  display: inline-block;
-  transition: color 0.3s, font-size 0.3s ease;
-}
-/* carousel */
-.carousel {
-position: relative;
-width: 100%;
-max-width: 100%;
-margin: auto;
-overflow: hidden;
-}
-
-.carousel-inner {
-display: flex;
-transition: transform 0.5s ease;
-}
-
-.carousel-item {
-min-width: 100%;
-box-sizing: border-box;
-}
-
-.carousel-item img {
-width: 100%;
-height: auto; /* Maintain aspect ratio */
-}
-
-.carousel-dots {
-text-align: center;
-padding: 10px;
-position: absolute;
-bottom: 10px;
-width: 100%;
-left: 0;
-}
-
-.dot {
-display: inline-block;
-width: 10px;
-height: 10px;
-margin: 0 5px;
-background: #bbb;
-border-radius: 50%;
-  transition: background 0.3s;
-}
-
-.dot.active {
-background: #717171;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8% 5% 8% ;
-  background: linear-gradient(to right, #1c2331, #003366);
-  color: white;
-  height: 88vh;
-  overflow: hidden;
-}
-.hero-wbg {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8% 5% 8% ;
-  color: white;
-  height: 100%;
-  position: relative; 
-  /* background: linear-gradient(to right, #1c2331, #003366); */
-  background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
-  url('https://i.ibb.co.com/YD7RktH/6-collage-bg.png') no-repeat center center/cover;
-}
-.hero-bg {
-  background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-carousel-4.jpeg?raw=true') no-repeat center center;
-  background-size: 50%; /* Default background size */
-  height: 100%; /* Ensure the section takes up the full height of the parent */
-  background-attachment: fixed; /* Optional: Fix the background during scrolling */
-}
-.hero-bg2 {
-  background-size: 150%; /* Default background size */
-  height: 100%; /* Ensure the section takes up the full height of the parent */
-  background-attachment: fixed; /* Optional: Fix the background during scrolling */
-}
-
-.hero-text {
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 1.6vw;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  white-space: nowrap;
-}
-
-.hakbar-show{
-  display: none;
-  font-size: 1.6vw;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  white-space: nowrap;
-}
-
-.hero-text h2 {
-  color:#Fff;
-  font-weight: inherit;
-  font-size: 1.2vw;
-  margin-bottom: 5px;
-  line-height: 1.3;
-  font-family: "Playwrite DK Loopet", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.hero-image img {
-  max-width: 450px;
-  width: 100%;
-}
-.hero-image2 img {
-  order: 1;
-  max-width: 500px;
-  width: 100%;
-}
-
-.services-section h2 {
-  text-align: center;
-  padding-top: 10px;
-}
-/* Service Section */
-.service-section-i {
-  margin: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0 20px; /* Responsive padding */ 
-}
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-}
-
-.hero-vcontent {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-text-align: center;
-z-index: 1;
-}
-
-.hero-vcontent h1 {
-font-size: 2rem;
-margin: 0;
-}
-
-.hero-vcontent p {
-font-size: 1rem;
-}
-
-.hero-content{
-  background-color: #ffffff;
-  margin: 30px;
-  border-radius: 8px;
-
-}
-.service-section-i .hero-content h1{
-  color: #003366;
-  font-size: 25px; 
-  padding-bottom: 5px;
-  text-align: center;
-}
-.service-section-i .hero-content p{
-  font-size: 20px; 
-}
-.service-section-i .hero-content li strong{
-  color: #003366;
-}
-
-.service-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.service-item {
-  max-width: 30%; /* Ensures items don't become too wide */
-  padding: 30px;
-  margin: 10px 10px 10px 10px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: inherit;
-}
-
-.service-item h3 {
-  color: #003366;
-  margin-top: 0;
-  padding-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.service-item p {
-  color: #666;
-  font-size: 1em;
-  line-height: 1.5;
-  text-align: justify; 
-}
-
-.services-section {
-  margin: 50px ;
-  background-color: #fff;
-  border-radius: 15px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #333;
-}
-
-/* Styling for the service cards */
-.links-pelayanan {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.link-pelayanan {
-  border-radius: 100%;
-  overflow: hidden;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none; /* Remove underline from text */
-}
-
-.link-pelayanan:hover {
-  transform: scale(1.15);
-}
-
-.link-pelayanan img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover; /* Ensure the image covers the container */
-}
-
-.link-pelayanan h3 {
-  margin: 1rem 0;
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-  flex-shrink: 0; /* Prevent text from shrinking */
-}
-
-/* Flexbox container for positioning */
-.link-pelayanan .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-/* Ensure links are clickable and styled */
-.link-pelayanan a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-.tabel-layanan {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  margin-bottom: 50px;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Layanan Notaris dan PPAT terdekat di Garut. Havis Akbar, SH., M.Kn., M.M menyediakan layanan profesional untuk kebutuhan hukum dan pertanahan Anda.">
+  <title>Notaris Terdekat di Garut - Havis Akbar | Layanan Notaris & PPAT Profesional</title>
   
-}
-.dropdown-content {
-  display: none;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  position: absolute;
-  right: 0; 
-  z-index: 1;
-  width: 100%;
-}
-
-.dropdown-content.show {
-  display: block;
-}
-.item {
-  position: relative; /* Ensure dropdowns are positioned correctly */
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  transition: background-color 0.3s;
-  /* dropdown */
-  cursor: Default;
-  padding: 10px;
-}
-.item p{
-  color: #07bd07;
-  text-align: center;
-  padding-top: 15px;
-}
-
-.judul-layanan {
-  color: #07bd07;
-  text-align: center;
-  padding-top: 15px;
-}
-.dropdown-content li {
-  margin-left: 20px;
-  text-align: left;
-  list-style-type:none
-}
-
-.item:hover {
-  background-color: #ced3e8;
-}
-
-
-/* Team Section */
-.team {
-  background-color: #46527a;
-  color: white;
-  padding: 60px 5%;
-  margin: 10px 0 0 0;
-  text-align: center;
-}
-
-.team h2 {
-  font-size: 22px;
-}
-
-.team-members {
-  display: flex;
-  justify-content: space-between;
-}
-
-.team-member {
-  width: 100%;
-  background-color: #2e3a59;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 20px;
-  overflow: hidden;
-}
-
-
-.team-member img {
-  object-fit: cover;
-  max-height: 180px;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-
-}
-
-.team-member h3 {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.team-member p {
-  font-size: 16px;
-  color: #ddd;
-}
-
-/* Contact Form Section */
-.contact-form {
-  padding: 60px 5%;
-}
-
-.linkdansocmed {
-  padding: 20px 5%;
-  font-size: 15px;
-}
-.linkdansocmed h2{
-  font-size: 16px;
-}
-
-.contact-form h2 {
-  text-align: center;
-  font-size: 1vw;
-  color: #2e3a59;
-}
-
-.contact-form form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-form label {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #666;
-  display: block;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #f57c00;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #d86900;
-}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16693384210"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16693384210');
+</script>
   
-  /* Footer Section */
-.profile-footer {
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  text-decoration: none;
-}
-
-.profile-footer h2 {
-    font-size: 1.5em;
-    color: #333;
-    text-decoration: none;
-}
-
-.footer p a {
-  font-size: 1em;
-  color: #fff;
-  margin: 5px 0;
-  text-decoration: none;
-}
-
-.footer {
-  background-color: #0f1620;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  text-decoration: none;
-}
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png">
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
   
-
-/* profil.html */
-.company-profile {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-.profile-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo {
-  max-width: 30%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.profile-header h1 {
-  font-size: 2em;
-  color: #333;
-}
-
-.profile-header img {
-  max-width: 450px;
-  width: 100%;
-}
-.profile-body {
-  margin-bottom: 20px;
-}
-
-.profile-body p {
-  font-size: 1.2em;
-  color: #666;
-  line-height: 1.6;
-}
-
-.profile-body h1 {
-  font-size: 1.5vw;
-}
-
-.profile-footer {
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
-
-.profile-footer h2 {
-  font-size: 1.5em;
-  color: #333;
-}
-
-.profile-footer p a {
-  font-size: 1em;
-  color: #666;
-  margin: 5px 0;
-  text-decoration: none;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  background-color: transparent;
-  color: #ff7300;
-  border: none;
-  font-size: 2em;
-  padding: 9px ;
-  cursor: pointer;
-  display: none; /* Initially hidden */
-  z-index: 1000;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #07bd07;
-  border-radius: 100%;
-  color: white;
-  border: none;
-  font-size: 1em;
-  padding: 15px 15px;
-  cursor: pointer;
-  z-index: 1000;
-}
-.socmed {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  color: white;
-  border: none;
-  padding: 15px 15px;
-  cursor: pointer;
-  z-index: 1000;
-  font-size: 1em;
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-}
-
-.fa-instagram {
-  bottom: 80px;
-background-color: #e22d69;
-
-}
-.fa-x {
-bottom: 140px;
-background-color: #000;
-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.fa-facebook-f {
-bottom: 20px;
-background-color: #4267B2;
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  background-color: #fff;
-  width: 100%;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.tablepress {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-}
-
-/* Table header styling */
-.tablepress thead th {
-  background-color: #f2f2f2;
-  text-align: left;
-  padding: 8px;
-  border-bottom: 2px solid #ddd;
-}
-
-/* Table cell styling */
-.tablepress td, .tablepress th {
-  padding: 8px;
-  vertical-align: top;
-}
-
-/* Alternating row colors */
-.tablepress tbody tr.odd {
-  background-color: #f9f9f9;
-}
-
-.tablepress tbody tr.even {
-  background-color: #ffffff;
-}
-
-/* Responsive table */
-.tablepress-responsive {
-  width: 100%;
-  overflow-x: auto;
-}
-
-/* Adjust table width */
-.tablepress-scroll-wrapper {
-  overflow-x: auto;
-}
-
-/* Header row */
-.tablepress thead th.column-2 {
-  width: 40%;
-}
-
-.tablepress thead th.column-3 {
-  width: 10%;
-}
-
-.tablepress thead th.column-4 {
-  width: 50%;
-}
-
-/* Add hover effect for rows */
-.tablepress tbody tr:hover {
-  background-color: #eaeaea;
-}
-
-.search{
-  padding: 0 10px 0 10px;
-  position: fixed;
-  width: 100%;
-  color: #fff;
-  background-color: #1c2331;
-  z-index: 1;
-}
-.search input{
-  height: 10px;
-}
-
-
-.whys-title {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 36px;
-}
-
-.why-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin : 20px;
-}
-
-.why-card {
-  background-color: #0f1b4d;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px;
-  flex: 0 0 calc(25% - 30px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.why-card:hover {
-  transform: translateY(-10px);
-}
-
-.why-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 15px;
-}
-
-.why-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.why-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #c4c9f3;
-}
-
-
-.btn-learn-more:hover {
-  background-color: #b98fff;
-}
-
-@media (max-width: 1500px) {
-  .why-card {
-      flex: 0 0 calc(50% - 30px);
-  }
-}
-
-
-@media (max-width: 900px) {
-.hero {
-  flex-direction: column;
-  text-align: center;
-  height: 78vh;
-  padding-bottom: 300px;
-}
-
-.profile-header h1 {
-  font-size: 2.5vh;
-}
-
-.hero-wbg {
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
-}
-.hero-bg {
-  background-size: 130%;
-}
-
-.hakbar-hide{
-  display: none;
-}
-
-.hakbar-show{
-display: block;
-font-size: 1.6vw;
-margin-bottom: 20px;
-line-height: 1.3;
-white-space: nowrap;
-}
-
-.hero-text {
-  order: 2; 
-  max-width: 100%;
-  margin-bottom: 30px;
-}
-
-.hero-text h1{
-  font-size: 4.5vw;
-}
-.hero-text h2{
-  font-size: 3.6vw;
-}
-
-.hero-text p{
-  font-size: 3vw;
-}
-
-.hero-image {
-  order: 1; /* Place hero image before hero text */
-}
-.hero-image2 img {
-  max-width: 300px;
-  width: 100%;
-}
-.hero-buttons {
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-buttons a {
-  width: 100%;
-  max-width: 300px; /* Limit button width on smaller screens */
-  margin-bottom: 10px; /* Space between buttons in column layout */
-}
-
-.nav-links {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 75px; /* Adjust based on header height */
-  right: 0;
-  background-color: #1c2331;
-  padding: 10px;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
-.menu-button {
-  display: block;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.nav-links a {
-  font-size: 16px; /* Adjust font size for mobile */
-  padding-left: 30px;
-  text-align: left;
-}
-
-.header-logo h3 {
-font-size: 15px;
-}
-
-.services-section {
-  margin: 10px 20px;
-}
-
-.services-section h2{
-  font-size: 25px;
-}
-
-.service-section-i {
-  margin: 1px;
-  flex-direction: column;
-  align-items: center;
-}
-.service-section-i .hero-content h1{
-  font-size: 20px; 
-  line-height: 1.2;
-  padding-bottom: 5px;
-}
-
-.service-section-i .hero-content p,
-.service-section-i .hero-content li{
-  font-size: 16px; 
-}
-
-.hero-content{
-  margin: 30px 0  0 0;
-}
-
-.service-item {
-  max-width: 100%; /* Limit button width on smaller screens */
-  margin: 10px 0 10px 0;
-  padding: 20px;
-}
-
-.service-item h3 {
-  color: #333;
-  margin-top: 0;
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-.team-members {
-  flex-direction: column;
-  align-items: center;
-}
-.team-members h3{
-  font-size: 19px;
-}
-
-.team-member img{
-  max-height: 100%;
-  height: 400px;
-}
-.team h2{
-  font-size: 4vw;
-}
-
-.contact-form h2 {
-  font-size: 4vw;
-}
-
-.team-member {
-  width: 80%;
-  margin-bottom: 30px;
-}
-
-.profile-body h1 {
-  font-size: 18px;
-}
-}
-@media (max-width: 700px) {
-  .why-card {
-      flex: 0 0 calc(90% - 30px);
-  }
-
-  .whys-title {
-      font-size: 28px;
-  }
-}
+</head>
+
+<body>
+  <div id="header"></div>
+  <section class="carousel-hero">
+    <div class="carousel">
+      <div class="carousel-inner">
+
+          <div class="carousel-item">
+            <section class="hero">
+              <div class="hero-text">
+                  <h1>KANTOR NOTARIS & PPAT <span class="hakbar-hide">HAVIS AKBAR SH., M.Kn., M.M</span></h1>
+                  <h1 class="hakbar-show">HAVIS AKBAR SH., M.Kn., M.M</h1>
+                  <h2>"We Properly Understand Your Purpose"</h2>
+              </div>
+              <div class="hero-image">
+                  <img src="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png" alt="Logo Notaris Havis Akbar">
+              </div>
+            </section>
+          </div>
+
+        
+          <div class="carousel-item">
+            <section class="hero-bg2" style="background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-document.jpg?raw=true') no-repeat center center/cover;">
+          </section>
+          </div>
+        
+          <div class="carousel-item">
+            <section class="hero">
+              <video class="hero-video" autoplay muted loop preload="metadata">
+                <source src="https://github.com/mirzajebret/static-cp-notary/raw/main/hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hero-vcontent">
+                  <h1>Notaris & PPAT</h1>
+                  <p>HAVIS AKBAR SH., M.Kn., M.M</p>
+              </div> -->
+          </section>
+          </div>
+
+           <div class="carousel-item">
+            <section class="hero-bg2" style="background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-stamp.jpg?raw=true') no-repeat center center/cover;">
+          </section>
+          </div>
+          
+          <div class="carousel-item">
+            <section class="hero-bg2" style="background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-meeting.jpg?raw=true') no-repeat center center/cover;">
+          </section>
+          </div>
+                  
+      </div>
+      <div class="carousel-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+      </div>
+  </div>
+  </section>
+
+  <section class="service-section-i">
+    <div class="hero-content">
+      <div class="welcome-text" style="padding :50px 50px 0 50px;">
+      <h1>Selamat Datang di Kantor Notaris & PPAT Havis Akbar, S.H., M.Kn., M.M.</h1>
+      <p style="text-align: justify; margin-top: 10px; ">Kami adalah mitra terpercaya Anda dalam layanan kenotariatan dan pertanahan. Dengan pengalaman yang luas dan keahlian dalam hukum, kami berkomitmen untuk memberikan pelayanan terbaik bagi Anda, baik individu, perusahaan, maupun instansi. </p>
+      </div>
+      <h1 style="text-decoration: underline;" > <br><br>Kenapa Memilih Kami ?</h1>
+      <div class="why-container">
+        <div class="why-card">
+            <img src="https://img.icons8.com/?size=100&id=lzUTUOdilGMx&format=png&color=000000" alt="Medal Icon">
+            <h3 class="why-title">Profesional & Berpengalaman</h3>
+            <p class="why-description">Didukung oleh Notaris & PPAT yang memiliki pemahaman memadai tentang hukum kenotariatan dan pertanahan di Indonesia.</p>
+        </div>
+
+        <div class="why-card">
+            <img src="https://img.icons8.com/?size=100&id=FpX85snfRaIT&format=png&color=000000" alt="Legal Icon">
+            <h3 class="why-title">Layanan Terpadu</h3>
+            <p class="why-description">Kami menyediakan berbagai layanan hukum yang komprehensif, mulai dari pembuatan akta otentik, perjanjian jual beli, hingga pengurusan hak atas tanah.</p>
+        </div>
+
+        <div class="why-card">
+            <img src="https://img.icons8.com/?size=100&id=JlFfbMTH8QoL&format=png&color=000000" alt="Clock Icon">
+            <h3 class="why-title">Pelayanan Cepat & Tepat</h3>
+            <p class="why-description">Efisiensi dan ketepatan waktu adalah prioritas kami dalam setiap proses, tanpa mengorbankan kualitas dan keakuratan.</p>
+        </div>
+
+        <div class="why-card">
+            <img src="https://img.icons8.com/?size=100&id=mVNWbD1Xe8fn&format=png&color=000000" alt="Handshake Icon">
+            <h3 class="why-title">Kepercayaan & Transparan</h3>
+            <p class="why-description">Kepercayaan klien adalah aset terbesar kami. Kami bekerja dengan integritas tinggi, memberikan penjelasan yang mudah dipahami, serta menjaga kerahasiaan klien.</p>
+        </div>
+    </div>
+      
+  </div>
+  
+    <a href="jasa_layanan.html#tabel-notaris" class="service-item">
+      <h3>Layanan Notaris</h3>
+     <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/gambar-layanan-notaris.jpg?raw=true" alt="layanan notaris havis akbar">
+      <p class="overlay-text">Kami menyediakan layanan notaris profesional untuk mengesahkan dan menyusun dokumen hukum penting, seperti akta pendirian, perjanjian, dan surat kuasa, memastikan kepastian hukum dan keabsahan dokumen Anda.</p>
+    </a>
+    <a href="jasa_layanan.html#tabel-ppat" class="service-item">
+      <h3>Layanan PPAT</h3>
+      <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/gambar-layanan-ppat.jpg?raw=true" alt="layanan ppat havis akbar">
+      <p class="overlay-text">Layanan PPAT kami meliputi pembuatan dan pengesahan akta transaksi tanah dan properti, seperti jual beli, hibah, dan peralihan hak. Kami memastikan bahwa transaksi properti Anda sah dan sesuai dengan peraturan yang berlaku.</p>
+    </a>
+    <a href="jasa_layanan.html#tabel-lainnya" class="service-item">
+      <h3>Layanan Lainnya</h3>
+      <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/gambar-layanan-lainnya.jpg?raw=true" alt="layanan havis akbar lainnya">
+      <p class="overlay-text">Kami juga menawarkan berbagai layanan hukum lainnya, termasuk konsultasi hukum, pembuatan kontrak, dan legalisasi dokumen, untuk membantu Anda menyelesaikan berbagai kebutuhan hukum secara profesional dan efisien.</p>
+    </a>
+</section>
+
+
+  <section class="team" id="tim">
+    <div class="container">
+      <h2 style="color:#fff; text-decoration: underline;">Tim Kami :</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/anggota-1.jpg?raw=true" alt="Foto Havis Akbar">
+          <h3>Havis Akbar</h3>
+          <p>Notaris & PPAT</p>
+        </div>
+        <div class="team-member">
+          <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/anggota-2.jpg?raw=true" alt="Foto Mirza Alby Assidiqie">
+          <h3>Mirza Alby Assidiqie</h3>
+          <p>IT Officer</p>
+        </div>
+         <div class="team-member">
+          <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/anggota-3.jpg?raw=true" alt="Foto Andi Guntara">
+          <h3>Andi Kuntoro</h3>
+          <p>External Relation</p>
+        </div>
+         <div class="team-member">
+          <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/anggota-4.jpg?raw=true" alt="Foto Yuni Cyntia">
+          <h3>Cyntia Yuni</h3>
+          <p>Staff Admin</p>
+        </div>
+         <div class="team-member">
+          <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/anggota-5.jpg?raw=true" alt="Foto Kartini Dini">
+          <h3>Kartini Dini</h3>
+          <p>Staff Admin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service">
+    <div class="linkdansocmed container">
+      <h2>Links :</h2>
+      <div class="links-pelayanan">
+        <a href="https://www.atrbpn.go.id/" class="link-pelayanan" target="_blank">
+          <div class="content">
+            <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/link-bpn.jpg?raw=true" alt="Kementrian ATRPBN">
+          </div>
+        </a>
+
+        <a href="https://oss.go.id/" class="link-pelayanan" target="_blank">
+          <div class="content">
+            <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/link-oss.jpg?raw=true" alt="OSS">
+          </div>
+        </a>
+
+        <a href="https://www.kemenkumham.go.id/" class="link-pelayanan" target="_blank">
+          <div class="content">
+            <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/link-kemkumham.jpg?raw=true" alt="Kemenkumham">
+          </div>
+        </a>
+
+        <a href="https://ppippat.org/wp/" class="link-pelayanan" target="_blank">
+          <div class="content">
+            <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/link-ppat.jpg?raw=true" alt="PPAT">
+          </div>
+        </a>
+
+        <a href="https://ini.id/" class="link-pelayanan" target="_blank">
+          <div class="content">
+            <img src="https://github.com/mirzajebret/static-cp-notary/blob/main/link-ini.jpg?raw=true" alt="Notaris">
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <section class="linkdansocmed">
+      <h2>Social Media :</h2>
+    <section class="links-pelayanan">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <a href="https://www.instagram.com/notarisppathavis/" style="font-size:24px"><i class="fab fa-instagram socmed"></i></a>
+      <a href="https://x.com/NPPATHavisAkbar"  style="font-size:24px;  text-decoration: none;" ><i class="faX fa-x socmed"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61565947491518" style="font-size:24px ;"><i class="fab fa-facebook-f socmed"></i></a>
+    </section>
+  </section>
+  </section>
+  
+  <section class="contact-form container" id="contact-form">
+    <h2>Hubungi Kami :</h2>
+    <form action="https://formspree.io/f/mvgpywge" method="POST">
+      <label for="name">Nama Lengkap</label>
+      <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+  
+      <label for="email">Alamat Email</label>
+      <input type="email" id="email" name="email" placeholder="Alamat Email" required>
+  
+      <label for="phone">Nomor Telepon</label>
+      <input type="tel" id="phone" name="phone" placeholder="Nomor Telepon" required>
+  
+      <label for="message">Pesan Anda</label>
+      <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+  
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+  <button id="back-to-top" class="back-to-top">▲</button>
+  <div id="footer"></div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html> 
