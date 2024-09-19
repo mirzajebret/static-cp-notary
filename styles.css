@@ -851,7 +851,7 @@ background-color: #4267B2;
   background-color: #b98fff;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   .why-card {
       flex: 0 0 calc(50% - 30px);
   }
