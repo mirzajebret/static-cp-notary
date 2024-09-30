@@ -210,7 +210,7 @@ function submitRequirements() {
         const message = `Halo Notaris, saya tertarik mengenai Layanan ${selectedService.name}`;
 
         // Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp number (in international format)
-        const whatsappNumber = '+6281321245011';
+        const whatsappNumber = '+6287736688999';
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         // Open WhatsApp
