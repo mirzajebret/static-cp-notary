@@ -1,15 +1,11 @@
-
-
-
-
 main {
-    padding: 80px;
+    padding:  0 400px 0 400px;
     margin: 20px 0 500px;
 }
 
 
 .order{
-   
+    text-align:center;    
 }
 
 label {
@@ -21,7 +17,7 @@ select, input {
     padding: 15px;
     margin-bottom: 15px;
     width: 100%;
-    max-width: 1000px;
+    
 }
 
 button {
@@ -67,12 +63,17 @@ button:hover {
 #requirements-list li {
     margin-bottom: 5px; /* Spasi antar item */
 }
-
+@media (max-width: 1500px) {
+main {
+    padding:  0 100px 0 100px;
+    margin: 20px 0 500px 0;
+    }
+}
 
 @media (max-width: 900px) {
 main {
     padding: 20px;
-    margin: 20px 0 500px;
+    margin: 20px 0 500px 0;
     }
     main h1{
         font-size: 1.3em;
