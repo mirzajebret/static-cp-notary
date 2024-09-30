@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pricing-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:160px;
+}
+.pricing-table thead{
+    background: linear-gradient(to right, #1c2331, #003366);
+}
+.pricing-table thead th {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.pricing-table tbody td {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background-color: #f8f9fd;
+}
+
+.pricing-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+.pricing-table tbody td img {
+    width: 20px;
+    height: 20px;
+}
+
+.pricing-table .order-btn {
+    background: linear-gradient(to right, #1c2331, #003366);            
+    color: white;
+    text-align: center;
+    padding: 10px 20px  10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px auto;
+}
+
+.pricing-table .order-btn:hover {
+    background-color: #1a3e72;
+}
+
+
+
+@media (max-width: 900px) {
+.order-card {
+    padding: 5px 5px 0 5px ;
+    }
+
+.order-card .pricing-table th{
+    font-size: 13px;
+}
+.order-card .pricing-table td{
+    font-size: 13px;
+}
+.order-card .pricing-table a{
+    font-size: 13px;
+}
+.table-content{
+    font-size: 5px;
+}
+}
