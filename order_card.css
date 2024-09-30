@@ -10,7 +10,6 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom:160px;
 }
 .pricing-table thead{
     background: linear-gradient(to right, #1c2331, #003366);
@@ -61,6 +60,12 @@ body {
     background-color: #1a3e72;
 }
 
+.misc{
+
+    text-align: center;
+    margin-bottom:160px;
+
+}
 
 
 @media (max-width: 900px) {
