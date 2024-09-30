@@ -207,7 +207,7 @@ function submitRequirements() {
 
     if (selectedService) {
         const requirements = selectedService.requirements.join(', ');
-        const message = `Layanan: ${selectedService.name}\n\nPersyaratan:\n${requirements}\n\nPermohonan telah dikirim!`;
+        const message = `Halo Notaris, saya tertarik mengenai Layanan: ${selectedService.name}`;
 
         // Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp number (in international format)
         const whatsappNumber = '+6281321245011';
