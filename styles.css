@@ -304,6 +304,11 @@ font-size: 1rem;
   background-color: #ffffff;
   text-decoration: none;
   color: inherit;
+  transition: filter 0.2s;
+}
+
+.service-item:hover {
+  filter: brightness(0.9); /* Darken effect */
 }
 
 .service-item h3 {
