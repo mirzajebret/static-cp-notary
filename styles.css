@@ -171,19 +171,8 @@ background: #717171;
   height: 100%;
   position: relative; 
   /* background: linear-gradient(to right, #1c2331, #003366); */
-  background: linear-gradient(to right, rgba(0, 30, 59, 0.9), rgba(0, 20, 59, 0.4) 100%), 
-  url('https://i.ibb.co.com/YD7RktH/6-collage-bg.png') no-repeat center center/cover;
-}
-.hero-bg {
-  background: url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-carousel-4.jpeg?raw=true') no-repeat center center;
-  background-size: 50%; /* Default background size */
-  height: 100%; /* Ensure the section takes up the full height of the parent */
-  background-attachment: fixed; /* Optional: Fix the background during scrolling */
-}
-.hero-bg2 {
-  background-size: 150%; /* Default background size */
-  height: 100%; /* Ensure the section takes up the full height of the parent */
-  background-attachment: fixed; /* Optional: Fix the background during scrolling */
+  background: linear-gradient(to right, rgba(194, 207, 255, 0.8), rgba(92, 127, 255, 0.8) 100%), 
+  url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-stamp.jpg?raw=true') no-repeat center center/cover;
 }
 
 .hero-text {
@@ -971,11 +960,10 @@ white-space: nowrap;
   order: 1; 
 }
 #slide4-update h1{
-  padding-top: 70px;
-  font-size: 30px;
+  font-size: 35px;
 }
 #slide4-update p{
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* END OF UPDATE */
