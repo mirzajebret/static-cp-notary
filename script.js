@@ -68,7 +68,7 @@ function searchServices() {
     
             // Adjust header size based on scroll position
             const header = document.getElementById('header');
-            if (window.scrollY > 50) { // Adjust the threshold as needed
+            if (window.scrollY > 250) { // Adjust the threshold as needed
                 header.classList.add('shrink');
             } else {
                 header.classList.remove('shrink');
