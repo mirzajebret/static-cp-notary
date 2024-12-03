@@ -163,14 +163,13 @@ background: #717171;
   overflow: hidden;
 }
 .hero-wbg {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8% 5% 8% ;
   color: white;
-  height: 100%;
-  position: relative; 
-  /* background: linear-gradient(to right, #1c2331, #003366); */
+  height: 88vh;
   background: linear-gradient(to right, rgba(194, 207, 255, 0.8), rgba(92, 127, 255, 0.8) 100%), 
   url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-stamp.jpg?raw=true') no-repeat center center/cover;
 }
@@ -935,7 +934,6 @@ white-space: nowrap;
 .hero-text {
   order: 2; 
   max-width: 100%;
-  margin-bottom: 30px;
 }
 
 .hero-text h1{
@@ -956,7 +954,6 @@ white-space: nowrap;
 /* UPDATE */
 
 .hero-image-update {
-  padding-top: 50px;
   order: 1; 
 }
 #slide4-update h1{
