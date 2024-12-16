@@ -162,23 +162,19 @@ background: #717171;
   height: 88vh;
   overflow: hidden;
 }
-.hero-wbg {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8% 5% 8% ;
-  color: white;
-  height: 88vh;
-  background: linear-gradient(to right, rgba(5, 39, 78, 0.8), rgba(92, 127, 255, 0.8) 100%), 
-  url('https://github.com/mirzajebret/static-cp-notary/blob/main/hero-stamp.jpg?raw=true') no-repeat center center/cover;
-}
 
 .hero-text {
   max-width: 50%;
 }
 
 .hero-text h1 {
+  font-size: 1.6vw;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.hero-text-not h1 {
+  max-width: 50%;
   font-size: 1.6vw;
   margin-bottom: 20px;
   line-height: 1.3;
@@ -196,7 +192,7 @@ background: #717171;
 
 /* UPDATE */
 #slide4-update h1{
-  font-size: 60px;
+  font-size: 1.6vw;
   white-space: wrap;
 }
 #slide4-update p{
@@ -222,6 +218,7 @@ background: #717171;
 .hero-text p {
   font-size: 18px;
   margin-bottom: 30px;
+  display: block;
 }
 
 .hero-image img {
@@ -584,6 +581,9 @@ h2 {
 .contact-form button:hover {
   background-color: #d86900;
 }
+.hero-image p{
+  display: none;
+}
   
   /* Footer Section */
 .profile-footer {
@@ -936,6 +936,11 @@ white-space: nowrap;
   max-width: 100%;
 }
 
+.hero-text-not {
+  order: 1; 
+  max-width: 100%;
+}
+
 .hero-text h1{
   font-size: 4.5vw;
 }
@@ -943,8 +948,17 @@ white-space: nowrap;
   font-size: 3.6vw;
 }
 
-.hero-text p{
+.hero-text-not h1{
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+.hero-image p{
+  padding-top: 20px;
+  display: block;
+}
+.hero-text-not p{
   font-size: 3vw;
+  display: none;
 }
 
 .hero-image {
