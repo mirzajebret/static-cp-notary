@@ -68,11 +68,22 @@ function searchServices() {
     
             // Adjust header size based on scroll position
             const header = document.getElementById('header');
-            if (window.scrollY > 250) { // Adjust the threshold as needed
-                header.classList.add('shrink');
-            } else {
-                header.classList.remove('shrink');
+            let lastScrollY = 0;
+            let debounceTimeout;
+
+            function handleScroll() {
+                clearTimeout(debounceTimeout);
+                debounceTimeout = setTimeout(() => {
+                    if (window.scrollY > 200 && lastScrollY <= 200) {
+                        header.classList.add('shrink');
+                    } else if (window.scrollY <= 200 && lastScrollY > 200) {
+                        header.classList.remove('shrink');
+                    }
+                    lastScrollY = window.scrollY;
+                }, 100); // Adjust debounce delay as needed
             }
+
+            window.addEventListener('scroll', handleScroll);
         });
     
         // Smooth scroll to the top when the button is clicked
