@@ -443,9 +443,7 @@ h2 {
   list-style-type:none
 }
 
-.item:hover {
-  background-color: #ced3e8;
-}
+
 
 .highlight:hover {
   background-color: #f9f9c5;
