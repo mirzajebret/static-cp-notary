@@ -8,533 +8,473 @@
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 font-sans">
   <div id="header"></div>
-  <div class="search">
-    <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Cari layanan...">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="search mb-6">
+      <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Cari layanan..." 
+             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+    </div>
+
+    <!-- JASA NOTARIS  -->
+    <section class="services-section mb-12 pt-14">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa Notaris</h2>
+      <div class="judul-layanan"></div>
+      
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-notaris">
+        <!-- Waarmerking/Register -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Waarmerking/Register</h3>
+          </div>
+          <div id="waarmarking" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Waarmerking atau Register adalah proses notaris untuk mengesahkan dan mencatat dokumen tertentu agar memiliki kekuatan hukum. Biasanya, dokumen yang didaftarkan termasuk surat pernyataan atau akta yang memerlukan pengesahan.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Legalisasi -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="legalisasi" onclick="toggleDropdown('legalisasi')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Legalisasi</h3>
+          </div>
+          <div id="legalisasi" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Legalisasi adalah proses pengesahan tanda tangan di hadapan notaris untuk dokumen yang dibuat di bawah tangan. Ini memberikan dokumen tersebut kekuatan hukum yang sah.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Perjanjian Kredit -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perjanjianKredit" onclick="toggleDropdown('perjanjianKredit')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kredit</h3>
+          </div>
+          <div id="perjanjianKredit" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Perjanjian Kredit adalah dokumen yang mengatur ketentuan pinjaman antara bank dan peminjam. Ada perbedaan antara perjanjian kredit di bawah tangan dan yang dibuat sebagai akta notaris.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Pembuatan Akta Kuasa -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaKuasa" onclick="toggleDropdown('aktaKuasa')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pembuatan Akta Kuasa</h3>
+          </div>
+          <div id="aktaKuasa" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Kuasa adalah dokumen yang memberikan wewenang kepada seseorang untuk bertindak atas nama orang lain dalam urusan hukum atau administratif. Ini termasuk pembuatan surat kuasa yang sah secara hukum.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Surat Kuasa Antar Para Pihak -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="suratKuasa" onclick="toggleDropdown('suratKuasa')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Surat Kuasa Antar Para Pihak</h3>
+          </div>
+          <div id="suratKuasa" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Surat Kuasa Antar Para Pihak memberikan hak kepada seseorang untuk mewakili pihak lain dalam urusan tertentu. Dokumen ini penting untuk keperluan hukum dan administratif.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Perjanjian Akta Perikatan -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perjanjianAkta" onclick="toggleDropdown('perjanjianAkta')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Akta Perikatan</h3>
+          </div>
+          <div id="perjanjianAkta" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Perjanjian Akta Perikatan adalah dokumen yang mencakup kesepakatan dan kewajiban antara pihak-pihak dalam suatu perikatan. Ini mencakup kesepakatan, kecakapan, pokok persoalan, dan sebab yang sah.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Perjanjian Kerjasama Antar Perusahaan -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="kerjasamaPerusahaan" onclick="toggleDropdown('kerjasamaPerusahaan')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kerjasama Antar Perusahaan</h3>
+          </div>
+          <div id="kerjasamaPerusahaan" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Perjanjian Kerjasama Antar Perusahaan adalah dokumen yang mengatur syarat dan ketentuan kerjasama antara perusahaan. Ini mencakup kesepakatan dan ketentuan hukum terkait kerjasama.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Akta PT Umum -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPT" onclick="toggleDropdown('pendirianPT')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Umum</h3>
+          </div>
+          <div id="pendirianPT" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Perusahaan Terbuka diperlukan untuk pendirian perusahaan yang terdaftar secara resmi dengan saham yang dapat diperdagangkan di publik. Ini melibatkan berbagai dokumen dan informasi terkait pendiri dan struktur perusahaan.</li>
+            <button onclick="window.location.href='order_pt.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Akta PT Perorangan -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPTPERO" onclick="toggleDropdown('pendirianPTPERO')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Perorangan</h3>
+          </div>
+          <div id="pendirianPTPERO" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Perseroan Perorangan (PT Perorangan) adalah bentuk badan hukum yang bisa didirikan oleh hanya 1 (satu) orang tanpa besaran modal minimal dan memenuhi kriteria Usaha Mikro Kecil Menengah (UMKM).</li>
+            <button onclick="window.location.href='order_pt_pero.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Pendirian PT PMA -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPTPMA" onclick="toggleDropdown('pendirianPTPMA')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pendirian PT PMA (Penanaman Modal Asing)</h3>
+          </div>
+          <div id="pendirianPTPMA" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pendirian PT PMA adalah proses untuk mendirikan perusahaan dengan penanaman modal asing. Dokumen ini mencakup identitas pemegang saham dan struktur perusahaan sesuai ketentuan hukum.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Pendirian Yayasan -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianYayasan" onclick="toggleDropdown('pendirianYayasan')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Yayasan</h3>
+          </div>
+          <div id="pendirianYayasan" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pendirian Yayasan memerlukan dokumen untuk mendirikan organisasi non-profit. Ini termasuk pilihan nama, identitas pendiri, alamat, dan informasi kekayaan yayasan.</li>
+            <button onclick="window.location.href='order_yayasan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Pendirian CV -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianCV" onclick="toggleDropdown('pendirianCV')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian CV</h3>
+          </div>
+          <div id="pendirianCV" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pendirian CV adalah proses mendirikan commanditaire vennootschap (CV), bentuk perusahaan yang melibatkan dokumen identitas pendiri, alamat kantor, dan struktur modal serta saham.</li>
+            <button onclick="window.location.href='order_cv.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Pendirian Firma -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianFirma" onclick="toggleDropdown('pendirianFirma')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Firma</h3>
+          </div>
+          <div id="pendirianFirma" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pendirian Firma adalah sebuah bentuk persekutuan antara dua perusahaan atau lebih untuk menjalankan usaha dengan memakai nama bersama.</li>
+            <button onclick="window.location.href='order_firma.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Akta Koperasi -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaKoperasi" onclick="toggleDropdown('aktaKoperasi')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Koperasi</h3>
+          </div>
+          <div id="aktaKoperasi" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Koperasi adalah dokumen yang mengatur pendirian koperasi, termasuk nama pendiri, tujuan, keanggotaan, dan ketentuan lainnya.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Akta Perkumpulan -->
+        <div class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaPerkumpulan" onclick="toggleDropdown('aktaPerkumpulan')">
+          <div class="p-5 border-b border-blue-200 relative">
+            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
+            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta Perkumpulan</h3>
+          </div>
+          <div id="aktaPerkumpulan" class="dropdown-content hidden p-5 bg-blue-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Perkumpulan adalah dokumen pendirian perkumpulan yang mencakup anggota, program kerja, dan dokumen pendukung seperti NPWP dan surat pernyataan.</li>
+            <button onclick="window.location.href='order_perkumpulan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
+          </div>
+        </div>
+        
+        <!-- Akta Perjanjian Sewa Menyewa -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaSewa" onclick="toggleDropdown('aktaSewa')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Perjanjian Sewa Menyewa</h3>
+          </div>
+          <div id="aktaSewa" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Perjanjian Sewa Menyewa adalah dokumen hukum yang mencatat perjanjian sewa antara pihak-pihak terkait. Dokumen ini penting untuk memastikan hak dan kewajiban dalam perjanjian sewa.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Akta Jaminan Fidusia -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaFidusia" onclick="toggleDropdown('aktaFidusia')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Jaminan Fidusia</h3>
+          </div>
+          <div id="aktaFidusia" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Akta Jaminan Fidusia adalah dokumen yang mengatur pengalihan hak kepemilikan suatu benda sebagai jaminan utang, meskipun hak kepemilikan masih dipegang oleh pemilik benda tersebut.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+        
+        <!-- Akta Notaris Lainnya -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktanlainnya" onclick="toggleDropdown('aktanlainnya')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Notaris Lainnya</h3>
+          </div>
+          <div id="aktanlainnya" class="dropdown-content hidden p-5 bg-gray-50">
+            <p class="text-gray-700">Untuk informasi tentang akta Notaris lainnya, hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JASA PPAT -->
+    <section class="services-section mb-12" id="ppat">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa PPAT</h2>
+      
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-ppat">
+        <!-- Akta Jual Beli -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaJualBeli" onclick="toggleDropdown('aktaJualBeli')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Jual Beli</h3>
+          </div>
+          <div id="aktaJualBeli" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan akta jual beli untuk transaksi tanah atau properti, yang mencakup pembuatan dokumen resmi yang mengesahkan perubahan kepemilikan.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- Akta Hibah -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaHibah" onclick="toggleDropdown('aktaHibah')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Hibah</h3>
+          </div>
+          <div id="aktaHibah" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan akta hibah untuk mentransfer hak atas tanah atau properti sebagai hadiah, yang secara sah mencatat pemberian tersebut.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- Akta Waris -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaWaris" onclick="toggleDropdown('aktaWaris')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Waris</h3>
+          </div>
+          <div id="aktaWaris" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan akta waris untuk mendokumentasikan pembagian hak atas tanah atau properti di antara ahli waris sesuai dengan hukum waris.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- SKMHT -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="skmht" onclick="toggleDropdown('skmht')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">SKMHT</h3>
+          </div>
+          <div id="skmht" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan Surat Kuasa Membebankan Hak Tanggungan (SKMHT) yang mengizinkan pembebanan hak tanggungan atas tanah atau properti sebagai jaminan utang.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- APHT -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="apht" onclick="toggleDropdown('apht')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">APHT</h3>
+          </div>
+          <div id="apht" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan Akta Pemberian Hak Tanggungan (APHT) yang menetapkan hak tanggungan atas tanah atau properti sebagai jaminan utang dan hak kreditur atas objek tersebut.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- Akta Pembagian Hak Bersama -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="hakBersama" onclick="toggleDropdown('hakBersama')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Pembagian Hak Bersama</h3>
+          </div>
+          <div id="hakBersama" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan akta pembagian hak bersama untuk mencatat pembagian kepemilikan tanah atau properti antara beberapa pihak yang memiliki hak bersama.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- Akta Tukar - Menukar -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="tukarMenukar" onclick="toggleDropdown('tukarMenukar')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta Tukar - Menukar</h3>
+          </div>
+          <div id="tukarMenukar" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses pembuatan akta tukar-menukar untuk mendokumentasikan pertukaran tanah atau properti antara dua pihak secara sah.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+
+        <!-- Akta PPAT Lainnya -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktalainnya" onclick="toggleDropdown('aktalainnya')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Akta PPAT Lainnya</h3>
+          </div>
+          <div id="aktalainnya" class="dropdown-content hidden p-5 bg-gray-50">
+            <p class="text-gray-700">Untuk informasi tentang akta PPAT lainnya yang mungkin Anda butuhkan, hubungi kami melalui WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JASA LAINNYA  -->
+    <section class="services-section mb-12" id="lainnya">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa Lainnya</h2>
+      
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-lainnya">
+        <!-- Pengecekan Sertifikat -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pengecekanSertifikat" onclick="toggleDropdown('pengecekanSertifikat')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pengecekan Sertifikat</h3>
+          </div>
+          <div id="pengecekanSertifikat" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Memverifikasi keaslian sertifikat tanah atau properti. Pastikan sertifikat sah dan tidak dipalsukan.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Roya -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="roya" onclick="toggleDropdown('roya')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Roya</h3>
+          </div>
+          <div id="roya" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Penghapusan hak tanggungan dari sertifikat tanah. Diperlukan untuk memastikan sertifikat bebas dari klaim pihak ketiga.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Balik Nama Sertifikat -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="balikNama" onclick="toggleDropdown('balikNama')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Balik Nama Sertifikat</h3>
+          </div>
+          <div id="balikNama" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Proses mengubah nama pemilik di sertifikat tanah setelah transaksi.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pemecahan Sertifikat -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pemecahanSertifikat" onclick="toggleDropdown('pemecahanSertifikat')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pemecahan Sertifikat</h3>
+          </div>
+          <div id="pemecahanSertifikat" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Membagi sertifikat tanah menjadi beberapa sertifikat baru. Ideal untuk pembagian atau penjualan sebagian tanah.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Perpanjangan Sertifikat -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perpanjanganSertifikat" onclick="toggleDropdown('perpanjanganSertifikat')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Perpanjangan Sertifikat</h3>
+          </div>
+          <div id="perpanjanganSertifikat" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Memperpanjang masa berlaku sertifikat dengan pembaruan dokumen.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pembuatan Perijinan Perusahaan -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perijinanPerusahaan" onclick="toggleDropdown('perijinanPerusahaan')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pembuatan Perijinan Perusahaan</h3>
+          </div>
+          <div id="perijinanPerusahaan" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pengurusan izin untuk mendirikan dan menjalankan perusahaan, termasuk izin usaha dan NPWP.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Penggantian Sertifikat Hilang -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="penggantianSertifikatHilang" onclick="toggleDropdown('penggantianSertifikatHilang')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Penggantian Sertifikat Hilang</h3>
+          </div>
+          <div id="penggantianSertifikatHilang" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Penggantian sertifikat yang hilang atau rusak dengan proses verifikasi dan penerbitan sertifikat pengganti.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pensertifikatan Tanah Adat -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pensertifikatanTanahAdat" onclick="toggleDropdown('pensertifikatanTanahAdat')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Adat</h3>
+          </div>
+          <div id="pensertifikatanTanahAdat" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Sertifikasi tanah yang diakui secara adat untuk memberikan status hukum resmi.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pensertifikatan Tanah Negara -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pensertifikatanTanahNegara" onclick="toggleDropdown('pensertifikatanTanahNegara')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Negara</h3>
+          </div>
+          <div id="pensertifikatanTanahNegara" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Sertifikasi untuk tanah negara agar memiliki status hukum yang sah.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pengurusan Perpajakan -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pengurusanPerpajakan" onclick="toggleDropdown('pengurusanPerpajakan')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perpajakan</h3>
+          </div>
+          <div id="pengurusanPerpajakan" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Administrasi terkait pajak, termasuk pendaftaran, pelaporan, dan pemenuhan kewajiban perpajakan.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Pengurusan Perijinan Pengadilan Negeri -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perijinanPengadilan" onclick="toggleDropdown('perijinanPengadilan')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perijinan Pengadilan Negeri</h3>
+          </div>
+          <div id="perijinanPengadilan" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Pengurusan izin yang dikeluarkan oleh pengadilan negeri untuk keperluan hukum atau administratif.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+        
+        <!-- Dan Jasa Pengurusan Perijinan Lainnya -->
+        <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="jasaPerijinanLainnya" onclick="toggleDropdown('jasaPerijinanLainnya')">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-800">Dan Jasa Pengurusan Perijinan Lainnya</h3>
+          </div>
+          <div id="jasaPerijinanLainnya" class="dropdown-content hidden p-5 bg-gray-50">
+            <li class="list-disc ml-5 mb-3 text-gray-700">Berbagai layanan tambahan untuk pengurusan perijinan khusus lainnya.</li>
+            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-<!-- JASA NOTARIS  -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-<section class="mb-12 pt-14" id="notaris">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa Notaris</h2>
-    
-    <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-notaris">
-      <!-- Waarmerking/Register -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Waarmerking/Register</h3>
-        </div>
-        <div id="waarmarking" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Waarmerking atau Register adalah proses notaris untuk mengesahkan dan mencatat dokumen tertentu agar memiliki kekuatan hukum. Biasanya, dokumen yang didaftarkan termasuk surat pernyataan atau akta yang memerlukan pengesahan.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Legalisasi -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="legalisasi" onclick="toggleDropdown('legalisasi')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Legalisasi</h3>
-        </div>
-        <div id="legalisasi" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Legalisasi adalah proses pengesahan tanda tangan di hadapan notaris untuk dokumen yang dibuat di bawah tangan. Ini memberikan dokumen tersebut kekuatan hukum yang sah.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Perjanjian Kredit -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perjanjianKredit" onclick="toggleDropdown('perjanjianKredit')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kredit</h3>
-        </div>
-        <div id="perjanjianKredit" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Perjanjian Kredit adalah dokumen yang mengatur ketentuan pinjaman antara bank dan peminjam. Ada perbedaan antara perjanjian kredit di bawah tangan dan yang dibuat sebagai akta notaris.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Pembuatan Akta Kuasa -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaKuasa" onclick="toggleDropdown('aktaKuasa')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pembuatan Akta Kuasa</h3>
-        </div>
-        <div id="aktaKuasa" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Kuasa adalah dokumen yang memberikan wewenang kepada seseorang untuk bertindak atas nama orang lain dalam urusan hukum atau administratif. Ini termasuk pembuatan surat kuasa yang sah secara hukum.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Surat Kuasa Antar Para Pihak -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="suratKuasa" onclick="toggleDropdown('suratKuasa')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Surat Kuasa Antar Para Pihak</h3>
-        </div>
-        <div id="suratKuasa" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Surat Kuasa Antar Para Pihak memberikan hak kepada seseorang untuk mewakili pihak lain dalam urusan tertentu. Dokumen ini penting untuk keperluan hukum dan administratif.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Perjanjian Akta Perikatan -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perjanjianAkta" onclick="toggleDropdown('perjanjianAkta')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Perjanjian Akta Perikatan</h3>
-        </div>
-        <div id="perjanjianAkta" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Perjanjian Akta Perikatan adalah dokumen yang mencakup kesepakatan dan kewajiban antara pihak-pihak dalam suatu perikatan. Ini mencakup kesepakatan, kecakapan, pokok persoalan, dan sebab yang sah.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Perjanjian Kerjasama Antar Perusahaan -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="kerjasamaPerusahaan" onclick="toggleDropdown('kerjasamaPerusahaan')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kerjasama Antar Perusahaan</h3>
-        </div>
-        <div id="kerjasamaPerusahaan" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Perjanjian Kerjasama Antar Perusahaan adalah dokumen yang mengatur syarat dan ketentuan kerjasama antara perusahaan. Ini mencakup kesepakatan dan ketentuan hukum terkait kerjasama.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Akta PT Umum -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPT" onclick="toggleDropdown('pendirianPT')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Umum</h3>
-        </div>
-        <div id="pendirianPT" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Perusahaan Terbuka diperlukan untuk pendirian perusahaan yang terdaftar secara resmi dengan saham yang dapat diperdagangkan di publik. Ini melibatkan berbagai dokumen dan informasi terkait pendiri dan struktur perusahaan.</li>
-          </ul>
-          <button onclick="window.location.href='order_pt.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Akta PT Perorangan -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPTPERO" onclick="toggleDropdown('pendirianPTPERO')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Perorangan</h3>
-        </div>
-        <div id="pendirianPTPERO" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Perseroan Perorangan (PT Perorangan) adalah bentuk badan hukum yang bisa didirikan oleh hanya 1 (satu) orang tanpa besaran modal minimal dan memenuhi kriteria Usaha Mikro Kecil Menengah (UMKM).</li>
-          </ul>
-          <button onclick="window.location.href='order_pt_pero.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Pendirian PT PMA -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianPTPMA" onclick="toggleDropdown('pendirianPTPMA')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pendirian PT PMA (Penanaman Modal Asing)</h3>
-        </div>
-        <div id="pendirianPTPMA" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pendirian PT PMA adalah proses untuk mendirikan perusahaan dengan penanaman modal asing. Dokumen ini mencakup identitas pemegang saham dan struktur perusahaan sesuai ketentuan hukum.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Pendirian Yayasan -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianYayasan" onclick="toggleDropdown('pendirianYayasan')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Yayasan</h3>
-        </div>
-        <div id="pendirianYayasan" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pendirian Yayasan memerlukan dokumen untuk mendirikan organisasi non-profit. Ini termasuk pilihan nama, identitas pendiri, alamat, dan informasi kekayaan yayasan.</li>
-          </ul>
-          <button onclick="window.location.href='order_yayasan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Pendirian CV -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianCV" onclick="toggleDropdown('pendirianCV')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian CV</h3>
-        </div>
-        <div id="pendirianCV" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pendirian CV adalah proses mendirikan commanditaire vennootschap (CV), bentuk perusahaan yang melibatkan dokumen identitas pendiri, alamat kantor, dan struktur modal serta saham.</li>
-          </ul>
-          <button onclick="window.location.href='order_cv.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Pendirian Firma -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pendirianFirma" onclick="toggleDropdown('pendirianFirma')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Firma</h3>
-        </div>
-        <div id="pendirianFirma" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pendirian Firma adalah sebuah bentuk persekutuan antara dua perusahaan atau lebih untuk menjalankan usaha dengan memakai nama bersama.</li>
-          </ul>
-          <button onclick="window.location.href='order_firma.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Akta Koperasi -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaKoperasi" onclick="toggleDropdown('aktaKoperasi')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Koperasi</h3>
-        </div>
-        <div id="aktaKoperasi" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Koperasi adalah dokumen yang mengatur pendirian koperasi, termasuk nama pendiri, tujuan, keanggotaan, dan ketentuan lainnya.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Akta Perkumpulan -->
-      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaPerkumpulan" onclick="toggleDropdown('aktaPerkumpulan')">
-        <div class="p-5 border-b border-blue-200 relative">
-          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡ Order</span>
-          <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta Perkumpulan</h3>
-        </div>
-        <div id="aktaPerkumpulan" class="hidden p-5 bg-blue-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Perkumpulan adalah dokumen pendirian perkumpulan yang mencakup anggota, program kerja, dan dokumen pendukung seperti NPWP dan surat pernyataan.</li>
-          </ul>
-          <button onclick="window.location.href='order_perkumpulan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button>
-        </div>
-      </div>
-      
-      <!-- Akta Perjanjian Sewa Menyewa -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaSewa" onclick="toggleDropdown('aktaSewa')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Perjanjian Sewa Menyewa</h3>
-        </div>
-        <div id="aktaSewa" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Perjanjian Sewa Menyewa adalah dokumen hukum yang mencatat perjanjian sewa antara pihak-pihak terkait. Dokumen ini penting untuk memastikan hak dan kewajiban dalam perjanjian sewa.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Akta Jaminan Fidusia -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaFidusia" onclick="toggleDropdown('aktaFidusia')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Jaminan Fidusia</h3>
-        </div>
-        <div id="aktaFidusia" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Akta Jaminan Fidusia adalah dokumen yang mengatur pengalihan hak kepemilikan suatu benda sebagai jaminan utang, meskipun hak kepemilikan masih dipegang oleh pemilik benda tersebut.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-      
-      <!-- Akta Notaris Lainnya -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktanlainnya" onclick="toggleDropdown('aktanlainnya')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Notaris Lainnya</h3>
-        </div>
-        <div id="aktanlainnya" class="hidden p-5 bg-gray-50">
-          <p class="text-gray-700">Untuk informasi tentang akta Notaris lainnya, hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- JASA PPAT -->
-  <section class="mb-12" id="ppat">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa PPAT</h2>
-    
-    <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-ppat">
-      <!-- Akta Jual Beli -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaJualBeli" onclick="toggleDropdown('aktaJualBeli')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Jual Beli</h3>
-        </div>
-        <div id="aktaJualBeli" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan akta jual beli untuk transaksi tanah atau properti, yang mencakup pembuatan dokumen resmi yang mengesahkan perubahan kepemilikan.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- Akta Hibah -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaHibah" onclick="toggleDropdown('aktaHibah')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Hibah</h3>
-        </div>
-        <div id="aktaHibah" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan akta hibah untuk mentransfer hak atas tanah atau properti sebagai hadiah, yang secara sah mencatat pemberian tersebut.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- Akta Waris -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktaWaris" onclick="toggleDropdown('aktaWaris')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Waris</h3>
-        </div>
-        <div id="aktaWaris" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan akta waris untuk mendokumentasikan pembagian hak atas tanah atau properti di antara ahli waris sesuai dengan hukum waris.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- SKMHT -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="skmht" onclick="toggleDropdown('skmht')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">SKMHT</h3>
-        </div>
-        <div id="skmht" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan Surat Kuasa Membebankan Hak Tanggungan (SKMHT) yang mengizinkan pembebanan hak tanggungan atas tanah atau properti sebagai jaminan utang.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- APHT -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="apht" onclick="toggleDropdown('apht')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">APHT</h3>
-        </div>
-        <div id="apht" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan Akta Pemberian Hak Tanggungan (APHT) yang menetapkan hak tanggungan atas tanah atau properti sebagai jaminan utang dan hak kreditur atas objek tersebut.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- Akta Pembagian Hak Bersama -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="hakBersama" onclick="toggleDropdown('hakBersama')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Pembagian Hak Bersama</h3>
-        </div>
-        <div id="hakBersama" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan akta pembagian hak bersama untuk mencatat pembagian kepemilikan tanah atau properti antara beberapa pihak yang memiliki hak bersama.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- Akta Tukar - Menukar -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="tukarMenukar" onclick="toggleDropdown('tukarMenukar')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta Tukar - Menukar</h3>
-        </div>
-        <div id="tukarMenukar" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses pembuatan akta tukar-menukar untuk mendokumentasikan pertukaran tanah atau properti antara dua pihak secara sah.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-
-      <!-- Akta PPAT Lainnya -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="aktalainnya" onclick="toggleDropdown('aktalainnya')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Akta PPAT Lainnya</h3>
-        </div>
-        <div id="aktalainnya" class="hidden p-5 bg-gray-50">
-          <p class="text-gray-700">Untuk informasi tentang akta PPAT lainnya yang mungkin Anda butuhkan, hubungi kami melalui WhatsApp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- JASA LAINNYA  -->
-  <section class="mb-12" id="lainnya">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Jasa Lainnya</h2>
-    
-    <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-lainnya">
-      <!-- Pengecekan Sertifikat -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pengecekanSertifikat" onclick="toggleDropdown('pengecekanSertifikat')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pengecekan Sertifikat</h3>
-        </div>
-        <div id="pengecekanSertifikat" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Memverifikasi keaslian sertifikat tanah atau properti. Pastikan sertifikat sah dan tidak dipalsukan.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Roya -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="roya" onclick="toggleDropdown('roya')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Roya</h3>
-        </div>
-        <div id="roya" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Penghapusan hak tanggungan dari sertifikat tanah. Diperlukan untuk memastikan sertifikat bebas dari klaim pihak ketiga.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Balik Nama Sertifikat -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="balikNama" onclick="toggleDropdown('balikNama')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Balik Nama Sertifikat</h3>
-        </div>
-        <div id="balikNama" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Proses mengubah nama pemilik di sertifikat tanah setelah transaksi.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pemecahan Sertifikat -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pemecahanSertifikat" onclick="toggleDropdown('pemecahanSertifikat')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pemecahan Sertifikat</h3>
-        </div>
-        <div id="pemecahanSertifikat" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Membagi sertifikat tanah menjadi beberapa sertifikat baru. Ideal untuk pembagian atau penjualan sebagian tanah.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Perpanjangan Sertifikat -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perpanjanganSertifikat" onclick="toggleDropdown('perpanjanganSertifikat')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Perpanjangan Sertifikat</h3>
-        </div>
-        <div id="perpanjanganSertifikat" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Memperpanjang masa berlaku sertifikat dengan pembaruan dokumen.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pembuatan Perijinan Perusahaan -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perijinanPerusahaan" onclick="toggleDropdown('perijinanPerusahaan')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pembuatan Perijinan Perusahaan</h3>
-        </div>
-        <div id="perijinanPerusahaan" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pengurusan izin untuk mendirikan dan menjalankan perusahaan, termasuk izin usaha dan NPWP.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Penggantian Sertifikat Hilang -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="penggantianSertifikatHilang" onclick="toggleDropdown('penggantianSertifikatHilang')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Penggantian Sertifikat Hilang</h3>
-        </div>
-        <div id="penggantianSertifikatHilang" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Penggantian sertifikat yang hilang atau rusak dengan proses verifikasi dan penerbitan sertifikat pengganti.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pensertifikatan Tanah Adat -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pensertifikatanTanahAdat" onclick="toggleDropdown('pensertifikatanTanahAdat')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Adat</h3>
-        </div>
-        <div id="pensertifikatanTanahAdat" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Sertifikasi tanah yang diakui secara adat untuk memberikan status hukum resmi.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pensertifikatan Tanah Negara -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pensertifikatanTanahNegara" onclick="toggleDropdown('pensertifikatanTanahNegara')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Negara</h3>
-        </div>
-        <div id="pensertifikatanTanahNegara" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Sertifikasi untuk tanah negara agar memiliki status hukum yang sah.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pengurusan Perpajakan -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="pengurusanPerpajakan" onclick="toggleDropdown('pengurusanPerpajakan')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perpajakan</h3>
-        </div>
-        <div id="pengurusanPerpajakan" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Administrasi terkait pajak, termasuk pendaftaran, pelaporan, dan pemenuhan kewajiban perpajakan.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Pengurusan Perijinan Pengadilan Negeri -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="perijinanPengadilan" onclick="toggleDropdown('perijinanPengadilan')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perijinan Pengadilan Negeri</h3>
-        </div>
-        <div id="perijinanPengadilan" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Pengurusan izin yang dikeluarkan oleh pengadilan negeri untuk keperluan hukum atau administratif.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-      
-      <!-- Dan Jasa Pengurusan Perijinan Lainnya -->
-      <div class="item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-dropdown="jasaPerijinanLainnya" onclick="toggleDropdown('jasaPerijinanLainnya')">
-        <div class="p-5 border-b border-gray-100">
-          <h3 class="text-lg font-semibold text-gray-800">Dan Jasa Pengurusan Perijinan Lainnya</h3>
-        </div>
-        <div id="jasaPerijinanLainnya" class="hidden p-5 bg-gray-50">
-          <ul class="list-disc pl-5 mb-3 text-gray-700">
-            <li>Berbagai layanan tambahan untuk pengurusan perijinan khusus lainnya.</li>
-          </ul>
-          <p class="text-sm text-[#07bd07]">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp kami.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  </div>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/your-whatsapp-number" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-all z-50">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
   <div id="footer"></div>
-  <script src="script.js"></script>
+
   <script>
     function toggleDropdown(id) {
       const dropdown = document.getElementById(id);
