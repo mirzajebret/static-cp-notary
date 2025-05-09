@@ -150,30 +150,24 @@ function searchServices() {
 
 
   document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-  
-    const data = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value
-    };
-  
-    fetch("https://script.google.com/macros/s/AKfycbz_C7ETwqx4k_m-RQ7V8EMdjiFhX5a7muSIlKu4-cRZ00hyf6eGH-ouzXlcoAdck1hD/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(res => {
-      alert("Pesan berhasil dikirim!");
-      document.getElementById("contactForm").reset();
-    })
-    .catch(err => {
-      alert("Gagal mengirim pesan.");
-      console.error(err);
-    });
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Pesan berhasil dikirim!");
+    form.reset();
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Gagal mengirim pesan.");
   });
+});
+
   
