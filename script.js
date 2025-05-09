@@ -149,26 +149,31 @@ function searchServices() {
   });
 
 
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    var form = event.target;
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formspree.io/f/mvgpywge'); // Correct Formspree form ID
-    xhr.setRequestHeader('Accept', 'application/json');
-
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          form.reset(); // Reset the form fields
-          document.getElementById('form-response').style.display = 'block'; // Show the success message
-        } else {
-          alert('Gagal mengirim pesan. Silakan coba lagi.');
-        }
-      }
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+  
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value
     };
-
-    xhr.send(formData); // Send the form data via AJAX
+  
+    fetch("https://script.google.com/macros/s/AKfycbz_C7ETwqx4k_m-RQ7V8EMdjiFhX5a7muSIlKu4-cRZ00hyf6eGH-ouzXlcoAdck1hD/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+      alert("Pesan berhasil dikirim!");
+      document.getElementById("contactForm").reset();
+    })
+    .catch(err => {
+      alert("Gagal mengirim pesan.");
+      console.error(err);
+    });
   });
   
