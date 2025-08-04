@@ -128,6 +128,26 @@
     <img src="/asset/banner-hut-80-notaris-ppat-havis-akbar-desktop-6890417bf1bc6.webp" alt="Dirgahayu Republik Indonesia Banner Desktop" style="width:100%; height:auto;">
   </div>
 </section>
+<style>
+/* Tampilkan desktop banner secara default */
+.banner-mobile {
+  display: none;
+}
+
+.banner-desktop {
+  display: block;
+}
+
+/* Jika lebar layar <= 767px, tampilkan banner mobile */
+@media screen and (max-width: 767px) {
+  .banner-mobile {
+    display: block;
+  }
+  .banner-desktop {
+    display: none;
+  }
+}
+</style>
 <!-- END BANNER -->
   
   <section class="bg-white py-10 px-4 md:px-10">
@@ -463,5 +483,6 @@
 </body>
 
 </html> 
+
 
 
