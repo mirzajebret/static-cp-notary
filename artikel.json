@@ -1,7 +1,7 @@
 [
  {
     "title": "Langkah Mudah Membuat Akta Jual Beli Properti melalui PPAT",
-    "link": "langkah-mudah-membuat-ajb.html",
+    "link": "artikel/langkah-mudah-membuat-ajb.html",
     "date": "15 Desember 2024",
     "category": "Featured",
     "excerpt": "Akta jual beli properti adalah dokumen penting dalam transaksi jual beli. Artikel ini membahas langkah-langkah...",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Panduan Lengkap: Cara Menghitung PPh dan BPHTB Jual Beli Properti (Kabupaten Garut).",
-    "link": "cara-menghitung-bphtb-&-pph.html",
+    "link": "artikel/cara-menghitung-bphtb-&-pph.html",
     "date": "09 September 2025",
     "category": "PPAT",
     "excerpt": "Pembayaran kedua pajak ini bersifat wajib dan menjadi syarat mutlak sebelum Pejabat Pembuat Akta Tanah (PPAT) dapat menandatangani Akta Jual Beli (AJB)...",
@@ -200,5 +200,6 @@
     "image": "https://images.unsplash.com/photo-1660927604748-9b039cb31fc1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG5vdGFyeXxlbnwwfHwwfHx8Mg%3D%3D"
   }
 ]
+
 
 
