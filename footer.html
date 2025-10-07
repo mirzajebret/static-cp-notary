@@ -1,3 +1,58 @@
+<style>
+    /* Wadah utama untuk semua tombol */
+    .whatsapp-container {
+        position: fixed; /* Tetap di posisi yang sama saat di-scroll */
+        bottom: 25px; /* Jarak dari bawah */
+        right: 25px; /* Jarak dari kanan */
+        display: flex;
+        flex-direction: column; /* Menyusun tombol secara vertikal */
+        gap: 15px; /* Jarak antar tombol */
+        z-index: 1000; /* Memastikan tombol tampil di atas konten lain */
+    }
+
+    /* Gaya untuk setiap tombol WhatsApp */
+    .whatsapp-button {
+        display: flex;
+        align-items: center; /* Menyelaraskan teks dan ikon secara vertikal */
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
+        transition: transform 0.2s ease-in-out; /* Animasi saat disentuh mouse */
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.05); /* Sedikit membesar saat disentuh mouse */
+    }
+
+    /* Gaya untuk label teks (CS 1, CS 2) */
+    .whatsapp-button .text-label {
+        background-color: #4A4A4A; /* Warna latar belakang abu-abu tua */
+        color: white; /* Warna teks putih */
+        padding: 10px 20px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    }
+
+    /* Gaya untuk ikon WhatsApp */
+    .whatsapp-button .whatsapp-icon {
+        width: 50px; /* Ukuran ikon */
+        height: 50px;
+        margin-left: -5px; /* Sedikit tumpang tindih dengan label untuk efek menyatu */
+    }
+</style>
+
+<div class="whatsapp-container">
+    <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Anda." class="whatsapp-button" target="_blank">
+        <span class="text-label">CS 1</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png" alt="WhatsApp CS 1" class="whatsapp-icon">
+    </a>
+
+    <a href="https://wa.me/6289876543210?text=Halo%2C%20saya%20butuh%20bantuan." class="whatsapp-button" target="_blank">
+        <span class="text-label">CS 2</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png" alt="WhatsApp CS 2" class="whatsapp-icon">
+    </a>
+</div>
+
 <footer class="footer" id="footer">
     <div class="container">
       <p>&copy; 2024 Notaris & PPAT Havis Akbar</p>
@@ -9,6 +64,7 @@
   <a href="https://wa.me/6287736688999?text=Halo%20Notaris%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20kantor%20anda" style="font-size:24px"> <i class="fa fa-whatsapp whatsapp"></i></a>
   <a href="https://wa.me/62811213966?text=Halo%20Notaris%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20kantor%20anda" style="font-size:24px"> <i class="fa fa-whatsapp whatsapp2"></i></a>
   <script src="script.js"></script>
+
 
 
 
