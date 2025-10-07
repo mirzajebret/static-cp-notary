@@ -699,6 +699,20 @@ h2 {
   cursor: pointer;
   z-index: 1000;
 }
+
+.whatsapp2 {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color: #07bd07;
+  border-radius: 100%;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 15px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
 .socmed {
   width: 50px;
   height: 50px;
@@ -1099,3 +1113,4 @@ font-size: 15px;
       font-size: 28px;
   }
 }
+
