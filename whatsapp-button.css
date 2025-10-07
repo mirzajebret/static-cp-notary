@@ -1,0 +1,27 @@
+.whatsapp-btn-1 {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #07bd07;
+  border-radius: 100%;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 15px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.whatsapp-btn-2 {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  background-color: #07bd07;
+  border-radius: 100%;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 15px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
