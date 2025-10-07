@@ -703,7 +703,7 @@ h2 {
 .whatsapp2 {
   position: fixed;
   bottom: 20px;
-  right: 70px;
+  right: 80px;
   background-color: #07bd07;
   border-radius: 100%;
   color: white;
@@ -1113,5 +1113,6 @@ font-size: 15px;
       font-size: 28px;
   }
 }
+
 
 
