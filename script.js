@@ -58,41 +58,7 @@ function searchServices() {
       function initializeNavigation() {
         const backToTopButton = document.getElementById('back-to-top');
     
-        // Back to Top Button
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 200) { // Show the button if scrolled down more than 200px
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-    
-            // Adjust header size based on scroll position
-            const header = document.getElementById('header');
-            let lastScrollY = 0;
-            let debounceTimeout;
-
-            function handleScroll() {
-                clearTimeout(debounceTimeout);
-                debounceTimeout = setTimeout(() => {
-                    if (window.scrollY > 200 && lastScrollY <= 200) {
-                        header.classList.add('shrink');
-                    } else if (window.scrollY <= 200 && lastScrollY > 200) {
-                        header.classList.remove('shrink');
-                    }
-                    lastScrollY = window.scrollY;
-                }, 100); // Adjust debounce delay as needed
-            }
-
-            window.addEventListener('scroll', handleScroll);
-        });
-    
-        // Smooth scroll to the top when the button is clicked
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        
     
         // Initialize menu button functionality
         const menuButton = document.querySelector('.menu-button');
@@ -169,5 +135,6 @@ function searchServices() {
     alert("Gagal mengirim pesan.");
   });
 });
+
 
   
