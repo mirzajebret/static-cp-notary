@@ -2,127 +2,259 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Cara Menghitung PPh dan BPHTB Properti di Kabupaten Garut</title>
+    <title>Cara Menghitung PPh dan BPHTB Properti di Kabupaten Garut - Notaris & PPAT Havis Akbar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/mirzajebret/static-cp-notary/main/logo-main.png">
+    <meta name="description" content="Panduan lengkap menghitung PPh dan BPHTB untuk jual beli properti di Kabupaten Garut. Termasuk rumus, contoh kasus, dan catatan penting.">
+    <link rel="icon" type="image/x-icon" href="../img/logo/logo-main.png">
+    <link rel="apple-touch-icon" href="../img/logo/logo-main.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../artikel-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Menambahkan sedikit style kustom untuk memperjelas elemen edukatif */
-        .calculation-box {
-            background-color: #f9fafb; /* bg-gray-50 */
-            border-left-width: 4px;
-            border-color: #3b82f6; /* border-blue-500 */
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 4px;
-        }
-        .highlight-formula {
-            background-color: #eef2ff; /* bg-indigo-50 */
-            color: #1e3a8a; /* text-blue-900 */
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="progressBar"></div>
+    </div>
+
     <div id="header"></div>
-    <div class="max-w-4xl mx-auto p-4 sm:p-6 text-gray-800">
-        <h1 class="text-2xl font-bold mb-2 text-[#18396f]">
-            Panduan Lengkap: Cara Menghitung PPh dan BPHTB Jual Beli Properti (Kabupaten Garut)
-        </h1>
-        <p class="text-sm text-gray-500 mb-4">Estimasi Waktu Baca: 4 Menit</p>
+    
+    <div class="article-wrapper">
+        <div class="article-container">
+            <!-- Breadcrumb -->
+            <nav class="article-breadcrumb">
+                <a href="../index.html"><i class="fa fa-home"></i> Beranda</a>
+                <span class="separator">›</span>
+                <a href="../artikel.html">Artikel</a>
+                <span class="separator">›</span>
+                <span class="current">Cara Menghitung PPh dan BPHTB</span>
+            </nav>
 
-        <img alt="Ilustrasi jual beli properti, akta tanah, dan kalkulator" class="w-full h-64 object-cover rounded-lg mb-6 shadow-md" src="https://flazztax.com/wp-content/uploads/2025/08/Strategi-Jitu-Mengelola-Kesalahan-Suket-BPHTB-Panduan-Lengkap-Pembatalan-atau-Penggantian-Dokumen-Pajak.webp" />
+            <!-- Article Card -->
+            <article class="article-card">
+                <!-- Article Header -->
+                <header class="article-header">
+                    <span class="article-category-badge">PPAT</span>
+                    <h1 class="article-title">Panduan Lengkap: Cara Menghitung PPh dan BPHTB Jual Beli Properti (Kabupaten Garut)</h1>
+                    <div class="article-meta">
+                        <span class="article-meta-item">
+                            <i class="fa fa-calendar"></i>
+                            <span>09 September 2025</span>
+                        </span>
+                        <span class="article-meta-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span>4 Menit Baca</span>
+                        </span>
+                        <span class="article-meta-item">
+                            <i class="fa fa-user"></i>
+                            <span>Tim Notaris & PPAT Havis Akbar</span>
+                        </span>
+                    </div>
+                </header>
 
-        <div class="prose max-w-none text-justify">
-            <p class="mb-4 text-lg leading-relaxed">
-                Melakukan transaksi jual beli properti (tanah atau bangunan) melibatkan beberapa kewajiban perpajakan yang harus dipenuhi oleh penjual dan pembeli. Dua pajak utama adalah Pajak Penghasilan (PPh) Final yang dibayarkan oleh penjual, dan Bea Perolehan Hak atas Tanah dan Bangunan (BPHTB) yang dibayarkan oleh pembeli.
-            </p>
-            <p class="mb-6">
-                Pembayaran kedua pajak ini bersifat wajib dan menjadi syarat mutlak sebelum Pejabat Pembuat Akta Tanah (PPAT) dapat menandatangani Akta Jual Beli (AJB). Artikel ini akan menjelaskan cara menghitung PPh dan BPHTB secara spesifik untuk transaksi di wilayah Kabupaten Garut.
-            </p>
+                <!-- Featured Image -->
+                <img src="https://flazztax.com/wp-content/uploads/2025/08/Strategi-Jitu-Mengelola-Kesalahan-Suket-BPHTB-Panduan-Lengkap-Pembatalan-atau-Penggantian-Dokumen-Pajak.webp" alt="Ilustrasi jual beli properti, akta tanah, dan kalkulator" class="article-featured-image">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div class="border border-red-300 bg-red-50 p-4 rounded-lg shadow">
-                    <h3 class="font-bold text-lg text-red-800">Kewajiban Penjual: PPh Final</h3>
-                    <p class="text-gray-700">Penjual wajib membayar Pajak Penghasilan atas keuntungan dari penjualan properti. Sifatnya final dan dihitung dari total nilai transaksi.</p>
+                <!-- Article Content -->
+                <div class="article-content">
+                    <p>
+                        Melakukan transaksi jual beli properti (tanah atau bangunan) melibatkan beberapa kewajiban perpajakan yang harus dipenuhi oleh penjual dan pembeli. Dua pajak utama adalah Pajak Penghasilan (PPh) Final yang dibayarkan oleh penjual, dan Bea Perolehan Hak atas Tanah dan Bangunan (BPHTB) yang dibayarkan oleh pembeli.
+                    </p>
+                    <p>
+                        Pembayaran kedua pajak ini bersifat wajib dan menjadi syarat mutlak sebelum Pejabat Pembuat Akta Tanah (PPAT) dapat menandatangani Akta Jual Beli (AJB). Artikel ini akan menjelaskan cara menghitung PPh dan BPHTB secara spesifik untuk transaksi di wilayah Kabupaten Garut.
+                    </p>
+
+                    <div class="info-box">
+                        <h3 style="margin-top: 0; font-size: 1.25rem;">Ringkasan Kewajiban Pajak</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px;">
+                                <h4 style="color: #991b1b; margin: 0 0 0.5rem 0; font-size: 1rem;"><strong>Kewajiban Penjual: PPh Final</strong></h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #374151;">Penjual wajib membayar Pajak Penghasilan atas keuntungan dari penjualan properti. Sifatnya final dan dihitung dari total nilai transaksi.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(59, 130, 246, 0.1); border-radius: 8px;">
+                                <h4 style="color: #1e40af; margin: 0 0 0.5rem 0; font-size: 1rem;"><strong>Kewajiban Pembeli: BPHTB</strong></h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #374151;">Pembeli wajib membayar Bea Perolehan Hak atas Tanah dan Bangunan sebagai pajak atas perolehan hak properti tersebut.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>1. Perhitungan Pajak Penghasilan (PPh) untuk Penjual</h2>
+                    <p>
+                        PPh Final atas pengalihan hak atas tanah dan bangunan diatur oleh pemerintah pusat. Tarif yang umum digunakan untuk transaksi jual beli biasa oleh individu adalah 2,5% dari nilai bruto transaksi.
+                    </p>
+                    
+                    <div class="calculation-box">
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Rumus PPh:</p>
+                        <p style="text-align: center; font-size: 1.25rem; margin: 0;">
+                            <span class="highlight-formula">PPh = 2,5% × Nilai Transaksi</span>
+                        </p>
+                    </div>
+
+                    <h3>Contoh Kasus Perhitungan PPh:</h3>
+                    <div class="example-case">
+                        <p><strong>Studi Kasus:</strong></p>
+                        <p>Bapak Budi menjual sebidang tanah di Kecamatan Tarogong Kidul, Kabupaten Garut, dengan harga kesepakatan (nilai transaksi) sebesar <strong>Rp 400.000.000</strong>.</p>
+                        <hr style="margin: 1rem 0; border-color: #e5e7eb;">
+                        <p><strong>Perhitungan PPh:</strong></p>
+                        <ul style="margin: 0; padding-left: 1.5rem;">
+                            <li>Nilai Transaksi: Rp 400.000.000</li>
+                            <li>Tarif PPh: 2,5%</li>
+                            <li>PPh Terutang = 2,5% × Rp 400.000.000</li>
+                            <li><strong>Total PPh yang harus dibayar penjual = Rp 10.000.000</strong></li>
+                        </ul>
+                    </div>
+
+                    <h2>2. Perhitungan BPHTB untuk Pembeli (Kabupaten Garut)</h2>
+                    <p>
+                        BPHTB diatur oleh pemerintah daerah masing-masing. Untuk menghitung BPHTB, kita perlu mengetahui Nilai Perolehan Objek Pajak Tidak Kena Pajak (NPOPTKP). Berdasarkan Peraturan Daerah Kabupaten Garut, NPOPTKP ditetapkan sebesar Rp 80.000.000.
+                    </p>
+
+                    <div class="info-box">
+                        <h4 style="margin-top: 0;">Parameter Penting BPHTB Garut:</h4>
+                        <ul style="margin: 0; padding-left: 1.5rem;">
+                            <li><strong>NPOP (Nilai Perolehan Objek Pajak):</strong> Nilai transaksi atau harga kesepakatan.</li>
+                            <li><strong>NPOPTKP (Nilai Perolehan Objek Pajak Tidak Kena Pajak) Kab. Garut:</strong> Rp 80.000.000</li>
+                            <li><strong>Tarif BPHTB:</strong> 5%</li>
+                        </ul>
+                    </div>
+
+                    <div class="calculation-box">
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Rumus BPHTB:</p>
+                        <p style="text-align: center; font-size: 1.25rem; margin: 0;">
+                            <span class="highlight-formula">BPHTB = 5% × (NPOP - NPOPTKP)</span>
+                        </p>
+                    </div>
+
+                    <h3>Contoh Kasus Perhitungan BPHTB:</h3>
+                    <div class="example-case">
+                        <p><strong>Studi Kasus:</strong></p>
+                        <p>Melanjutkan contoh sebelumnya, Ibu Ani membeli tanah milik Bapak Budi dengan nilai transaksi (NPOP) sebesar <strong>Rp 400.000.000</strong>.</p>
+                        <hr style="margin: 1rem 0; border-color: #e5e7eb;">
+                        <p><strong>Perhitungan BPHTB:</strong></p>
+                        <ol style="margin: 0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <strong>Tentukan Nilai Kena Pajak (NPOP - NPOPTKP):</strong><br>
+                                Rp 400.000.000 (NPOP) - Rp 80.000.000 (NPOPTKP Kab. Garut) = Rp 320.000.000
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <strong>Hitung BPHTB Terutang (Tarif 5%):</strong><br>
+                                BPHTB = 5% × Rp 320.000.000
+                            </li>
+                            <li>
+                                <strong>Total BPHTB yang harus dibayar pembeli = Rp 16.000.000</strong>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h2>Kesimpulan dan Catatan Penting</h2>
+                    <div class="warning-box">
+                        <h4 style="margin-top: 0; color: #78350f;"><i class="fa fa-exclamation-triangle"></i> Hal-hal yang Perlu Diperhatikan:</h4>
+                        <ul style="margin: 0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <strong>Validasi NJOP:</strong> Dalam praktiknya, petugas pajak akan membandingkan Nilai Transaksi dengan Nilai Jual Objek Pajak (NJOP) yang tertera di PBB. Perhitungan pajak akan menggunakan nilai yang tertinggi di antara keduanya.
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <strong>Waktu Pembayaran:</strong> PPh dan BPHTB harus sudah dibayar lunas dan divalidasi oleh kantor pajak (KPP Pratama untuk PPh dan Bappenda Garut untuk BPHTB) sebelum penandatanganan AJB di hadapan PPAT.
+                            </li>
+                            <li>
+                                <strong>Perubahan Regulasi:</strong> Tarif NPOPTKP dapat berubah sewaktu-waktu sesuai kebijakan Pemerintah Daerah Kabupaten Garut. Selalu konfirmasikan angka terbaru kepada PPAT Anda.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="border border-blue-300 bg-blue-50 p-4 rounded-lg shadow">
-                    <h3 class="font-bold text-lg text-blue-800">Kewajiban Pembeli: BPHTB</h3>
-                    <p class="text-gray-700">Pembeli wajib membayar Bea Perolehan Hak atas Tanah dan Bangunan sebagai pajak atas perolehan hak properti tersebut.</p>
-                </div>
-            </div>
 
-            <h2 class="text-xl font-bold mb-3 text-[#18396f] border-b pb-1">1. Perhitungan Pajak Penghasilan (PPh) untuk Penjual</h2>
-            <p class="mb-4">
-                PPh Final atas pengalihan hak atas tanah dan bangunan diatur oleh pemerintah pusat. Tarif yang umum digunakan untuk transaksi jual beli biasa oleh individu adalah 2,5% dari nilai bruto transaksi.
-            </p>
-            <p class="mb-4"><strong>Rumus PPh:</strong></p>
-            <div class="calculation-box">
-                <p class="text-center text-lg font-medium"><span class="highlight-formula">PPh = 2,5% × Nilai Transaksi</span></p>
-            </div>
+                <!-- Article Footer -->
+                <footer class="article-footer">
+                    <!-- Disclaimer -->
+                    <div class="article-disclaimer">
+                        <p style="margin: 0;">
+                            <strong>Disclaimer:</strong> Artikel ini bertujuan untuk edukasi umum. Perhitungan aktual mungkin memerlukan verifikasi dokumen dan penyesuaian berdasarkan kondisi spesifik properti dan regulasi terbaru. Konsultasikan dengan Notaris & PPAT terpercaya untuk proses yang akurat dan aman.
+                        </p>
+                    </div>
 
-            <h3 class="font-semibold text-lg mt-4 mb-2">Contoh Kasus Perhitungan PPh:</h3>
-            <div class="border border-gray-200 rounded-md p-4 mb-6 bg-white">
-                <p>Bapak Budi menjual sebidang tanah di Kecamatan Tarogong Kidul, Kabupaten Garut, dengan harga kesepakatan (nilai transaksi) sebesar <strong>Rp 400.000.000</strong>.</p>
-                <hr class="my-3">
-                <p><strong>Perhitungan PPh:</strong></p>
-                <ul class="list-disc pl-5 space-y-1">
-                    <li>Nilai Transaksi: Rp 400.000.000</li>
-                    <li>Tarif PPh: 2,5%</li>
-                    <li>PPh Terutang = 2,5% × Rp 400.000.000</li>
-                    <li><strong>Total PPh yang harus dibayar penjual = Rp 10.000.000</strong></li>
-                </ul>
-            </div>
+                    <!-- Tags -->
+                    <div class="article-tags">
+                        <a href="#" class="article-tag">#PPAT</a>
+                        <a href="#" class="article-tag">#Pajak</a>
+                        <a href="#" class="article-tag">#BPHTB</a>
+                        <a href="#" class="article-tag">#PPh</a>
+                        <a href="#" class="article-tag">#JualBeli</a>
+                        <a href="#" class="article-tag">#Garut</a>
+                    </div>
 
-            <h2 class="text-xl font-bold mb-3 mt-8 text-[#18396f] border-b pb-1">2. Perhitungan BPHTB untuk Pembeli (Kabupaten Garut)</h2>
-            <p class="mb-4">
-                BPHTB diatur oleh pemerintah daerah masing-masing. Untuk menghitung BPHTB, kita perlu mengetahui Nilai Perolehan Objek Pajak Tidak Kena Pajak (NPOPTKP). Berdasarkan Peraturan Daerah Kabupaten Garut, NPOPTKP ditetapkan sebesar Rp 80.000.000.
-            </p>
-            <ul class="list-disc pl-5 mb-4 space-y-1">
-                <li><strong>NPOP (Nilai Perolehan Objek Pajak):</strong> Nilai transaksi atau harga kesepakatan.</li>
-                <li><strong>NPOPTKP (Nilai Perolehan Objek Pajak Tidak Kena Pajak) Kab. Garut:</strong> Rp 80.000.000</li>
-                <li><strong>Tarif BPHTB:</strong> 5%</li>
-            </ul>
+                    <!-- Share Section -->
+                    <div class="article-share">
+                        <h3><i class="fa fa-share-alt"></i> Bagikan Artikel Ini</h3>
+                        <div class="share-buttons">
+                            <a href="https://wa.me/?text=Panduan Lengkap: Cara Menghitung PPh dan BPHTB - https://notarishavisakbar.com/artikel/cara-menghitung-bphtb-%26-pph.html" target="_blank" class="share-btn whatsapp">
+                                <i class="fa fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://notarishavisakbar.com/artikel/cara-menghitung-bphtb-%26-pph.html" target="_blank" class="share-btn facebook">
+                                <i class="fa fa-facebook"></i> Facebook
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text=Panduan Lengkap: Cara Menghitung PPh dan BPHTB&url=https://notarishavisakbar.com/artikel/cara-menghitung-bphtb-%26-pph.html" target="_blank" class="share-btn twitter">
+                                <i class="fa fa-twitter"></i> Twitter
+                            </a>
+                        </div>
+                    </div>
 
-            <p class="mb-4"><strong>Rumus BPHTB:</strong></p>
-            <div class="calculation-box">
-                <p class="text-center text-lg font-medium"><span class="highlight-formula">BPHTB = 5% × (NPOP - NPOPTKP)</span></p>
-            </div>
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3><i class="fa fa-newspaper-o"></i> Artikel Terkait</h3>
+                        <div class="related-articles-grid">
+                            <a href="langkah-mudah-membuat-ajb.html" class="related-article-card">
+                                <img src="https://www.shutterstock.com/image-photo/close-businessman-hand-pointing-cellphone-600nw-2527367231.jpg" alt="Langkah Mudah Membuat AJB" class="related-article-image">
+                                <div class="related-article-content">
+                                    <span class="related-article-category">PPAT</span>
+                                    <h4 class="related-article-title">Langkah Mudah Membuat Akta Jual Beli Properti melalui PPAT</h4>
+                                    <p class="related-article-date">15 Desember 2024</p>
+                                </div>
+                            </a>
+                            <a href="syarat-dan-prosedur-balik-nama-sertifikat.html" class="related-article-card">
+                                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&auto=format&fit=crop&q=60" alt="Balik Nama Sertifikat" class="related-article-image">
+                                <div class="related-article-content">
+                                    <span class="related-article-category">PPAT</span>
+                                    <h4 class="related-article-title">Syarat dan Prosedur Balik Nama Sertifikat Tanah</h4>
+                                    <p class="related-article-date">25 Maret 2025</p>
+                                </div>
+                            </a>
+                            <a href="cara-mengurus-sertifikat-tanah.html" class="related-article-card">
+                                <img src="https://universalbpr.co.id/blog/wp-content/uploads/2021/02/sertifikat-tanah-transaksi.jpg" alt="Mengurus Sertifikat Tanah" class="related-article-image">
+                                <div class="related-article-content">
+                                    <span class="related-article-category">PPAT</span>
+                                    <h4 class="related-article-title">Cara Mengurus Sertifikat Tanah melalui PPAT</h4>
+                                    <p class="related-article-date">27 Maret 2025</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-            <h3 class="font-semibold text-lg mt-4 mb-2">Contoh Kasus Perhitungan BPHTB:</h3>
-            <div class="border border-gray-200 rounded-md p-4 mb-6 bg-white">
-                <p>Melanjutkan contoh sebelumnya, Ibu Ani membeli tanah milik Bapak Budi dengan nilai transaksi (NPOP) sebesar <strong>Rp 400.000.000</strong>.</p>
-                <hr class="my-3">
-                <p><strong>Perhitungan BPHTB:</strong></p>
-                <ol class="list-decimal pl-5 space-y-1">
-                    <li><strong>Tentukan Nilai Kena Pajak (NPOP - NPOPTKP):</strong><br>
-                        Rp 400.000.000 (NPOP) - Rp 80.000.000 (NPOPTKP Kab. Garut) = Rp 320.000.000</li>
-                    <li><strong>Hitung BPHTB Terutang (Tarif 5%):</strong><br>
-                        BPHTB = 5% × Rp 320.000.000</li>
-                    <li><strong>Total BPHTB yang harus dibayar pembeli = Rp 16.000.000</strong></li>
-                </ol>
-            </div>
-
-            <h2 class="text-xl font-bold mb-3 mt-8 text-[#18396f]">Kesimpulan dan Catatan Penting</h2>
-            <div class="bg-yellow-50 border border-yellow-300 rounded-lg p-4 text-yellow-900">
-                <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Validasi NJOP:</strong> Dalam praktiknya, petugas pajak akan membandingkan Nilai Transaksi dengan Nilai Jual Objek Pajak (NJOP) yang tertera di PBB. Perhitungan pajak akan menggunakan nilai yang tertinggi di antara keduanya.</li>
-                    <li><strong>Waktu Pembayaran:</strong> PPh dan BPHTB harus sudah dibayar lunas dan divalidasi oleh kantor pajak (KPP Pratama untuk PPh dan Bappenda Garut untuk BPHTB) sebelum penandatanganan AJB di hadapan PPAT.</li>
-                    <li><strong>Perubahan Regulasi:</strong> Tarif NPOPTKP dapat berubah sewaktu-waktu sesuai kebijakan Pemerintah Daerah Kabupaten Garut. Selalu konfirmasikan angka terbaru kepada PPAT Anda.</li>
-                </ul>
-            </div>
-
-            <p class="mt-6 italic text-gray-600">
-                Disclaimer: Artikel ini bertujuan untuk edukasi umum. Perhitungan aktual mungkin memerlukan verifikasi dokumen dan penyesuaian berdasarkan kondisi spesifik properti dan regulasi terbaru. Konsultasikan dengan Notaris & PPAT terpercaya untuk proses yang akurat dan aman.
-            </p>
+                    <!-- CTA Section -->
+                    <div class="article-cta">
+                        <h3>Butuh Bantuan Profesional?</h3>
+                        <p>Konsultasikan kebutuhan legal Anda dengan Notaris & PPAT berpengalaman</p>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="cta-button">
+                            <i class="fa fa-whatsapp"></i> Hubungi Kami Sekarang
+                        </a>
+                    </div>
+                </footer>
+            </article>
         </div>
     </div>
+
     <div id="footer"></div>
-  <script src="script.js"></script>
-    </body>
+    
+    <script src="../script.js"></script>
+    <script>
+        // Reading Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+</body>
 </html>
