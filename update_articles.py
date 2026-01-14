@@ -134,13 +134,7 @@ def generate_article_html(article_data, related_articles):
 {related_html}                        </div>
                     </div>
 
-                    <div class="article-cta">
-                        <h3>Butuh Bantuan Profesional?</h3>
-                        <p>Konsultasikan kebutuhan legal Anda dengan Notaris & PPAT berpengalaman</p>
-                        <a href="https://wa.me/6281234567890" target="_blank" class="cta-button">
-                            <i class="fa fa-whatsapp"></i> Hubungi Kami Sekarang
-                        </a>
-                    </div>
+                    
                 </footer>
             </article>
         </div>
