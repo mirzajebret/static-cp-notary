@@ -45,8 +45,8 @@ function searchServices() {
 document.addEventListener('DOMContentLoaded', function () {
   // Load header and footer
   Promise.all([
-    fetch('../header.html').then(response => response.text()),
-    fetch('../footer.html').then(response => response.text())
+    fetch('header.html').then(response => response.text()),
+    fetch('footer.html').then(response => response.text())
   ]).then(([headerData, footerData]) => {
     document.getElementById('header').innerHTML = headerData;
     document.getElementById('footer').innerHTML = footerData;
