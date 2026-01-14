@@ -58,6 +58,7 @@ z-index: 1000;
 }
 
 .header-logo h3 a {
+  font-weight: bold;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -1113,6 +1114,7 @@ font-size: 15px;
       font-size: 28px;
   }
 }
+
 
 
 
