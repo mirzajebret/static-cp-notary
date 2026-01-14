@@ -1,74 +1,264 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tentang Kami | Notaris Havis Akbar</title>
-  <link rel="icon" href="/img/logo/logo-main.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Notaris & PPAT Havis Akbar</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#C5A059',
+                        'brand-dark': '#1F2937',
+                        'brand-gray': '#F3F4F6',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .honeycomb-bg {
+            background-image: url('img/asset/honeycomb-new-F-darken.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+    </style>
 </head>
-<body class="bg-white text-gray-800">
+
+  
+<body class="font-sans text-gray-700 antialiased bg-white">
 
   <!-- Header -->
   <div id="header"></div>
-  <img src="/img/logo/logo-main.png" alt="notaristerdekat.com" class="mx-auto w-64 h-64">
-  <!-- Tentang Kami -->
-  <section class=" px-6 md:px-10 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold text-[#18396F] mb-6">Salam Sejahtera</h2>
-      <p class="text-justify leading-relaxed text-gray-700">
-        Selamat datang di Kantor Notaris & PPAT Havis Akbar, S.H., M.Kn., M.M., tempat di mana profesionalisme, integritas, dan pelayanan berkualitas menjadi prioritas utama. Kami didedikasikan untuk melayani masyarakat dan perusahaan dalam bidang hukum pertanahan dan kenotariatan.
-      </p>
-      <p class="mt-4 text-justify text-gray-700">
-        Dengan pengalaman bertahun-tahun dan pemahaman hukum mendalam, tim kami siap membantu berbagai keperluan hukum personal maupun korporat berdasarkan prinsip kejujuran, transparansi, dan keakuratan.
-      </p>
-    </div>
-  </section>
+  <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-brand-dark overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img/asset/notaryhero-bg.JPG" alt="Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+        </div>
+        
+        <!-- Decorative Honeycomb -->
+        <img src="img/asset/honeycomb-new-F.png" class="absolute top-0 right-0 w-64 md:w-96 opacity-20 animate-pulse z-10" alt="decoration">
 
-  <!-- Layanan -->
-  <section class="bg-[#F9FAFB] py-16 px-6 md:px-10">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold text-[#18396F] mb-6">Layanan Kami</h2>
-      <ul class="space-y-3 text-gray-700 list-disc pl-6">
-        <li>Pembuatan akta tanah</li>
-        <li>Akta pendirian perusahaan</li>
-        <li>Perjanjian jual beli</li>
-        <li>Pembuatan akta otentik lainnya</li>
-        <li>Pengurusan hak atas tanah dan bangunan</li>
-        <li>Legalisasi dokumen penting</li>
-      </ul>
-    </div>
-  </section>
+        <div class="container mx-auto px-4 relative z-20 text-center">
+            <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">Profil Perusahaan</span>
+            <h1 class="text-4xl md:text-6xl font-serif text-white font-bold mb-6 leading-tight">
+                Integritas & Kepercayaan <br> Adalah Prioritas Kami
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-8 font-light">
+                Notaris & PPAT Havis Akbar berkomitmen memberikan pelayanan hukum terbaik, cepat, dan transparan untuk segala kebutuhan legalitas Anda.
+            </p>
+        </div>
+    </section>
 
-  <!-- Visi & Misi -->
-  <section class="bg-white py-16 px-6 md:px-10">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold text-[#18396F] mb-6">Visi & Misi</h2>
-      <div class="mb-4">
-        <h3 class="font-semibold text-[#1C2331]">Visi:</h3>
-        <p class="text-gray-700 mt-1">Menjadi kantor notaris dan PPAT terkemuka yang dikenal atas dedikasi, kepercayaan, dan kualitas layanan unggul di Indonesia.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-[#1C2331]">Misi:</h3>
-        <ul class="list-disc pl-6 text-gray-700 space-y-2 mt-1">
-          <li>Memberikan pelayanan hukum yang transparan, tepat waktu, dan profesional.</li>
-          <li>Menjaga kepercayaan klien dengan mengutamakan kejujuran dan integritas.</li>
-          <li>Mengedukasi masyarakat tentang pentingnya aspek hukum dalam setiap transaksi.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="py-16 md:py-24 bg-white relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Image Grid -->
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="img/asset/hero-meeting.jpg" alt="Meeting" class="w-full h-64 object-cover rounded-lg shadow-lg transform translate-y-4">
+                    <img src="img/galeri/ruang-kantor-notaris-ppat-havis-akbar.webp" alt="Office" class="w-full h-64 object-cover rounded-lg shadow-lg transform -translate-y-4">
+                </div>
 
-  <!-- Lokasi -->
-  <section class="bg-[#1C2331] text-white py-16 px-6 md:px-10">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6 text-white">Lokasi Kantor</h2>
-      <div class="rounded-lg overflow-hidden shadow-lg border-4 border-white">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15833.491460279838!2d107.9132053!3d-7.1982291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b10032408009%3A0xea372280ee728aec!2sKantor%20Notaris%20%26%20PPAT%20Havis%20Akbar%2C%20S.H.%2C%20M.Kn.%2C%20M.M!5e0!3m2!1sid!2sid!4v1724660068429!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 relative">
+                        Tentang Kami
+                        <span class="absolute bottom-0 left-0 w-20 h-1 bg-brand-gold transform translate-y-2"></span>
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Kami adalah kantor Notaris & PPAT yang berdedikasi untuk memberikan solusi hukum yang tepat dan akurat bagi perseorangan maupun badan usaha. Dengan pengalaman yang luas dan tim yang profesional, kami siap membantu Anda dalam pembuatan akta, pengurusan izin, hingga konsultasi hukum pertanahan.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Kantor kami didukung oleh sistem manajemen modern yang memungkinkan proses pengerjaan lebih efisien tanpa mengurangi ketelitian. Kenyamanan klien dan kepastian hukum adalah fokus utama layanan kami.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-brand-gold pl-4">
+                            <span class="block text-2xl font-bold text-brand-dark">10+</span>
+                            <span class="text-sm text-gray-500">Tahun Pengalaman</span>
+                        </div>
+                        <div class="border-l-4 border-brand-gold pl-4">
+                            <span class="block text-2xl font-bold text-brand-dark">1000+</span>
+                            <span class="text-sm text-gray-500">Klien Terpercaya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pimpinan Section -->
+    <section class="py-16 bg-brand-gray relative overflow-hidden">
+         <!-- BG Decoration -->
+         <img src="img/asset/honeycomb-analog.png" class="absolute -left-20 bottom-0 w-64 opacity-10" alt="deco">
+
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="w-full md:w-5/12 h-96 md:h-auto relative">
+                    <img src="img/anggota/foto-notaris-havis-akbar.jpg" alt="Havis Akbar" class="absolute inset-0 w-full h-full object-cover object-top">
+                </div>
+                <div class="w-full md:w-7/12 p-8 md:p-12">
+                    <span class="text-brand-gold font-bold uppercase tracking-wider text-sm">Pimpinan Kantor</span>
+                    <h3 class="text-3xl font-serif font-bold text-gray-900 mt-2 mb-4">Havis Akbar, S.H., M.Kn.</h3>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Kepercayaan adalah fondasi dari setiap hubungan hukum. Kami hadir tidak hanya sebagai pejabat pembuat akta, tetapi sebagai mitra yang menjaga kepentingan hukum Anda dengan integritas tinggi."
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-brand-gray text-brand-dark px-4 py-1 rounded-full text-sm font-medium">Notaris</span>
+                        <span class="bg-brand-gray text-brand-dark px-4 py-1 rounded-full text-sm font-medium">PPAT</span>
+                        <span class="bg-brand-gray text-brand-dark px-4 py-1 rounded-full text-sm font-medium">Konsultan Hukum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Tim Profesional Kami</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Didukung oleh staf yang kompeten, ramah, dan berpengalaman dalam menangani berbagai dokumen kenotariatan.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Team Member 1 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-mirza-alby-assidiqie.jpg" alt="Mirza Alby" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Mirza Alby Assidiqie</h4>
+                    <p class="text-brand-gold text-sm font-medium">Senior Staff</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-andi-kuntoro.jpg" alt="Andi Kuntoro" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Andi Kuntoro</h4>
+                    <p class="text-brand-gold text-sm font-medium">Legal Staff</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-cyntia-yuni.jpg" alt="Cyntia Yuni" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Cyntia Yuni</h4>
+                    <p class="text-brand-gold text-sm font-medium">Administrasi</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-dini-kartini.jpg" alt="Dini Kartini" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Dini Kartini</h4>
+                    <p class="text-brand-gold text-sm font-medium">Staff Pendukung</p>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-nepi-meinti.webp" alt="Nepi Meinti" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Nepi Meinti</h4>
+                    <p class="text-brand-gold text-sm font-medium">Staff Pendukung</p>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
+                        <img src="img/anggota/foto-zacky.jpeg" alt="Zacky" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Zacky</h4>
+                    <p class="text-brand-gold text-sm font-medium">Staff Lapangan</p>
+                </div>
+                 <!-- Team Member 7 (Generic if needed or spacer) -->
+                 <div class="group text-center flex flex-col justify-center items-center h-full p-6 border-2 border-dashed border-gray-300 rounded-xl">
+                    <i class="fas fa-users text-4xl text-gray-300 mb-3"></i>
+                    <h4 class="text-lg font-bold text-gray-400">Dan Tim Lainnya</h4>
+                    <p class="text-gray-400 text-sm">Siap membantu Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Values -->
+    <section class="py-16 bg-brand-dark text-white relative">
+        <div class="absolute inset-0 overflow-hidden">
+             <img src="img/asset/honeycomb-new-F-darken.png" class="absolute -right-20 top-0 w-96 opacity-10 rotate-180" alt="deco">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Legalitas Terjamin</h3>
+                    <p class="text-gray-400 text-sm">Setiap dokumen diproses sesuai dengan peraturan perundang-undangan yang berlaku.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proses Cepat</h3>
+                    <p class="text-gray-400 text-sm">Kami menghargai waktu Anda. Layanan kami dirancang untuk efisiensi maksimal.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pelayanan Prima</h3>
+                    <p class="text-gray-400 text-sm">Konsultasi yang ramah dan solusi yang berorientasi pada kebutuhan klien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Gallery Mini -->
+    <section class="py-16 bg-brand-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-10">Fasilitas Kantor</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="img/galeri/depan-kantor.jpeg" alt="Depan Kantor" class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
+                <img src="img/galeri/resepsionis.jpeg" alt="Resepsionis" class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
+                <img src="img/galeri/ruang-1.png" alt="Ruang Kerja" class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
+                <img src="img/galeri/ruang-2.png" alt="Ruang Meeting" class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
+            </div>
+            <div class="text-center mt-8">
+                <a href="galery.html" class="inline-block border border-brand-dark text-brand-dark px-8 py-3 rounded hover:bg-brand-dark hover:text-white transition duration-300 uppercase text-sm tracking-widest">Lihat Galeri Lengkap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">Siap Mengurus Dokumen Anda?</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Konsultasikan kebutuhan hukum Anda sekarang juga. Kami siap membantu pembuatan PT, CV, Jual Beli Tanah, dan lainnya.</p>
+            <a href="https://wa.me/6281234567890" class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-green-700 transition transform hover:-translate-y-1">
+                <i class="fab fa-whatsapp text-xl"></i> Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </section>
 
   <!-- Footer -->
   <div id="footer"></div>
@@ -76,6 +266,7 @@
 
 </body>
 </html>
+
 
 
 
