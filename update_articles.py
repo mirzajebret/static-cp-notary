@@ -122,8 +122,8 @@ def generate_article_html(article_data, related_articles):
                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn facebook">
                                 <i class="fa fa-facebook"></i> Facebook
                             </a>
-                            <a href="https://twitter.com/intent/tweet?text={article_data['title']}&url=https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn twitter">
-                                <i class="fa fa-twitter"></i> Twitter
+                            <a href="https://x.com/intent/post?text={article_data['title']}&url=https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn twitter">
+                                <i class="fa fa-X"></i> X
                             </a>
                         </div>
                     </div>

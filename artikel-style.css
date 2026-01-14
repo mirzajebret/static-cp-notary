@@ -416,7 +416,7 @@ article * {
 }
 
 .share-btn.twitter {
-  background: linear-gradient(135deg, #1DA1F2 0%, #0c85d0 100%);
+  background: linear-gradient(135deg, #000000 0%, #444444 100%);
 }
 
 .share-btn.linkedin {
@@ -561,16 +561,16 @@ article * {
   .article-title {
     font-size: 2rem;
   }
-  
+
   .article-content {
     padding: 2rem;
     font-size: 1.0625rem;
   }
-  
+
   .article-header {
     padding: 2rem;
   }
-  
+
   .article-footer {
     padding: 2rem;
   }
@@ -580,40 +580,40 @@ article * {
   .article-wrapper {
     padding: 1rem 0;
   }
-  
+
   .article-container {
     padding: 0 1rem;
   }
-  
+
   .article-title {
     font-size: 1.75rem;
   }
-  
+
   .article-content {
     padding: 1.5rem;
     font-size: 1rem;
   }
-  
+
   .article-header {
     padding: 1.5rem;
   }
-  
+
   .article-footer {
     padding: 1.5rem;
   }
-  
+
   .article-featured-image {
     height: 250px;
   }
-  
+
   .related-articles-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .share-buttons {
     flex-direction: column;
   }
-  
+
   .share-btn {
     width: 100%;
     justify-content: center;
@@ -624,21 +624,21 @@ article * {
   .article-title {
     font-size: 1.5rem;
   }
-  
+
   .article-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
-  
+
   .article-content h1 {
     font-size: 1.5rem;
   }
-  
+
   .article-content h2 {
     font-size: 1.35rem;
   }
-  
+
   .article-content h3 {
     font-size: 1.25rem;
   }
@@ -646,6 +646,7 @@ article * {
 
 /* === PRINT STYLES === */
 @media print {
+
   .article-breadcrumb,
   .article-share,
   .related-articles,
@@ -653,11 +654,11 @@ article * {
   .reading-progress {
     display: none;
   }
-  
+
   .article-card {
     box-shadow: none;
   }
-  
+
   .article-content {
     font-size: 12pt;
     line-height: 1.6;
