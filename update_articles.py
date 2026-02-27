@@ -116,13 +116,13 @@ def generate_article_html(article_data, related_articles):
                     <div class="article-share">
                         <h3><i class="fa fa-share-alt"></i> Bagikan Artikel Ini</h3>
                         <div class="share-buttons">
-                            <a href="https://wa.me/?text={article_data['title']} - https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn whatsapp">
+                            <a href="https://wa.me/?text={article_data['title']} - https://notaristerdekat.com/artikel/{filename}.html" target="_blank" class="share-btn whatsapp">
                                 <i class="fa fa-whatsapp"></i> WhatsApp
                             </a>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn facebook">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://notaristerdekat.com/artikel/{filename}.html" target="_blank" class="share-btn facebook">
                                 <i class="fa fa-facebook"></i> Facebook
                             </a>
-                            <a href="https://x.com/intent/post?text={article_data['title']}&url=https://notarishavisakbar.com/artikel/{filename}.html" target="_blank" class="share-btn twitter">
+                            <a href="https://x.com/intent/post?text={article_data['title']}&url=https://notaristerdekat.com/artikel/{filename}.html" target="_blank" class="share-btn twitter">
                                 <i class="fa fa-X"></i> X
                             </a>
                         </div>
