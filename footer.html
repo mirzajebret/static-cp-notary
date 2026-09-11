@@ -1,50 +1,67 @@
 <style>
     /* Wadah utama untuk semua tombol */
     .whatsapp-container {
-        position: fixed; /* Tetap di posisi yang sama saat di-scroll */
-        bottom: 8px; /* Jarak dari bawah */
-        right: 8px; /* Jarak dari kanan */
+        position: fixed;
+        /* Tetap di posisi yang sama saat di-scroll */
+        bottom: 8px;
+        /* Jarak dari bawah */
+        right: 8px;
+        /* Jarak dari kanan */
         display: flex;
-        flex-direction: column; /* Menyusun tombol secara vertikal */
-        gap: 5px; /* Jarak antar tombol */
-        z-index: 1000; /* Memastikan tombol tampil di atas konten lain */
+        flex-direction: column;
+        /* Menyusun tombol secara vertikal */
+        gap: 5px;
+        /* Jarak antar tombol */
+        z-index: 1000;
+        /* Memastikan tombol tampil di atas konten lain */
     }
 
     /* Gaya untuk setiap tombol WhatsApp */
     .whatsapp-button {
         display: flex;
-        align-items: center; /* Menyelaraskan teks dan ikon secara vertikal */
-        text-decoration: none; /* Menghilangkan garis bawah pada link */
-        transition: transform 0.2s ease-in-out; /* Animasi saat disentuh mouse */
+        align-items: center;
+        /* Menyelaraskan teks dan ikon secara vertikal */
+        text-decoration: none;
+        /* Menghilangkan garis bawah pada link */
+        transition: transform 0.2s ease-in-out;
+        /* Animasi saat disentuh mouse */
     }
 
     .whatsapp-button:hover {
-        transform: scale(1.05); /* Sedikit membesar saat disentuh mouse */
+        transform: scale(1.05);
+        /* Sedikit membesar saat disentuh mouse */
     }
 
     /* Gaya untuk label teks (CS 1, CS 2) */
     .whatsapp-button .text-label {
-        background-color: #4A4A4A; /* Warna latar belakang abu-abu tua */
-        color: white; /* Warna teks putih */
+        background-color: #4A4A4A;
+        /* Warna latar belakang abu-abu tua */
+        color: white;
+        /* Warna teks putih */
         padding: 7px 18px;
         font-family: Arial, sans-serif;
         font-size: 16px;
         font-weight: bold;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        /* Bayangan halus */
     }
 
     /* Gaya untuk ikon WhatsApp */
     .whatsapp-button .whatsapp-icon {
-        width: 50px; /* Ukuran ikon */
+        width: 50px;
+        /* Ukuran ikon */
         height: 50px;
-        margin-left: -5px; /* Sedikit tumpang tindih dengan label untuk efek menyatu */
+        margin-left: -5px;
+        /* Sedikit tumpang tindih dengan label untuk efek menyatu */
     }
 </style>
 
 <div class="whatsapp-container">
-    <a href="https://wa.me/6287736688999?text=Halo%20Notaris%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20kantor%20anda" class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/6287736688999?text=Halo%20Notaris%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20kantor%20anda"
+        class="whatsapp-button" target="_blank">
         <span class="text-label">CS 1</span>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png" alt="WhatsApp CS 1" class="whatsapp-icon">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/428/326/small/3d-social-media-icons-whatsapp-free-png.png"
+            alt="WhatsApp CS 1" class="whatsapp-icon">
     </a>
 
     <!-- <a href="https://wa.me/62811213966?text=Halo%20%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20%20anda" class="whatsapp-button" target="_blank">
@@ -55,19 +72,12 @@
 
 <footer class="footer" id="footer">
     <div class="container">
-      <p>&copy; 2024 Notaris & PPAT Havis Akbar</p>
-      <p><a href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z/data=!4m2!3m1!1s0x0:0xea372280ee728aec?sa=X&ved=1t:2428&ictx=111"> Jl. Jendral Sudirman No.31, Sukamentri, Kec. Garut Kota, Kabupaten Garut, Jawa Barat 44116</a></p>
+        <p>&copy; 2024 Notaris & PPAT Havis Akbar</p>
+        <p><a
+                href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z/data=!4m2!3m1!1s0x0:0xea372280ee728aec?sa=X&ved=1t:2428&ictx=111">
+                Jl. Jendral Sudirman No.31, Sukamentri, Kec. Garut Kota, Kabupaten Garut, Jawa Barat 44116</a></p>
     </div>
-  </footer>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <button id="back-to-top" class="back-to-top">▲</button> -->
-  <script src="script.js"></script>
-
-
-
-
-
-
-
-
-
+</footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <button id="back-to-top" class="back-to-top">▲</button> -->
+<script src="script.js"></script>
