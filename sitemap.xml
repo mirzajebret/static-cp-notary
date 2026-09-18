@@ -4,37 +4,197 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<!-- Halaman Utama -->
 <url>
   <loc>https://notaristerdekat.com/</loc>
-  <lastmod>2025-04-08T07:46:38+00:00</lastmod>
+  <lastmod>2026-09-17T04:28:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://notaristerdekat.com/jasa_layanan.html</loc>
   <lastmod>2025-04-08T07:46:38+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel.html</loc>
+  <lastmod>2026-09-17T04:28:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/profil.html</loc>
+  <lastmod>2025-04-08T07:46:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
+<!-- Artikel Terbaru (2026) -->
 <url>
   <loc>https://notaristerdekat.com/artikel/kbli-2025-panduan-lengkap.html</loc>
   <lastmod>2026-09-17T04:28:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://notaristerdekat.com/artikel/laporan-tahunan-pt-ahu.html</loc>
   <lastmod>2026-09-17T04:28:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://notaristerdekat.com/artikel/reforma-agraria-2025-redistribusi-tanah.html</loc>
   <lastmod>2026-09-17T04:28:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://notaristerdekat.com/artikel/hak-guna-bangunan-hgb-perpanjangan.html</loc>
   <lastmod>2026-09-17T04:28:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+
+<!-- Artikel 2026 -->
+<url>
+  <loc>https://notaristerdekat.com/artikel/girik-masih-berlaku-bisa-jadi-dasar-shm.html</loc>
+  <lastmod>2026-02-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<!-- Artikel 2025 -->
+<url>
+  <loc>https://notaristerdekat.com/artikel/cara-menghitung-bphtb-&-pph.html</loc>
+  <lastmod>2025-09-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/bisakah-notaris-mengurus-surat-perjanjian-hutang.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/berapa-lama-proses-pembuatan-akta-notaris.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/apa-yang-dilakukan-jika-akta-notaris-hilang.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/cara-mengurus-surat-kuasa.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/perjanjian-pra-nikah.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/langkah-mudah-membuat-ajb.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/cara-cek-keabsahan-akta-notaris-online.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/cara-mengurus-sertifikat-tanah.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/panduan-akta-pendirian-pt.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/proses-perubahan-anggaran-dasar.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/pentingnya-akta-hibah.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/digitalisasi-notaris.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/tips-memilih-notaris.html</loc>
+  <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/panduan-EFIN-badan-usaha.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/panduan-sertifikat-elektronik.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/pentingnya-pensertifikatan-tanah.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/hati-hati-calo-perizinan.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/syarat-dan-prosedur-balik-nama-sertifikat.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/legalisir-dokumen-di-notaris.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/aturan-baru-pendaftaran-tanah.html</loc>
+  <lastmod>2025-03-23T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/beli-rumah-tanpa-sertifikat.html</loc>
+  <lastmod>2025-03-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/5-kesalahan-fatal-dalam-pembuatan-akta-notaris.html</loc>
+  <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/ppat-atau-notaris.html</loc>
+  <lastmod>2025-03-11T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/prosedur-pendirian-CV.html</loc>
+  <lastmod>2026-09-17T04:28:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/prosedur-pendirian-PT.html</loc>
+  <lastmod>2026-09-17T04:28:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/akta-wasiat-dan-waris.html</loc>
+  <lastmod>2026-09-17T04:28:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://notaristerdekat.com/artikel/EFIN-badan-usaha-coretax.html</loc>
+  <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
