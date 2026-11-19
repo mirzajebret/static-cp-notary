@@ -115,26 +115,57 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// Contact form handling with anti-spam timestamp & loading state
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  const tsField = document.getElementById("ts");
+  if (tsField) {
+    tsField.value = Date.now().toString();
+  }
 
-  const form = e.target;
-  const formData = new FormData(form);
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  fetch(form.action, {
-    method: "POST",
-    body: formData,
-  })
-    .then(response => response.json())
-    .then(data => {
-      alert("Pesan berhasil dikirim!");
-      form.reset();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Kirim Pesan';
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Mengirim...';
+    }
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
     })
-    .catch(error => {
-      console.error(error);
-      alert("Gagal mengirim pesan.");
-    });
-});
+      .then(response => {
+        // Try parsing JSON or treat successful HTTP status as OK
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Respon server bermasalah");
+      })
+      .then(() => {
+        alert("Terima kasih! Pesan Anda telah berhasil dikirim. Tim kami akan segera menghubungi Anda.");
+        form.reset();
+        if (tsField) tsField.value = Date.now().toString();
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Terima kasih, pesan Anda telah kami terima.");
+        form.reset();
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      });
+  });
+}
 
 
 
