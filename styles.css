@@ -14,7 +14,7 @@ body {
 }
 
 #header {
-  background-color: #1c2331;
+  background-color: #ffffff;
   padding: 20px 5%;
   color: white;
   position: sticky;
@@ -62,7 +62,7 @@ body {
 
 .header-logo h3 a {
   font-weight: bold;
-  color: white;
+  color: rgb(80, 77, 77);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -101,7 +101,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(80, 77, 77);
   text-decoration: none;
   font-size: 18px;
   margin: 0 10px;
@@ -633,7 +633,7 @@ h2 {
 }
 
 .footer {
-  background-color: #0f1620;
+  background-color: #6B1D1E;
   color: white;
   text-align: center;
   padding: 20px 0;
