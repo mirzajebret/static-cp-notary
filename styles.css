@@ -93,8 +93,9 @@ body {
 }
 
 .header-brand-subtitle {
+  font-style: italic;
   font-family: 'Figtree', system-ui, sans-serif;
-  font-size: 10.5px;
+  font-size: 8.5px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -203,7 +204,7 @@ body {
   background-color: var(--color-navy-darkest, #0F3D2E);
   border-radius: 2px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.2s ease;
+    opacity 0.2s ease;
   transform-origin: center;
 }
 
@@ -247,7 +248,7 @@ body {
   }
 
   .header-brand-subtitle {
-    font-size: 9.5px;
+    font-size: 7.5px;
   }
 
   .nav-links {
@@ -269,9 +270,9 @@ body {
     visibility: hidden;
     overflow: hidden;
     transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.25s ease,
-                visibility 0.25s ease,
-                padding 0.35s ease;
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      padding 0.35s ease;
   }
 
   .nav-links.active {
@@ -370,11 +371,13 @@ body {
     width: 36px;
     height: 36px;
   }
+
   .header-brand-title {
     font-size: 14.5px;
   }
+
   .header-brand-subtitle {
-    font-size: 9px;
+    font-size: 7px;
   }
 }
 
@@ -382,6 +385,7 @@ body {
   .mobile-cta-wrapper {
     display: none;
   }
+
   .nav-backdrop {
     display: none !important;
   }
