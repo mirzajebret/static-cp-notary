@@ -1,18 +1,49 @@
-<header id="header">
-  <div class="container nav">
-    <div class="header-logo">
-      <img src="img/logo/logo-main.png" class="small-image" alt="notaris havis akbar lg sm">
-      <h3><a href="index.html">Notaris & PPAT Havis Akbar</a></h3>
-    </div>
-    <button class="menu-button" aria-label="Toggle navigation">&#9776;</button>
-    <div class="nav-links">
-      <a href="index.html">Beranda</a>
-      <a href="profil.html">Tentang Kami</a>
-      <a href="profnot.html">Profil Notaris & PPAT</a>
-      <a href="jasa_layanan.html">Layanan</a>
-      <a href="artikel.html">Informasi & Edukasi</a>
-      <a href="galery.html">Galeri</a>
+<header class="site-header" id="site-header">
+  <div class="site-header-container">
+    <!-- Brand / Logo -->
+    <a href="index.html" class="header-brand" aria-label="Beranda Notaris &amp; PPAT Havis Akbar">
+      <img src="img/logo/logo-main.png" class="header-logo-img" alt="Logo Notaris &amp; PPAT Havis Akbar Garut">
+      <div class="header-brand-text">
+        <span class="header-brand-title">Havis Akbar, S.H., M.Kn.</span>
+        <span class="header-brand-subtitle">Notaris &amp; PPAT Garut</span>
+      </div>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-links" id="main-nav" aria-label="Navigasi Utama">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="profil.html" class="nav-link">Tentang Kami</a>
+      <a href="profnot.html" class="nav-link">Profil Notaris</a>
+      <a href="jasa_layanan.html" class="nav-link">Layanan</a>
+      <a href="artikel.html" class="nav-link">Informasi &amp; Edukasi</a>
+      <a href="galery.html" class="nav-link">Galeri</a>
+
+      <!-- CTA Mobile Drawer -->
+      <div class="mobile-cta-wrapper">
+        <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan" 
+           target="_blank" rel="noopener noreferrer" class="mobile-cta-btn">
+          <i class="fa-brands fa-whatsapp fa fa-whatsapp" aria-hidden="true"></i>
+          <span>Konsultasi WhatsApp</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Header Actions (CTA Desktop & Hamburger Mobile) -->
+    <div class="header-actions">
+      <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan" 
+         target="_blank" rel="noopener noreferrer" class="header-cta-btn">
+        <i class="fa-brands fa-whatsapp fa fa-whatsapp" aria-hidden="true"></i>
+        <span>Konsultasi</span>
+      </a>
+
+      <button class="menu-button" id="mobile-menu-btn" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 </header>
-<script src="script.js"></script>

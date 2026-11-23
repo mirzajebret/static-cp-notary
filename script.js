@@ -56,19 +56,111 @@ document.addEventListener('DOMContentLoaded', function () {
   }).catch(error => console.error('Error loading header or footer:', error));
 
   function initializeNavigation() {
-    const backToTopButton = document.getElementById('back-to-top');
-
-
-
-    // Initialize menu button functionality
     const menuButton = document.querySelector('.menu-button');
     const navLinks = document.querySelector('.nav-links');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const siteHeader = document.querySelector('.site-header') || document.getElementById('header');
 
+    function closeMobileMenu() {
+      if (menuButton) {
+        menuButton.classList.remove('active', 'open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+      if (navLinks) {
+        navLinks.classList.remove('active');
+      }
+      if (navBackdrop) {
+        navBackdrop.classList.remove('active');
+      }
+      document.body.classList.remove('menu-open');
+    }
+
+    function toggleMobileMenu() {
+      const isOpen = navLinks && navLinks.classList.contains('active');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        if (menuButton) {
+          menuButton.classList.add('active', 'open');
+          menuButton.setAttribute('aria-expanded', 'true');
+        }
+        if (navLinks) {
+          navLinks.classList.add('active');
+        }
+        if (navBackdrop) {
+          navBackdrop.classList.add('active');
+        }
+        document.body.classList.add('menu-open');
+      }
+    }
+
+    // Toggle menu on button click
     if (menuButton && navLinks) {
-      menuButton.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
+      menuButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMobileMenu();
       });
     }
+
+    // Close menu when backdrop is tapped
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (navLinks && navLinks.classList.contains('active')) {
+        if (!navLinks.contains(e.target) && (!menuButton || !menuButton.contains(e.target))) {
+          closeMobileMenu();
+        }
+      }
+    });
+
+    // Close menu when any nav link is clicked
+    if (navLinks) {
+      const allLinks = navLinks.querySelectorAll('a');
+      allLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+    }
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+
+    // Reset mobile menu state on desktop resize
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 992) {
+        closeMobileMenu();
+      }
+    });
+
+    // Highlight active link based on current page URL
+    const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = rawPath.toLowerCase();
+    const navItems = document.querySelectorAll('.nav-links .nav-link, .nav-links a');
+    navItems.forEach(link => {
+      const href = (link.getAttribute('href') || '').toLowerCase();
+      if (href && (href === currentPath || (currentPath === '' && href === 'index.html') || (currentPath === 'index.html' && href === 'index.html'))) {
+        link.classList.add('active');
+      }
+    });
+
+    // Add scroll elevation shadow to header
+    function handleScroll() {
+      if (siteHeader) {
+        if (window.scrollY > 15) {
+          siteHeader.classList.add('is-scrolled');
+        } else {
+          siteHeader.classList.remove('is-scrolled');
+        }
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
 
