@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome Icons -->
@@ -38,22 +38,22 @@
     <script>
         const THEME_COLORS = {
             // --- PALET MERAH MAROON & VARIASI GRADASI ---
-            navyDarkest: '#6B1D1E', // Maroon paling pekat (Section gelap FAQ, background/overlay kartu)
-            navyMid: '#85292A', // Merah maroon tengah (Gradasi peralihan antara maroon pekat dan merah utama)
-            navyPrimary: '#A03737', // Merah utama (Judul hero, kartu staf, ikon, tautan, angka statistik)
-            navyCharcoal: '#6B1D1E', // Maroon gelap (Warna teks utama/body, judul section terang, tombol gelap)
-            navyTint: '#F9F3EC', // Krem lembut (Teks paragraf di atas latar merah/maroon gelap)
-            navyMuted: '#E3CFC6', // Krem kemerahan pudar (Teks pendukung kecil di atas latar gelap)
+            navyDarkest: '#0F3D2E', // Maroon paling pekat (Section gelap FAQ, background/overlay kartu)
+            navyMid: '#17543F', // Merah maroon tengah (Gradasi peralihan antara maroon pekat dan merah utama)
+            navyPrimary: '#1F6B4F', // Merah utama (Judul hero, kartu staf, ikon, tautan, angka statistik)
+            navyCharcoal: '#0F3D2E', // Maroon gelap (Warna teks utama/body, judul section terang, tombol gelap)
+            navyTint: '#EEF4F0', // Krem lembut (Teks paragraf di atas latar merah/maroon gelap)
+            navyMuted: '#C9DDD2', // Krem kemerahan pudar (Teks pendukung kecil di atas latar gelap)
 
             // --- PALET AKSEN MERAH ---
-            gold: '#A03737', // Merah aksen (Badge, bintang, tombol utama, border aksen di latar terang)
-            goldHover: '#6B1D1E', // Maroon saat kursor hover
+            gold: '#1F6B4F', // Merah aksen (Badge, bintang, tombol utama, border aksen di latar terang)
+            goldHover: '#0F3D2E', // Maroon saat kursor hover
 
             // --- PALET TEKS & LATAR PENDUKUNG ---
-            accentLight: '#F9F3EC', // Krem: aksen/teks/ikon/border di atas latar gelap
-            textMuted: '#6B1D1E', // Maroon untuk paragraf di latar terang
-            bgLight: '#F9F3EC', // Latar belakang krem lembut
-            borderLight: '#E8D8CC'  // Garis pembatas terang
+            accentLight: '#EEF4F0', // Krem: aksen/teks/ikon/border di atas latar gelap
+            textMuted: '#0F3D2E', // Maroon untuk paragraf di latar terang
+            bgLight: '#EEF4F0', // Latar belakang krem lembut
+            borderLight: '#D5E3DA'  // Garis pembatas terang
         };
 
         // Daftarkan ke Tailwind Config
@@ -109,15 +109,15 @@
 
     <style>
         :root {
-            --color-navy-darkest: #6B1D1E;
-            --color-navy-mid: #85292A;
-            --color-navy-primary: #A03737;
-            --color-navy-charcoal: #6B1D1E;
-            --color-navy-tint: #F9F3EC;
-            --color-navy-muted: #E3CFC6;
-            --color-gold: #A03737;
-            --color-gold-hover: #6B1D1E;
-            --color-accent-light: #F9F3EC;
+            --color-navy-darkest: #0F3D2E;
+            --color-navy-mid: #17543F;
+            --color-navy-primary: #1F6B4F;
+            --color-navy-charcoal: #0F3D2E;
+            --color-navy-tint: #EEF4F0;
+            --color-navy-muted: #C9DDD2;
+            --color-gold: #1F6B4F;
+            --color-gold-hover: #0F3D2E;
+            --color-accent-light: #EEF4F0;
         }
 
         /* Details summary indicator smooth rotation */
@@ -141,17 +141,42 @@
         }
 
         .custom-review-scroll::-webkit-scrollbar-track {
-            background: #F9F3EC;
+            background: #EEF4F0;
             border-radius: 8px;
         }
 
         .custom-review-scroll::-webkit-scrollbar-thumb {
-            background: var(--color-gold, #A03737);
+            background: var(--color-gold, #1F6B4F);
             border-radius: 8px;
         }
 
         .custom-review-scroll::-webkit-scrollbar-thumb:hover {
-            background: var(--color-gold-hover, #6B1D1E);
+            background: var(--color-gold-hover, #0F3D2E);
+        }
+    </style>
+
+    <!-- Komponen Tailwind (@apply) untuk desain baru -->
+    <style type="text/tailwindcss">
+        @layer components {
+            .eyebrow { @apply text-[11px] uppercase tracking-wide text-navyPrimary/80 mb-2; }
+            .feature-card { @apply grid grid-cols-1 md:grid-cols-2 bg-white md:h-[420px] overflow-hidden; }
+            .feature-text { @apply p-7 sm:p-8 flex flex-col justify-between min-h-0 overflow-hidden; }
+            .feature-title { @apply font-display font-light text-[26px] sm:text-[30px] leading-[1.15] text-navyCharcoal mb-4; }
+            .feature-body { @apply text-[14px] leading-relaxed text-navyCharcoal/80 max-w-[360px]; }
+            .feature-img { @apply relative h-[240px] md:h-full overflow-hidden bg-navyDarkest; }
+            .feature-img > img, .feature-img > iframe { @apply absolute inset-0 w-full h-full; }
+
+            .btn-flag { @apply inline-block border-l-2 border-navyPrimary bg-[#DCEAE2] px-3.5 py-2 text-[10px] font-semibold uppercase tracking-wider text-navyCharcoal transition-colors duration-200 hover:bg-navyPrimary hover:text-white; }
+            .btn-flag-glass { @apply border-white bg-white/25 text-white backdrop-blur-sm hover:bg-white hover:text-navyDarkest; }
+            .btn-flag-accent { @apply bg-gold/10 text-gold hover:text-white; }
+            .btn-flag-light { @apply border-white bg-white/90 text-navyDarkest hover:bg-white; }
+
+            .pill { @apply inline-flex items-center rounded-full border border-navyPrimary/40 px-4 py-2 text-[14px] leading-none text-navyCharcoal transition-colors duration-200 hover:bg-navyPrimary hover:border-navyPrimary hover:text-white; }
+
+            .faq-summary { @apply flex justify-between items-center gap-4 cursor-pointer list-none select-none text-[15px] font-semibold text-navyCharcoal hover:text-gold transition-colors; }
+            .faq-plus { @apply text-xl leading-none text-gold flex-shrink-0 transition-transform duration-300; }
+            details[open] .faq-plus { @apply rotate-45; }
+            .faq-answer { @apply mt-3 text-[13px] sm:text-[14px] leading-relaxed text-navyCharcoal/80; }
         }
     </style>
 </head>
@@ -160,1032 +185,562 @@
     <!-- Dynamic Header -->
     <div id="header"></div>
 
-    <main class="overflow-x-hidden">
+    <main class="overflow-x-hidden bg-white">
 
         <!-- ============================================================
-             1. HERO SECTION (Fully Mobile Optimized & Responsive - Light/Putih-Abu)
+             1. HERO — gambar penuh, judul serif tipis, tombol kecil
         ============================================================ -->
-        <section
-            class="relative bg-gradient-to-b from-[#F9F3EC] via-white to-[#F9F3EC] text-navyCharcoal py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden border-b border-[#E8D8CC]">
-            <!-- Subtle background aesthetic light -->
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none">
-            </div>
-            <div
-                class="absolute -bottom-32 -left-32 w-96 h-96 bg-navyPrimary/5 rounded-full blur-3xl pointer-events-none">
+        <section class="relative h-[400px] sm:h-[480px] lg:h-[560px] bg-navyDarkest overflow-hidden">
+            <img src="img/galeri/ruang-kantor-notaris-ppat-havis-akbar.webp"
+                alt="Kantor Notaris &amp; PPAT Havis Akbar Garut" fetchpriority="high"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-navyDarkest/85 via-navyDarkest/45 to-navyDarkest/10">
             </div>
 
-            <div
-                class="relative max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_.85fr] gap-10 lg:gap-14 items-center">
-                <!-- Hero Left Content -->
-                <div class="text-left">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navyPrimary/10 border border-navyPrimary/20 text-navyPrimary text-xs sm:text-sm font-semibold tracking-wide uppercase mb-4 sm:mb-5">
-                        <i class="fa-solid fa-scale-balanced text-xs text-gold"></i>
-                        <span>Pelayanan Kenotariatan & Pertanahan Resmi</span>
-                    </div>
-
-                    <!-- Mobile View: Foto Notaris & PPAT (Tepat Dibawah Badge Pelayanan Hukum & Pertanahan Resmi) -->
-                    <div class="block lg:hidden my-6 mx-auto w-full max-w-[290px] sm:max-w-[330px]">
-                        <div class="relative">
-                            <!-- Decorative Frame Backdrop -->
-                            <div
-                                class="absolute -top-3 -left-3 right-3 bottom-3 sm:-top-4 sm:-left-4 sm:right-4 sm:bottom-4 bg-gold opacity-90 transition-all">
-                            </div>
-
-                            <!-- Portrait Image -->
-                            <div class="relative overflow-hidden shadow-2xl bg-navyDarkest">
-                                <img src="img/anggota/foto-havis-akbar.jpg"
-                                    alt="Havis Akbar, S.H., M.Kn., M.M. - Notaris dan PPAT Garut"
-                                    class="w-full aspect-[4/5] object-cover object-top block">
-
-                                <!-- Overlay Caption -->
-                                <div class="absolute inset-x-0 bottom-0 px-4 pt-8 pb-3  text-white">
-                                    <!-- <p class="font-display font-semibold text-base leading-tight">Havis Akbar, S.H., M.Kn., M.M.</p>
-                                    <p class="text-xs text-gold font-medium mt-0.5">Notaris &amp; PPAT Kabupaten Garut</p> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h1
-                        class="font-display font-semibold text-3xl sm:text-4xl text-center sm:text-left md:text-5xl lg:text-[54px] leading-[1.15] text-navyPrimary tracking-tight">
-                        Notaris &amp; PPAT <br> Havis Akbar, S.H., M.Kn.
-                        <!-- <span
-                            class="block mt-2 sm:mt-3 font-normal italic text-lg sm:text-xl md:text-2xl text-gold">
-                            &ldquo;We Properly Understand Your Purpose&rdquo;
-                        </span> -->
-                    </h1>
-
-                    <p
-                        class="max-w-[540px] mt-4 sm:mt-5 mb-7 sm:mb-8 text-[#6B1D1E]/80 text-sm sm:text-base md:text-[17px] leading-relaxed">
-                        Mitra terpercaya untuk layanan kenotariatan dan pertanahan di Kabupaten Garut, Jawa Barat. Kami
-                        melayani perseorangan, pelaku usaha, hingga instansi dengan ketelitian, transparansi, dan
-                        kepastian hukum.
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
-                        <a href="#contact-form"
-                            class="inline-flex justify-center items-center gap-2.5 bg-gold text-white px-7 py-3.5 font-semibold text-sm sm:text-[15px] rounded-lg shadow-lg hover:bg-navyDarkest hover:text-white transition-all duration-200 active:scale-95 text-center">
-                            <span>Konsultasi Sekarang</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-
-                        <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan"
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-flex justify-center items-center gap-2.5 bg-green-600 hover:bg-gray-50 text-white border border-[#E8D8CC] px-6 py-3.5 font-semibold text-sm sm:text-[15px] rounded-lg shadow-sm transition-all duration-200 text-center">
-                            <i class="fa-brands fa-whatsapp text-lg text-white"></i>
-                            <span>Chat WhatsApp</span>
-                        </a>
-                    </div>
-
-
-                </div>
-
-                <!-- Desktop Right Image (Hidden on Mobile) -->
-                <div class="hidden lg:block relative w-full lg:max-w-none mx-auto px-2 sm:px-0">
-                    <div class="relative">
-                        <!-- Decorative Frame Backdrop -->
-
-
-                        <!-- Portrait Image -->
-                        <div
-                            class="relative rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-navyDarkest">
-                            <img src="img/anggota/foto-havis-akbar.jpg"
-                                alt="Havis Akbar, S.H., M.Kn., M.M. - Notaris dan PPAT Garut"
-                                class="w-full aspect-[4/5] object-cover object-top block transform transition duration-500 hover:scale-102">
-
-                            <!-- Overlay Caption -->
-                            <div
-                                class="absolute inset-x-0 bottom-0 px-4 sm:px-5 pt-10 pb-4 bg-gradient-to-t from-navyDarkest via-navyDarkest/85 to-transparent text-white">
-                                <p class="font-display font-semibold text-base sm:text-lg leading-tight">Havis Akbar,
-                                    S.H., M.Kn., M.M.</p>
-                                <p class="text-xs sm:text-sm text-accentLight font-medium mt-0.5">Notaris &amp; PPAT
-                                    Kabupaten Garut</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             2. INSTANSI TERKAIT / PARTNERS LOGO STRIP
-        ============================================================ -->
-        <section aria-label="Instansi terkait" class="bg-white py-6 sm:py-8 border-b border-[#E8D8CC]">
-            <div class="max-w-[1180px] mx-auto px-4 sm:px-6">
-                <p class="text-center text-xs uppercase tracking-wider text-[#6B1D1E]/70 font-semibold mb-5 sm:mb-6">
-                    Bermitra &amp; Terafiliasi Dengan Lembaga Resmi
-                </p>
-                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-14 lg:gap-16">
-                    <img class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-all duration-300"
-                        src="img/logo/link-bpn.jpg" alt="Kementerian ATR/BPN">
-                    <img class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-all duration-300"
-                        src="img/logo/link-oss.jpg" alt="OSS - BKPM">
-                    <img class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-all duration-300"
-                        src="img/logo/link-kemkumham.jpg" alt="Kementerian Hukum dan HAM RI">
-                    <img class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-all duration-300"
-                        src="img/logo/link-ppat.jpg" alt="IPPAT - Ikatan Pejabat Pembuat Akta Tanah">
-                    <img class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-all duration-300"
-                        src="img/logo/link-ini.jpg" alt="INI - Ikatan Notaris Indonesia">
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             3. TENTANG KAMI / OVERVIEW (Biru / Navy)
-        ============================================================ -->
-        <section
-            class="relative bg-gradient-to-b from-navyDarkest via-navyMid to-navyPrimary text-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-            <!-- Subtle background aesthetic light -->
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none">
-            </div>
-            <div
-                class="absolute -bottom-32 -left-32 w-96 h-96 bg-navyPrimary/40 rounded-full blur-3xl pointer-events-none">
-            </div>
-
-            <div
-                class="relative max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-                <!-- Visual Card -->
-                <div class="relative order-2 lg:order-1">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15">
-                        <img src="img/galeri/ruang-kantor-notaris-ppat-havis-akbar.webp"
-                            alt="Konsultasi di kantor notaris havis akbar" loading="lazy"
-                            class="w-full aspect-[16/10] sm:aspect-[4/3] object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
-                        </div>
-                        <div
-                            class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl border border-white/40 shadow-sm flex items-center gap-3.5">
-                            <div
-                                class="w-10 h-10 rounded-full bg-navyPrimary text-accentLight flex items-center justify-center flex-shrink-0 text-base">
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-[#6B1D1E]/70 font-medium">Fasilitas Konsultasi Nyaman</p>
-                                <p class="text-sm font-semibold text-navyCharcoal">Solusi Legal Terpercaya &amp;
-                                    Transparan
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Text Content -->
-                <div class="order-1 lg:order-2">
-                    <h2
-                        class="font-display font-semibold leading-[1.18] text-2xl sm:text-3xl md:text-4xl lg:text-[42px] text-white">
-                        Kantor Notaris &amp; PPAT <em class="not-italic text-accentLight">Havis Akbar, S.H., M.Kn.</em>
-                    </h2>
-                    <p class="mt-4 sm:mt-5 mb-6 text-navyTint text-sm sm:text-base leading-relaxed">
-                        Kami memadukan keahlian hukum kenotariatan dan pertanahan dengan penjelasan yang jernih, supaya
-                        setiap akta dan perjanjian yang Anda tandatangani dapat dipahami seutuhnya serta memiliki
-                        kekuatan hukum yang sempurna.
-                    </p>
-
-                    <!-- Feature List -->
-                    <ul
-                        class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-8 p-0 list-none text-sm sm:text-[15px]">
-                        <li
-                            class="flex items-start gap-3 p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/15 hover:bg-white/15 transition-colors">
-                            <i class="fa-solid fa-award mt-0.5 text-base text-accentLight"></i>
-                            <span class="font-medium text-white">Notaris &amp; PPAT Berpengalaman</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/15 hover:bg-white/15 transition-colors">
-                            <i class="fa-solid fa-bolt mt-0.5 text-base text-accentLight"></i>
-                            <span class="font-medium text-white">Pelayanan Cepat &amp; Tepat</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/15 hover:bg-white/15 transition-colors">
-                            <i class="fa-solid fa-layer-group mt-0.5 text-base text-accentLight"></i>
-                            <span class="font-medium text-white">Layanan Hukum Terpadu</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/15 hover:bg-white/15 transition-colors">
-                            <i class="fa-solid fa-lock mt-0.5 text-base text-accentLight"></i>
-                            <span class="font-medium text-white">Transparan &amp; Kerahasiaan</span>
-                        </li>
-                    </ul>
-
-                    <div class="flex flex-wrap items-center gap-3.5">
-                        <a href="#contact-form"
-                            class="inline-flex items-center justify-center gap-2 bg-accentLight text-navyDarkest px-7 py-3 font-semibold text-sm sm:text-[15px] rounded-lg hover:bg-white hover:text-navyDarkest transition-all duration-200 shadow-md">
-                            <span>Konsultasi Gratis</span>
-                            <i class="fa-solid fa-chevron-right text-xs"></i>
-                        </a>
-                        <a href="profil.html"
-                            class="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-6 py-3 font-semibold text-sm sm:text-[15px] rounded-lg hover:bg-white/15 transition-all duration-200">
-                            <span>Tentang Kami</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             4. LOKASI KANTOR & INTERACTIVE MAP
-        ============================================================ -->
-        <section class="bg-[#F9F3EC] py-12 sm:py-16 md:py-20 text-center border-t border-b border-[#E8D8CC]">
-            <div class="max-w-[1180px] mx-auto px-4 sm:px-6">
-                <span class="inline-block text-xs uppercase tracking-wider text-gold font-bold mb-2">Lokasi
-                    Strategis</span>
-                <h2
-                    class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl md:text-4xl text-navyCharcoal">
-                    Kunjungi Kantor Kami di <em class="not-italic text-gold">Garut</em>
-                </h2>
-                <p class="max-w-[620px] mx-auto mt-3 mb-6 text-sm sm:text-base text-[#6B1D1E]/80">
-                    Kantor Notaris &amp; PPAT Havis Akbar berlokasi di pusat kota Garut, mudah dijangkau dengan akses
-                    jalan utama dan area parkir yang memadai.
-                </p>
-
-                <!-- Map Box -->
-                <div
-                    class="relative max-w-[1020px] mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white bg-white">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3728650699595!2d107.9132053!3d-7.1982291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b10032408009%3A0xea372280ee728aec!2sKantor%20Notaris%20%26%20PPAT%20Havis%20Akbar%2C%20S.H.%2C%20M.Kn.%2C%20M.M!5e0!3m2!1sen!2sid!4v1752629515960!5m2!1sen!2sid"
-                        title="Peta Lokasi Kantor Notaris & PPAT Havis Akbar Garut" loading="lazy" allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="w-full h-[280px] sm:h-[350px] md:h-[400px] border-0 block"></iframe>
-
-                    <!-- Address Bar Below Map -->
-                    <div
-                        class="p-4 sm:p-5 bg-white border-t border-[#E8D8CC] flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-location-dot text-lg"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold text-navyCharcoal">Jl. Jendral Sudirman No.31, Sukamentri
-                                </p>
-                                <p class="text-xs text-[#6B1D1E]/70">Kec. Garut Kota, Kabupaten Garut, Jawa Barat 44116
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 w-full sm:w-auto">
-                            <a href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z"
-                                target="_blank" rel="noopener noreferrer"
-                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-navyCharcoal text-white px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:bg-gold hover:text-white transition-colors">
-                                <i class="fa-solid fa-diamond-turn-right"></i>
-                                <span>Petunjuk Rute</span>
-                            </a>
-                            <a href="#contact-form"
-                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-gold text-white px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:bg-goldHover transition-colors">
-                                <span>Hubungi Kami</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             5. LAYANAN UNGGULAN (Services Grid with Mobile Polish)
-        ============================================================ -->
-        <section id="services" class="py-14 sm:py-20 bg-white">
-            <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-4">
-                    <div>
-                        <span class="inline-block text-xs uppercase tracking-wider text-gold font-bold mb-2">Layanan
-                            Hukum &amp; Pertanahan</span>
-                        <h2 class="font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navyCharcoal">
-                            Layanan Unggulan Kami
-                        </h2>
-                    </div>
-                    <p class="text-sm sm:text-base text-[#6B1D1E]/80 max-w-[480px]">
-                        Layanan lengkap mulai dari legalitas usaha, perjanjian akta otentik, hingga pengurusan
-                        sertifikat tanah di Kabupaten Garut.
-                    </p>
-                </div>
-
-                <!-- 6 Service Cards -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-                    <!-- 1. Pendirian Badan Hukum -->
-                    <a href="jasa_layanan.html#tabel-notaris"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/hero-document.jpg" alt="Pendirian Badan Hukum" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Kenotariatan</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Pendirian Badan Hukum
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">PT, PT Perorangan, Yayasan, Perkumpulan,
-                                dan Koperasi resmi terdaftar Kemenkumham.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- 2. Pendirian Badan Usaha -->
-                    <a href="jasa_layanan.html#tabel-notaris"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/hero-meeting.jpg" alt="Pendirian Badan Usaha" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Kenotariatan</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Pendirian Badan Usaha
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">CV, Firma, Persekutuan Perdata dengan
-                                pendaftaran Kemenkumham dan sistem OSS NIB.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- 3. Akta-akta Notariil -->
-                    <a href="jasa_layanan.html#tabel-notaris"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/gambar-layanan-notaris.jpg" alt="Akta Notariil" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-file-signature"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Kenotariatan</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Akta-akta Notariil
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">Perjanjian sewa, perjanjian kerjasama,
-                                surat kuasa, pengakuan hutang, wasiat, dan hibah.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- 4. Layanan Jasa Pertanahan (PPAT) -->
-                    <a href="jasa_layanan.html#tabel-ppat"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/gambar-layanan-ppat.jpg" alt="Layanan Pertanahan PPAT" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Layanan
-                                PPAT</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Layanan Jasa Pertanahan
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">Akta Jual Beli (AJB), Hibah, APHB, Balik
-                                Nama Sertifikat, Pengecekan Sertifikat BPN.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- 5. Legalisasi & Waarmerking -->
-                    <a href="jasa_layanan.html#tabel-lainnya"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/hero-stamp.jpg" alt="Legalisasi dan Waarmerking" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-stamp"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Kenotariatan</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Legalisasi &amp; Waarmerking
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">Pengesahan tanda tangan surat di bawah
-                                tangan, pencatatan/pembukuan dalam buku daftar khusus.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- 6. Layanan Jasa Lainnya -->
-                    <a href="jasa_layanan.html#tabel-lainnya"
-                        class="group relative flex flex-col justify-end min-h-[220px] p-6 text-white bg-navyDarkest rounded-xl overflow-hidden border border-[#F9F3EC]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <img src="img/asset/gambar-layanan-lainnya.jpg" alt="Layanan Lainnya" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/70 to-transparent">
-                        </div>
-
-                        <div
-                            class="absolute top-4 right-4 w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-accentLight text-accentLight flex items-center justify-center text-sm shadow">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                        </div>
-
-                        <div class="relative z-10">
-                            <span
-                                class="text-xs uppercase font-semibold text-accentLight tracking-wider mb-1 block">Layanan
-                                Tambahan</span>
-                            <h3
-                                class="font-display font-semibold text-xl sm:text-[22px] leading-snug mb-1 text-white group-hover:text-accentLight transition-colors">
-                                Layanan Jasa Lainnya
-                            </h3>
-                            <p class="text-xs text-navyTint line-clamp-2 mb-3">Pemasangan Hak Tanggungan (APHT), SKMHT,
-                                Roya sertifikat, dan konsultasi legalitas pertanahan.</p>
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-accentLight">
-                                <span>Lihat Selengkapnya</span>
-                                <i
-                                    class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             6. SPOTLIGHT 1: TRANSAKSI TANAH (PPAT)
-        ============================================================ -->
-        <section class="bg-[#F9F3EC] border-t border-b border-[#E8D8CC]">
-            <div class="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
-                <!-- Image -->
-                <div class="h-64 sm:h-80 md:h-[440px] w-full overflow-hidden">
-                    <img src="img/asset/gambar-layanan-ppat.jpg" alt="Layanan PPAT Garut Transaksi Tanah" loading="lazy"
-                        class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
-                </div>
-
-                <!-- Content -->
-                <div class="p-6 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center">
-                    <span class="inline-block text-xs uppercase tracking-wider text-gold font-bold mb-2">Pejabat
-                        Pembuat Akta Tanah (PPAT)</span>
-                    <h2
-                        class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl lg:text-[38px] text-navyCharcoal">
-                        Transaksi Tanah
-                        <em class="block not-italic text-gold mt-1">Aman, Tertib, dan Sah</em>
-                    </h2>
-                    <p class="mt-3.5 mb-6 text-[#6B1D1E]/80 text-sm sm:text-base leading-relaxed">
-                        Jual beli, hibah, pembagian hak bersama (APHB), hingga peralihan hak atas tanah dan bangunan
-                        dibuat sebagai akta PPAT berkekuatan hukum penuh sesuai ketentuan Kementerian ATR/BPN.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-3 mb-7 text-xs sm:text-sm text-navyCharcoal">
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Akta Jual Beli (AJB)</span>
-                        </div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Akta Hibah Tanah</span></div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>APHB Waris</span></div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Pengecekan Sertifikat</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <a href="jasa_layanan.html#tabel-ppat"
-                            class="inline-flex items-center gap-2 bg-navyCharcoal text-white px-7 py-3 rounded-lg font-semibold text-sm hover:bg-gold hover:text-white transition-colors shadow">
-                            <span>Pelajari Layanan PPAT</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             7. SPOTLIGHT 2: PENDIRIAN PT & CV (NOTARIS)
-        ============================================================ -->
-        <section class="bg-white">
-            <div class="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
-                <!-- Mobile: Image comes first for smooth rhythm; on desktop text is left, image is right -->
-                <div class="h-64 sm:h-80 md:h-[440px] w-full overflow-hidden order-1 md:order-2">
-                    <img src="img/asset/hero-document.jpg" alt="Dokumen pendirian badan usaha PT CV Garut"
-                        loading="lazy"
-                        class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
-                </div>
-
-                <!-- Content -->
-                <div class="p-6 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
-                    <span class="inline-block text-xs uppercase tracking-wider text-gold font-bold mb-2">Kenotariatan
-                        &amp; Badan Usaha</span>
-                    <h2
-                        class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl lg:text-[38px] text-navyCharcoal">
-                        Pendirian PT &amp; CV
-                        <em class="block not-italic text-gold mt-1">Legal, Cepat, dan Terarah</em>
-                    </h2>
-                    <p class="mt-3.5 mb-6 text-[#6B1D1E]/80 text-sm sm:text-base leading-relaxed">
-                        Mulai dari akta pendirian, pengesahan SK Kemenkumham, pendaftaran NIB OSS, hingga perubahan
-                        anggaran dasar. Kami mendampingi perjalanan usaha Anda sejak langkah pertama.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-3 mb-7 text-xs sm:text-sm text-navyCharcoal">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold"></i><span>PT
-                                Perorangan / Umum</span>
-                        </div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Pendirian CV &amp;
-                                Firma</span></div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Perubahan Pengurus /
-                                RUPS</span></div>
-                        <div class="flex items-center gap-2"><i
-                                class="fa-solid fa-circle-check text-gold"></i><span>Pendaftaran NIB OSS</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <a href="jasa_layanan.html#tabel-notaris"
-                            class="inline-flex items-center gap-2 bg-navyCharcoal text-white px-7 py-3 rounded-lg font-semibold text-sm hover:bg-gold hover:text-white transition-colors shadow">
-                            <span>Pelajari Layanan Notaris</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             8. SOCIAL PROOF / MENGAPA MEMILIH KAMI
-        ============================================================ -->
-        <section class="bg-[#F9F3EC] border-t border-[#E8D8CC]">
-            <div class="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
-                <!-- Real Office Interior Photo (Replaced repeated stamp image!) -->
-                <div class="h-64 sm:h-80 md:h-[480px] w-full overflow-hidden">
-                    <img src="img/galeri/plang-kantor.jpeg" alt="Ruang Kerja Kantor Notaris & PPAT Havis Akbar"
-                        loading="lazy" class="w-full h-full object-cover">
-                </div>
-
-                <!-- Proof Content & Grid -->
-                <div class="p-6 sm:p-10 md:p-12 lg:p-16">
-
-                    <h2
-                        class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl lg:text-[40px] text-navyCharcoal">
-                        Mengapa Memilih Kami?
-                    </h2>
-                    <p class="mt-3.5 mb-6 text-[#6B1D1E]/80 text-sm sm:text-base leading-relaxed">
-                        Kepercayaan Anda adalah prioritas kami. Setiap berkas dan akta dikerjakan dengan ketelitian
-                        tingkat tinggi, kerahasiaan penuh, dan kepatuhan mutlak pada kode etik jabatan.
-                    </p>
-
-                    <!-- 4 Metric Cards -->
-                    <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-7">
-                        <div class="p-4 bg-white rounded-xl border border-[#E8D8CC] shadow-sm flex items-center gap-3">
-                            <i class="fa-solid fa-briefcase text-2xl text-gold flex-shrink-0"></i>
-                            <div>
-                                <b class="block font-display text-md sm:text-md leading-tight text-navyPrimary">Profesional
-                                    & Berpengalaman</b>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-white rounded-xl border border-[#E8D8CC] shadow-sm flex items-center gap-3">
-                            <i class="fa-solid fa-users text-2xl text-gold flex-shrink-0"></i>
-                            <div>
-                                <b class="block font-display text-md sm:text-md leading-tight text-navyPrimary">Layanan
-                                    Terpadu</b>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-white rounded-xl border border-[#E8D8CC] shadow-sm flex items-center gap-3">
-                            <i class="fa-solid fa-layer-group text-2xl text-gold flex-shrink-0"></i>
-                            <div>
-                                <b class="block font-display text-md sm:text-md leading-tight text-navyPrimary">Pelayanan
-                                    Cepat & Tepat</b>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-white rounded-xl border border-[#E8D8CC] shadow-sm flex items-center gap-3">
-                            <i class="fa-solid fa-shield-halved text-2xl text-gold flex-shrink-0"></i>
-                            <div>
-                                <b class="block font-display text-md sm:text-md leading-tight text-navyPrimary">Kepercayaan
-                                    & Transparan</b>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#services"
-                        class="inline-flex items-center gap-2 bg-navyCharcoal text-white px-7 py-3 rounded-lg font-semibold text-sm hover:bg-gold hover:text-white transition-colors shadow">
-                        <span>Lihat Semua Layanan</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ============================================================
-             9. TIM KAMI (Leader Spotlight + Balanced 8 Staff Grid)
-        ============================================================ -->
-        <section id="team" class="py-14 sm:py-20 md:py-24 bg-white">
-            <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Title -->
-                <div class="text-center max-w-[640px] mx-auto mb-12 sm:mb-12">
-
-                    <h2 class="font-display font-semibold text-2xl sm:text-3xl md:text-4xl text-navyCharcoal">
-                        Tim Profesional Kami
-                    </h2>
-                    <p class="mt-3 text-sm sm:text-base text-[#6B1D1E]/80">
-                        didukung oleh tenaga profesional & berpengalaman, berorientasi pada pelayanan terbaik,
-                        memberikan solusi atas kebutuhan layanan kenotariatan dan pertanahan bagi masyarakat
-
-                    </p>
-                </div>
-
-                <!-- Leader Spotlight Card -->
-                <div
-                    class="mb-10 sm:mb-12 bg-gradient-to-r from-navyDarkest to-navyPrimary text-white rounded-2xl overflow-hidden shadow-xl border border-accentLight/30">
-                    <div class="flex flex-col sm:flex-row md:grid md:grid-cols-12 items-center p-5 sm:p-6 md:p-0">
-                        <div class="w-36 sm:w-44 md:w-full md:col-span-4 lg:col-span-3 flex-shrink-0">
-                            <img src="img/anggota/pak-havis-akbar-2026.jpg" alt="Havis Akbar, S.H., M.Kn., M.M."
-                                loading="lazy"
-                                class="w-36 h-36 sm:w-44 sm:h-44 md:w-full md:h-full aspect-square md:aspect-[4/5] object-cover object-top rounded-xl md:rounded-none shadow-md md:shadow-none mx-auto border-2 border-accentLight/40 md:border-0">
-                        </div>
-                        <div
-                            class="pt-4 sm:pt-0 sm:pl-6 md:p-8 lg:p-10 md:col-span-8 lg:col-span-9 flex flex-col justify-center text-center sm:text-left">
-
-                            <h3 class="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-white">
-                                Havis Akbar, S.H., M.Kn., M.M.
-                            </h3>
-                            <p class="text-sm sm:text-base text-accentLight font-medium mt-1 mb-2 sm:mb-4">
-                                NOTARIS &amp; PPAT
-                            </p>
-                            <p class="text-xs sm:text-sm text-navyTint max-w-2xl leading-relaxed hidden lg:block">
-                                Berkomitmen mendampingi masyarakat dan pelaku usaha dalam mewujudkan kepastian hukum
-                                atas akta otentik serta administrasi pertanahan dengan pelayanan yang bersahabat, cepat,
-                                dan akuntabel.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8 Dedicated Staff (2x4 on mobile, 4x2 on tablet/desktop - ZERO dangling empty slots!) -->
+            <div class="relative h-full max-w-[920px] mx-auto px-5 sm:px-6 flex items-end pb-12 sm:pb-16 lg:pb-20">
                 <div>
-                    <h4 class="text-center font-display font-semibold text-lg sm:text-xl text-navyCharcoal mb-6">
-                        Staf &amp; Tim Operasional Kantor
-                    </h4>
-                    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5">
-                        <!-- Member 1 -->
+                    <h1
+                        class="font-display font-light text-white text-[38px] sm:text-5xl lg:text-[60px] leading-[1.08] max-w-[540px]">
+                        Notaris &amp; PPAT Havis Akbar, S.H., M.Kn.
+                    </h1>
+                    <a href="#services" class="btn-flag btn-flag-glass mt-6">Jelajahi Layanan Kami</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             2. PENCARIAN — "Ada yang bisa kami bantu?"
+        ============================================================ -->
+        <section class="bg-[#EEF4F0] pt-10 pb-14 sm:pb-20 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <h2 class="font-display font-light text-[26px] sm:text-[30px] text-navyCharcoal mb-3">Ada yang bisa kami
+                    bantu?</h2>
+                <form id="service-search" class="relative" role="search" onsubmit="return false;">
+                    <label for="service-search-input" class="sr-only">Cari layanan</label>
+                    <input id="service-search-input" type="search" autocomplete="off"
+                        placeholder="Ketik untuk mencari layanan..."
+                        class="w-full h-12 bg-white pl-4 pr-12 text-[14px] text-navyCharcoal placeholder:text-navyCharcoal/60 outline-none border border-transparent focus:border-navyPrimary/50 transition-colors">
+                    <button type="submit" aria-label="Cari"
+                        class="absolute right-0 top-0 h-12 w-12 flex items-center justify-center text-navyCharcoal hover:text-gold transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             4. LAYANAN UNGGULAN (gaya "Recent News & Insights")
+        ============================================================ -->
+        <section id="services" class="bg-white py-14 sm:py-16">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <h2 class="font-display font-light text-[32px] sm:text-[38px] text-gold mb-8">Layanan Unggulan</h2>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8">
+                    <a href="jasa_layanan.html#tabel-notaris" class="group block">
+                        <div class="aspect-[4/3] overflow-hidden bg-navyDarkest">
+                            <img src="img/asset/hero-document.jpg" alt="Pendirian Badan Hukum" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
                         <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                            class="mt-3 flex items-center justify-between text-[10px] uppercase tracking-wide text-gold">
+                            <span>Kenotariatan</span><span>Notaris</span>
+                        </div>
+                        <h3
+                            class="mt-1.5 text-[14px] sm:text-[15px] font-semibold leading-snug text-navyCharcoal group-hover:text-gold transition-colors">
+                            Pendirian Badan Hukum: PT, Yayasan, Perkumpulan &amp; Koperasi
+                        </h3>
+                    </a>
+
+                    <a href="jasa_layanan.html#tabel-notaris" class="group block">
+                        <div class="aspect-[4/3] overflow-hidden bg-navyDarkest">
+                            <img src="img/asset/hero-meeting.jpg" alt="Pendirian Badan Usaha" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div
+                            class="mt-3 flex items-center justify-between text-[10px] uppercase tracking-wide text-gold">
+                            <span>Kenotariatan</span><span>Notaris</span>
+                        </div>
+                        <h3
+                            class="mt-1.5 text-[14px] sm:text-[15px] font-semibold leading-snug text-navyCharcoal group-hover:text-gold transition-colors">
+                            Pendirian Badan Usaha: CV, Firma &amp; Pendaftaran NIB OSS
+                        </h3>
+                    </a>
+
+                    <a href="jasa_layanan.html#tabel-notaris" class="group block">
+                        <div class="aspect-[4/3] overflow-hidden bg-navyDarkest">
+                            <img src="img/asset/gambar-layanan-notaris.jpg" alt="Akta-akta Notariil" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div
+                            class="mt-3 flex items-center justify-between text-[10px] uppercase tracking-wide text-gold">
+                            <span>Kenotariatan</span><span>Notaris</span>
+                        </div>
+                        <h3
+                            class="mt-1.5 text-[14px] sm:text-[15px] font-semibold leading-snug text-navyCharcoal group-hover:text-gold transition-colors">
+                            Akta-akta Notariil: sewa, kerjasama, kuasa, wasiat &amp; hibah
+                        </h3>
+                    </a>
+
+                    <a href="jasa_layanan.html#tabel-ppat" class="group block">
+                        <div class="aspect-[4/3] overflow-hidden bg-navyDarkest">
+                            <img src="img/asset/gambar-layanan-ppat.jpg" alt="Layanan Pertanahan PPAT" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div
+                            class="mt-3 flex items-center justify-between text-[10px] uppercase tracking-wide text-gold">
+                            <span>Pertanahan</span><span>PPAT</span>
+                        </div>
+                        <h3
+                            class="mt-1.5 text-[14px] sm:text-[15px] font-semibold leading-snug text-navyCharcoal group-hover:text-gold transition-colors">
+                            Jasa Pertanahan: AJB, Hibah, APHB &amp; Balik Nama Sertifikat
+                        </h3>
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="jasa_layanan.html" class="btn-flag btn-flag-accent">Semua Layanan</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             5. JELAJAHI LAYANAN (pill / chip)
+        ============================================================ -->
+        <section id="jelajah" class="bg-[#EEF4F0] py-14 sm:py-16 border-y-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <h2 class="font-display font-light text-[32px] sm:text-[38px] text-navyCharcoal mb-6">Jelajahi Layanan
+                    Kami</h2>
+
+                <div id="chip-list" class="flex flex-wrap gap-2.5">
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Pendirian PT</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">PT Perorangan</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Pendirian CV</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Firma</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Yayasan</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Perkumpulan</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Koperasi</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">NIB OSS</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Perubahan Pengurus</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">RUPS</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Perjanjian Sewa</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Perjanjian Kerjasama</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Surat Kuasa</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Pengakuan Hutang</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-notaris">Wasiat</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-ppat">Akta Jual Beli (AJB)</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-ppat">Hibah</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-ppat">APHB</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-ppat">Balik Nama Sertifikat</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-ppat">Pengecekan Sertifikat</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-lainnya">APHT</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-lainnya">SKMHT</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-lainnya">Roya</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-lainnya">Legalisasi</a>
+                    <a class="pill" href="jasa_layanan.html#tabel-lainnya">Waarmerking</a>
+                    <a class="pill" href="#contact-form">Konsultasi Legalitas</a>
+                </div>
+                <p id="chip-empty" class="hidden mt-4 text-sm text-navyCharcoal/80">
+                    Layanan tidak ditemukan. <a href="#contact-form" class="underline text-gold">Hubungi kami</a> untuk
+                    bertanya langsung.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             6. KARTU: TENTANG KANTOR
+        ============================================================ -->
+        <section class="bg-[#EEF4F0] py-8 sm:py-10 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Tentang Kami</p>
+                            <h2 class="feature-title">Kantor Notaris &amp; PPAT Havis Akbar</h2>
+                            <p class="feature-body">
+                                Kami memadukan keahlian kenotariatan dan pertanahan dengan penjelasan yang jernih,
+                                supaya
+                                setiap akta yang Anda tandatangani dapat dipahami seutuhnya dan berkekuatan hukum
+                                sempurna.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-2.5">
+                            <a href="profil.html" class="btn-flag">Tentang Kami</a>
+                            <a href="#contact-form" class="btn-flag">Konsultasi Gratis</a>
+                        </div>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/asset/hero-meeting.jpg" loading="lazy"
+                            alt="Konsultasi di kantor notaris Havis Akbar" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KARTU: TRANSAKSI TANAH (PPAT) -->
+        <section class="bg-[#EEF4F0] py-8 sm:py-10 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Pejabat Pembuat Akta Tanah</p>
+                            <h2 class="feature-title">Transaksi tanah yang aman, tertib, dan sah</h2>
+                            <p class="feature-body">
+                                Jual beli, hibah, APHB, hingga peralihan hak atas tanah dan bangunan dibuat sebagai akta
+                                PPAT sesuai ketentuan Kementerian ATR/BPN.
+                            </p>
+                        </div>
+                        <div class="mt-8"><a href="jasa_layanan.html#tabel-ppat" class="btn-flag">Pelajari Layanan
+                                PPAT</a></div>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/asset/gambar-layanan-ppat.jpg" loading="lazy"
+                            alt="Layanan PPAT Garut Transaksi Tanah" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KARTU: PENDIRIAN PT & CV -->
+        <section class="bg-[#EEF4F0] py-8 sm:py-10 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Kenotariatan &amp; Badan Usaha</p>
+                            <h2 class="feature-title">Pendirian PT &amp; CV yang legal, cepat, dan terarah</h2>
+                            <p class="feature-body">
+                                Dari akta pendirian, pengesahan SK Kemenkumham, pendaftaran NIB OSS, hingga perubahan
+                                anggaran dasar. Kami mendampingi usaha Anda sejak langkah pertama.
+                            </p>
+                        </div>
+                        <div class="mt-8"><a href="jasa_layanan.html#tabel-notaris" class="btn-flag">Pelajari Layanan
+                                Notaris</a></div>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/asset/hero-document.jpg" loading="lazy"
+                            alt="Dokumen pendirian badan usaha PT CV Garut" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KARTU: MENGAPA MEMILIH KAMI -->
+        <section class="bg-[#EEF4F0] py-8 sm:py-10 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Kepercayaan</p>
+                            <h2 class="feature-title">Mengapa memilih kami?</h2>
+                            <p class="feature-body">
+                                Setiap berkas dan akta dikerjakan dengan ketelitian tinggi, kerahasiaan penuh, dan
+                                kepatuhan pada kode etik jabatan.
+                            </p>
+                            <ul class="mt-5 space-y-2 text-[13px] text-navyCharcoal">
+                                <li class="flex items-center gap-2"><i
+                                        class="fa-solid fa-check text-gold text-xs"></i>Profesional &amp; berpengalaman
+                                </li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fa-solid fa-check text-gold text-xs"></i>Layanan hukum terpadu</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fa-solid fa-check text-gold text-xs"></i>Pelayanan cepat &amp; tepat</li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fa-solid fa-check text-gold text-xs"></i>Transparan &amp; terjaga
+                                    kerahasiaannya</li>
+                            </ul>
+                        </div>
+                        <div class="mt-8"><a href="#services" class="btn-flag">Lihat Semua Layanan</a></div>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/galeri/plang-kantor.jpeg" loading="lazy"
+                            alt="Kantor Notaris &amp; PPAT Havis Akbar" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KARTU: LOKASI (peta di sisi kanan) -->
+        <section class="bg-[#EEF4F0] py-8 sm:py-10 border-b-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Lokasi</p>
+                            <h2 class="feature-title">Kunjungi kantor kami di Garut</h2>
+                            <p class="feature-body">
+                                Jl. Jendral Sudirman No.31, Sukamentri, Kec. Garut Kota, Kabupaten Garut, Jawa Barat
+                                44116.
+                                Berada di pusat kota dengan akses jalan utama dan area parkir memadai.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-2.5">
+                            <a href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z"
+                                target="_blank" rel="noopener noreferrer" class="btn-flag">Petunjuk Rute</a>
+                            <a href="#contact-form" class="btn-flag">Hubungi Kami</a>
+                        </div>
+                    </div>
+                    <div class="feature-img">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3728650699595!2d107.9132053!3d-7.1982291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b10032408009%3A0xea372280ee728aec!2sKantor%20Notaris%20%26%20PPAT%20Havis%20Akbar%2C%20S.H.%2C%20M.Kn.%2C%20M.M!5e0!3m2!1sen!2sid!4v1752629515960!5m2!1sen!2sid"
+                            title="Peta Lokasi Kantor Notaris & PPAT Havis Akbar Garut" loading="lazy" allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full min-h-[260px] border-0 block"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             7. TIM KAMI
+        ============================================================ -->
+        <section id="team" class="bg-white pt-14 sm:pt-16 pb-14 sm:pb-16">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <h2 class="font-display font-light text-[32px] sm:text-[38px] text-gold mb-3">Tim Profesional Kami</h2>
+                <p class="text-[14px] leading-relaxed text-navyCharcoal/80 max-w-[620px] mb-8">
+                    Didukung tenaga profesional dan berpengalaman yang berorientasi pada pelayanan terbaik bagi
+                    kebutuhan kenotariatan dan pertanahan masyarakat.
+                </p>
+
+                <!-- Notaris & PPAT -->
+                <div class="feature-card bg-[#EEF4F0] mb-12">
+                    <div class="feature-text">
+                        <div>
+                            <p class="eyebrow">Notaris &amp; PPAT</p>
+                            <h3 class="feature-title">Havis Akbar, S.H., M.Kn., M.M.</h3>
+                            <p class="feature-body">
+                                Berkomitmen mendampingi masyarakat dan pelaku usaha mewujudkan kepastian hukum atas akta
+                                otentik serta administrasi pertanahan dengan pelayanan yang bersahabat, cepat, dan
+                                akuntabel.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/anggota/pak-havis-akbar-2026.jpg" loading="lazy"
+                            alt="Havis Akbar, S.H., M.Kn., M.M." class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+
+                <h3 class="font-display font-light text-[26px] text-navyCharcoal mb-6">Staf &amp; Tim Operasional</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-8">
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/foto-mirza-alby-assidiqie.jpg" alt="Mirza Alby Assidiqie"
                                 loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Mirza
-                                    Alby A.</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">IT Officer</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 2 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">IT Officer</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Mirza Alby A.</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/foto-dini-kartini.jpg" alt="Kartini Dini" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Kartini
-                                    Dini</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Senior Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 3 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Senior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Kartini Dini</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/foto-nepi-meinti.webp" alt="Nepi Meinti" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Nepi
-                                    Meinti</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Senior Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 4 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Senior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Nepi Meinti</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/Aulia Novani.jpg" alt="Aulia Noviani" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Aulia
-                                    Noviani</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Junior Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 5 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Junior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Aulia Noviani</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/Muhammad Rizieq Alghani Taufik.png" alt="M. Rizieq Alghani Taufik"
                                 loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">M. Rizieq
-                                    A. T.</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Junior Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 6 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Junior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">M. Rizieq A. T.</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/Neli Zakiyatun Nufus.jpg" alt="Neli Zakiyatun Nufus" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Neli
-                                    Zakiyatun N.</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Staff Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 7 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Staff Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Neli Zakiyatun N.</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/foto-cyntia-yuni.jpg" alt="Cyntia Yuni" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Cyntia
-                                    Yuni</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">Staff Admin</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-
-                        <!-- Member 8 -->
-                        <div
-                            class="bg-navyPrimary text-white rounded-xl overflow-hidden shadow-md group hover:-translate-y-1 transition-all duration-300">
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">Staff Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Cyntia Yuni</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest">
                             <img src="img/anggota/foto-andi-kuntoro.jpg" alt="Andi Kuntoro" loading="lazy"
-                                class="w-full aspect-square object-cover object-top group-hover:scale-105 transition duration-500">
-                            <div class="p-3 sm:p-4 text-center">
-                                <b class="block font-semibold text-sm sm:text-[15px] leading-tight text-white">Andi
-                                    Kuntoro</b>
-                                <span class="text-xs text-accentLight font-medium mt-1 block">General Affair</span>
-                            </div>
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold">General Affair</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Andi Kuntoro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             8. FAQ
+        ============================================================ -->
+        <section class="bg-[#EEF4F0] py-12 sm:py-16 border-y-[3px] border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="bg-white grid grid-cols-1 md:grid-cols-[.8fr_1.2fr]">
+                    <div class="p-7 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <p class="eyebrow">FAQ</p>
+                            <h2 class="feature-title">Pertanyaan yang sering diajukan</h2>
+                            <p class="feature-body">
+                                Rangkuman informasi mengenai prosedur, dokumen pendukung, dan konsultasi layanan notaris
+                                serta PPAT.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20bertanya%20seputar%20akta"
+                                target="_blank" rel="noopener noreferrer" class="btn-flag">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Tanya via WhatsApp
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-
-        <!-- ============================================================
-             10. FAQ / PERTANYAAN YANG SERING DIAJUKAN
-        ============================================================ -->
-        <section class="py-14 sm:py-20 bg-navyDarkest text-white">
-            <div
-                class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14 items-start">
-                <!-- Left Title Column -->
-                <div>
-                    <h2
-                        class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl lg:text-[40px] text-white">
-                        Pertanyaan yang Sering Diajukan
-                    </h2>
-                    <p class="mt-3.5 mb-7 text-sm sm:text-base text-navyTint leading-relaxed">
-                        Berikut rangkuman informasi penting mengenai prosedur, dokumen pendukung, dan konsultasi layanan
-                        notaris serta PPAT.
-                    </p>
-
-                    <!-- Direct Help Box -->
-                    <div class="p-5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                        <p class="text-sm font-semibold text-white mb-1">Masih memiliki pertanyaan lain?</p>
-                        <p class="text-xs text-navyMuted mb-4">Tim kami siap memberikan penjelasan lengkap secara
-                            langsung.</p>
-                        <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20bertanya%20seputar%20akta"
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 bg-accentLight text-navyDarkest px-5 py-2.5 rounded-lg text-xs font-semibold hover:bg-white transition-colors">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
-                            <span>Tanya via WhatsApp</span>
-                        </a>
+                    <div class="p-7 sm:p-8 md:pl-2 divide-y divide-navyCharcoal/15">
+                        <details open class="group py-4 first:pt-0">
+                            <summary class="faq-summary">
+                                <span>Apa perbedaan mendasar antara Notaris dan PPAT?</span>
+                                <span class="faq-plus">+</span>
+                            </summary>
+                            <p class="faq-answer">
+                                <strong>Notaris</strong> berwenang membuat akta otentik umum seperti pendirian badan
+                                usaha
+                                (PT, CV), yayasan, surat kuasa, dan perjanjian kerjasama. Sedangkan
+                                <strong>PPAT</strong>
+                                (Pejabat Pembuat Akta Tanah) bertugas khusus membuat akta otentik mengenai perbuatan
+                                hukum
+                                atas hak tanah dan bangunan, seperti Akta Jual Beli (AJB), Hibah, dan APHB.
+                            </p>
+                        </details>
+                        <details class="group py-4">
+                            <summary class="faq-summary">
+                                <span>Dokumen apa saja yang perlu saya persiapkan?</span>
+                                <span class="faq-plus">+</span>
+                            </summary>
+                            <p class="faq-answer">
+                                Dokumen disesuaikan dengan jenis kebutuhan akta. Secara umum diperlukan identitas para
+                                pihak
+                                (KTP, KK, NPWP), bukti kepemilikan (Sertifikat Tanah asli, PBB terbaru untuk PPAT),
+                                serta
+                                izin usaha atau anggaran dasar (untuk badan usaha). Hubungi kami untuk checklist dokumen
+                                spesifik Anda.
+                            </p>
+                        </details>
+                        <details class="group py-4">
+                            <summary class="faq-summary">
+                                <span>Berapa lama proses pembuatan akta dan pendaftarannya?</span>
+                                <span class="faq-plus">+</span>
+                            </summary>
+                            <p class="faq-answer">
+                                Waktu pengerjaan bergantung pada kelengkapan berkas dan koordinasi dengan instansi
+                                terkait
+                                (Kemenkumham, BPN, atau Bapenda). Pembuatan draf akta biasanya selesai dalam 1-3 hari
+                                kerja,
+                                sedangkan proses balik nama sertifikat atau SK pengesahan mengikuti estimasi resmi yang
+                                kami
+                                infokan secara transparan sejak awal.
+                            </p>
+                        </details>
+                        <details class="group py-4">
+                            <summary class="faq-summary">
+                                <span>Apakah data dan kerahasiaan akta saya terjamin aman?</span>
+                                <span class="faq-plus">+</span>
+                            </summary>
+                            <p class="faq-answer">
+                                Tentu saja. Menjaga kerahasiaan seluruh informasi, isi akta, dan identitas para pihak
+                                adalah
+                                sumpah jabatan serta kewajiban mutlak seorang Notaris &amp; PPAT yang kami jalankan
+                                dengan
+                                standar kepatuhan ketat.
+                            </p>
+                        </details>
+                        <details class="group py-4 last:pb-0">
+                            <summary class="faq-summary">
+                                <span>Bagaimana prosedur untuk berkonsultasi?</span>
+                                <span class="faq-plus">+</span>
+                            </summary>
+                            <p class="faq-answer">
+                                Anda dapat mengisi formulir pesan di bawah, menghubungi tim kami melalui WhatsApp (+62
+                                877-3668-8999), atau datang langsung ke kantor kami di Garut pada jam operasional kerja
+                                (Senin - Sabtu 08.00 - 17.00 WIB).
+                            </p>
+                        </details>
                     </div>
                 </div>
-
-                <!-- Right Accordion List -->
-                <div class="divide-y divide-white/15">
-                    <!-- Q1 -->
-                    <details open class="group py-4">
-                        <summary
-                            class="flex justify-between items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer list-none select-none text-white hover:text-accentLight transition-colors">
-                            <span>Apa perbedaan mendasar antara Notaris dan PPAT?</span>
-                            <span
-                                class="text-xl leading-none text-accentLight transform transition-transform duration-300 group-open:rotate-45 flex-shrink-0">+</span>
-                        </summary>
-                        <p class="mt-3 text-xs sm:text-sm text-navyTint leading-relaxed">
-                            <strong>Notaris</strong> berwenang membuat akta otentik umum seperti pendirian badan usaha
-                            (PT, CV), yayasan, surat kuasa, dan perjanjian kerjasama. Sedangkan <strong>PPAT</strong>
-                            (Pejabat Pembuat Akta Tanah) bertugas khusus membuat akta otentik mengenai perbuatan hukum
-                            atas hak tanah dan bangunan, seperti Akta Jual Beli (AJB), Hibah, dan APHB.
-                        </p>
-                    </details>
-
-                    <!-- Q2 -->
-                    <details class="group py-4">
-                        <summary
-                            class="flex justify-between items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer list-none select-none text-white hover:text-accentLight transition-colors">
-                            <span>Dokumen apa saja yang perlu saya persiapkan?</span>
-                            <span
-                                class="text-xl leading-none text-accentLight transform transition-transform duration-300 group-open:rotate-45 flex-shrink-0">+</span>
-                        </summary>
-                        <p class="mt-3 text-xs sm:text-sm text-navyTint leading-relaxed">
-                            Dokumen disesuaikan dengan jenis kebutuhan akta. Secara umum diperlukan identitas para pihak
-                            (KTP, KK, NPWP), bukti kepemilikan (Sertifikat Tanah asli, PBB terbaru untuk PPAT), serta
-                            izin usaha atau anggaran dasar (untuk badan usaha). Hubungi kami untuk checklist dokumen
-                            spesifik Anda.
-                        </p>
-                    </details>
-
-                    <!-- Q3 -->
-                    <details class="group py-4">
-                        <summary
-                            class="flex justify-between items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer list-none select-none text-white hover:text-accentLight transition-colors">
-                            <span>Berapa lama proses pembuatan akta dan pendaftarannya?</span>
-                            <span
-                                class="text-xl leading-none text-accentLight transform transition-transform duration-300 group-open:rotate-45 flex-shrink-0">+</span>
-                        </summary>
-                        <p class="mt-3 text-xs sm:text-sm text-navyTint leading-relaxed">
-                            Waktu pengerjaan bergantung pada kelengkapan berkas dan koordinasi dengan instansi terkait
-                            (Kemenkumham, BPN, atau Bapenda). Pembuatan draf akta biasanya selesai dalam 1-3 hari kerja,
-                            sedangkan proses balik nama sertifikat atau SK pengesahan mengikuti estimasi resmi yang kami
-                            infokan secara transparan sejak awal.
-                        </p>
-                    </details>
-
-                    <!-- Q4 -->
-                    <details class="group py-4">
-                        <summary
-                            class="flex justify-between items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer list-none select-none text-white hover:text-accentLight transition-colors">
-                            <span>Apakah data dan kerahasiaan akta saya terjamin aman?</span>
-                            <span
-                                class="text-xl leading-none text-accentLight transform transition-transform duration-300 group-open:rotate-45 flex-shrink-0">+</span>
-                        </summary>
-                        <p class="mt-3 text-xs sm:text-sm text-navyTint leading-relaxed">
-                            Tentu saja. Menjaga kerahasiaan seluruh informasi, isi akta, dan identitas para pihak adalah
-                            sumpah jabatan serta kewajiban mutlak seorang Notaris &amp; PPAT yang kami jalankan dengan
-                            standar kepatuhan ketat.
-                        </p>
-                    </details>
-
-                    <!-- Q5 -->
-                    <details class="group py-4">
-                        <summary
-                            class="flex justify-between items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer list-none select-none text-white hover:text-accentLight transition-colors">
-                            <span>Bagaimana prosedur untuk berkonsultasi?</span>
-                            <span
-                                class="text-xl leading-none text-accentLight transform transition-transform duration-300 group-open:rotate-45 flex-shrink-0">+</span>
-                        </summary>
-                        <p class="mt-3 text-xs sm:text-sm text-navyTint leading-relaxed">
-                            Anda dapat mengisi formulir pesan di bawah, menghubungi tim kami melalui WhatsApp (+62
-                            877-3668-8999), atau datang langsung ke kantor kami di Garut pada jam operasional kerja
-                            (Senin - Sabtu 08.00 - 17.00 WIB).
-                        </p>
-                    </details>
-                </div>
             </div>
         </section>
 
 
         <!-- ============================================================
-             11. HUBUNGI KAMI & FORMULIR KONSULTASI
+             9. HUBUNGI KAMI & ULASAN GOOGLE
         ============================================================ -->
-        <section id="contact-form" class="py-14 sm:py-20 md:py-24 bg-white">
+        <section id="contact-form" class="bg-white py-14 sm:py-16">
             <div
-                class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-16 items-start">
-                <!-- Left: Complete Contact Information -->
+                class="max-w-[920px] mx-auto px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-12 items-start">
                 <div>
-
-                    <h2
-                        class="font-display font-semibold leading-[1.15] text-2xl sm:text-3xl md:text-4xl text-navyCharcoal">
-                        Hubungi Kantor Kami
+                    <h2 class="font-display font-light text-[32px] sm:text-[38px] text-gold mb-3">Hubungi Kantor Kami
                     </h2>
-                    <p class="mt-3 mb-8 text-sm sm:text-base text-[#6B1D1E]/80 leading-relaxed">
+                    <p class="text-[14px] leading-relaxed text-navyCharcoal/80 mb-8">
                         Kunjungi kantor kami langsung atau hubungi tim kami melalui WhatsApp untuk konsultasi cepat.
                         Simak juga ulasan asli dari para klien kami di Google Maps.
                     </p>
 
-                    <!-- Contact Detail Cards -->
-                    <div class="space-y-4 mb-8">
-                        <!-- Alamat -->
-                        <div class="p-4 rounded-xl bg-white border border-[#E8D8CC] shadow-sm flex items-start gap-3.5">
-                            <div
-                                class="w-10 h-10 rounded-full bg-navyPrimary text-accentLight flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs uppercase font-semibold text-[#6B1D1E]/70 tracking-wide">Alamat Kantor
-                                </p>
-                                <p class="text-sm font-semibold text-navyCharcoal mt-0.5">Jl. Jendral Sudirman No.31,
-                                    Sukamentri</p>
-                                <p class="text-xs text-[#6B1D1E]/70">Kec. Garut Kota, Kab. Garut, Jawa Barat 44116</p>
-                            </div>
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-navyPrimary pl-4">
+                            <p class="eyebrow">Alamat Kantor</p>
+                            <p class="text-[15px] font-semibold text-navyCharcoal">Jl. Jendral Sudirman No.31,
+                                Sukamentri</p>
+                            <p class="text-[13px] text-navyCharcoal/70">Kec. Garut Kota, Kab. Garut, Jawa Barat 44116
+                            </p>
                         </div>
-
-                        <!-- WhatsApp & Telepon -->
-                        <div class="p-4 rounded-xl bg-white border border-[#E8D8CC] shadow-sm flex items-start gap-3.5">
-                            <div
-                                class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs uppercase font-semibold text-[#6B1D1E]/70 tracking-wide">WhatsApp
-                                    &amp;
-                                    Telepon</p>
-                                <a href="https://wa.me/6287736688999" target="_blank" rel="noopener noreferrer"
-                                    class="text-sm font-bold text-navyPrimary hover:text-navyDarkest transition-colors mt-0.5 block">
-                                    +62 877-3668-8999
-                                </a>
-                                <p class="text-xs text-[#6B1D1E]/70">Layanan konsultasi cepat via WhatsApp</p>
-                            </div>
+                        <div class="border-l-2 border-navyPrimary pl-4">
+                            <p class="eyebrow">WhatsApp &amp; Telepon</p>
+                            <a href="https://wa.me/6287736688999" target="_blank" rel="noopener noreferrer"
+                                class="text-[15px] font-semibold text-navyPrimary hover:text-navyDarkest transition-colors block">+62
+                                877-3668-8999</a>
+                            <p class="text-[13px] text-navyCharcoal/70">Layanan konsultasi cepat via WhatsApp</p>
                         </div>
-
-                        <!-- Jam Operasional -->
-                        <div class="p-4 rounded-xl bg-white border border-[#E8D8CC] shadow-sm flex items-start gap-3.5">
-                            <div
-                                class="w-10 h-10 rounded-full bg-navyPrimary text-accentLight flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fa-regular fa-clock"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs uppercase font-semibold text-[#6B1D1E]/70 tracking-wide">Jam Pelayanan
-                                </p>
-                                <p class="text-sm font-semibold text-navyCharcoal mt-0.5">Senin &ndash; Sabtu: 08.00
-                                    &ndash; 17.00 WIB</p>
-                                <p class="text-xs text-[#6B1D1E]/70">Minggu: Tutup (Konsultasi pesan tetap
-                                    dicatat)</p>
-                            </div>
+                        <div class="border-l-2 border-navyPrimary pl-4">
+                            <p class="eyebrow">Jam Pelayanan</p>
+                            <p class="text-[15px] font-semibold text-navyCharcoal">Senin &ndash; Sabtu: 08.00 &ndash;
+                                17.00 WIB</p>
+                            <p class="text-[13px] text-navyCharcoal/70">Minggu: Tutup (konsultasi pesan tetap dicatat)
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Google Reviews Card (Container Terkontrol & Anti-Overflow) -->
-                <div
-                    class="bg-white rounded-2xl shadow-xl border border-[#E8D8CC] p-4 sm:p-6 flex flex-col w-full overflow-hidden">
-                    <!-- Header Card Ulasan Google -->
-                    <div
-                        class="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#E8D8CC] flex-shrink-0">
-                        <div class="flex items-center gap-2.5">
-                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/3840px-Google_%22G%22_logo.svg.png"
-                                alt="Google" class="w-5 h-5 flex-shrink-0">
-                            <div>
-                                <h3 class="font-display font-bold text-base sm:text-lg text-navyCharcoal leading-none">
-                                    Ulasan Google Business</h3>
-                            </div>
-                        </div>
+                <div class="bg-[#EEF4F0] p-4 sm:p-6 flex flex-col w-full overflow-hidden">
+                    <div class="flex items-center gap-2.5 pb-3.5 mb-3.5 border-b border-navyCharcoal/15 flex-shrink-0">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/3840px-Google_%22G%22_logo.svg.png"
+                            alt="Google" class="w-5 h-5 flex-shrink-0">
+                        <h3 class="font-display text-[20px] text-navyCharcoal leading-none">Ulasan Google Business</h3>
                     </div>
 
-                    <!-- Scrollable Container: menjaga tinggi tetap stabil saat klik 'Load More' -->
                     <div
                         class="overflow-y-auto max-h-[480px] sm:max-h-[540px] pr-1.5 overscroll-contain custom-review-scroll">
                         <!-- Elfsight Google Reviews | Untitled Google Reviews -->
@@ -1193,13 +748,56 @@
                         <div class="elfsight-app-91a63fd4-db60-4966-b0c2-d1e81f5a1d21" data-elfsight-app-lazy></div>
                     </div>
                 </div>
-
             </div>
+        </section>
 
 
+        <!-- ============================================================
+             10. CTA GELAP (gaya "Don't miss out")
+        ============================================================ -->
+        <section class="bg-navyDarkest text-center text-white py-14 sm:py-16 px-5">
+            <h2 class="font-display text-white font-light text-[32px] sm:text-[40px] leading-tight">Butuh pendampingan
+                hukum?</h2>
+            <p class="mt-3 text-[14px] sm:text-[15px] text-navyTint">
+                Konsultasikan kebutuhan akta dan pertanahan Anda langsung dengan tim kami.
+            </p>
+            <div class="mt-7">
+                <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan"
+                    target="_blank" rel="noopener noreferrer" class="btn-flag btn-flag-light">Konsultasi via
+                    WhatsApp</a>
+            </div>
         </section>
 
     </main>
+
+    <script>
+        // Pencarian layanan: filter chip "Jelajahi Layanan Kami"
+        (function () {
+            var form = document.getElementById('service-search');
+            var input = document.getElementById('service-search-input');
+            var chips = Array.prototype.slice.call(document.querySelectorAll('#chip-list .pill'));
+            var empty = document.getElementById('chip-empty');
+            if (!form || !input) return;
+
+            function filter() {
+                var q = input.value.trim().toLowerCase();
+                var shown = 0;
+                chips.forEach(function (c) {
+                    var match = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+                    c.classList.toggle('hidden', !match);
+                    if (match) shown++;
+                });
+                empty.classList.toggle('hidden', shown !== 0);
+            }
+
+            input.addEventListener('input', filter);
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                filter();
+                document.getElementById('jelajah').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        })();
+    </script>
 
     <!-- Dynamic Footer -->
     <div id="footer"></div>
