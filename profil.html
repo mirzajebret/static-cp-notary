@@ -1,335 +1,454 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Notaris & PPAT Havis Akbar</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <title>Tentang Kami - Notaris &amp; PPAT Havis Akbar</title>
+
+    <link rel="icon" type="image/x-icon" href="img/logo/logo-main.png">
+    <link rel="apple-touch-icon" href="img/logo/logo-main.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/img/logo/logo-main.png" />
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="whatsapp-button.css">
+
+    <!-- Tailwind CSS (Play CDN with JIT) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ============================================================
+         VARIABEL WARNA TEMA WEBSITE (THEME COLOR CONFIGURATION)
+    ============================================================ -->
     <script>
+        const THEME_COLORS = {
+            navyDarkest: '#0F3D2E',
+            navyMid: '#17543F',
+            navyPrimary: '#1F6B4F',
+            navyCharcoal: '#0F3D2E',
+            navyTint: '#EEF4F0',
+            navyMuted: '#C9DDD2',
+            gold: '#1F6B4F',
+            goldHover: '#0F3D2E',
+            accentLight: '#EEF4F0',
+            textMuted: '#0F3D2E',
+            bgLight: '#EEF4F0',
+            borderLight: '#D5E3DA'
+        };
+
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-gold': '#C5A059',
-                        'brand-dark': '#1F2937',
-                        'brand-gray': '#F3F4F6',
+                        navyDarkest: THEME_COLORS.navyDarkest,
+                        navyMid: THEME_COLORS.navyMid,
+                        navyPrimary: THEME_COLORS.navyPrimary,
+                        navyCharcoal: THEME_COLORS.navyCharcoal,
+                        navyTint: THEME_COLORS.navyTint,
+                        navyMuted: THEME_COLORS.navyMuted,
+                        gold: THEME_COLORS.gold,
+                        goldHover: THEME_COLORS.goldHover,
+                        accentLight: THEME_COLORS.accentLight,
+
+                        // Aliases for compatibility
+                        brandNavy: THEME_COLORS.navyDarkest,
+                        brandBlue: THEME_COLORS.navyPrimary,
+                        brandDark: THEME_COLORS.navyCharcoal,
+                        brandGold: THEME_COLORS.gold,
+                        brandGoldHover: THEME_COLORS.goldHover,
+                        brandMuted: THEME_COLORS.textMuted,
+                        brandLight: THEME_COLORS.bgLight,
+                        brandBorder: THEME_COLORS.borderLight,
+
+                        // Legacy aliases
+                        'brand-gold': THEME_COLORS.gold,
+                        'brand-dark': THEME_COLORS.navyDarkest,
+                        'brand-gray': THEME_COLORS.bgLight,
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['Newsreader', 'Georgia', 'serif'],
+                        body: ['Figtree', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Figtree', 'system-ui', '-apple-system', 'sans-serif'],
                     }
                 }
             }
+        };
+
+        if (typeof document !== 'undefined') {
+            const root = document.documentElement;
+            root.style.setProperty('--color-navy-darkest', THEME_COLORS.navyDarkest);
+            root.style.setProperty('--color-navy-mid', THEME_COLORS.navyMid);
+            root.style.setProperty('--color-navy-primary', THEME_COLORS.navyPrimary);
+            root.style.setProperty('--color-navy-charcoal', THEME_COLORS.navyCharcoal);
+            root.style.setProperty('--color-navy-tint', THEME_COLORS.navyTint);
+            root.style.setProperty('--color-navy-muted', THEME_COLORS.navyMuted);
+            root.style.setProperty('--color-gold', THEME_COLORS.gold);
+            root.style.setProperty('--color-gold-hover', THEME_COLORS.goldHover);
+            root.style.setProperty('--color-accent-light', THEME_COLORS.accentLight);
         }
     </script>
 
+    <style>
+        :root {
+            --color-navy-darkest: #0F3D2E;
+            --color-navy-mid: #17543F;
+            --color-navy-primary: #1F6B4F;
+            --color-navy-charcoal: #0F3D2E;
+            --color-navy-tint: #EEF4F0;
+            --color-navy-muted: #C9DDD2;
+            --color-gold: #1F6B4F;
+            --color-gold-hover: #0F3D2E;
+            --color-accent-light: #EEF4F0;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-navy-primary, #1F6B4F);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .btn-flag {
+            display: inline-block;
+            border-left: 2px solid var(--color-navy-primary, #1F6B4F);
+            background: #DCEAE2;
+            padding: 0.5rem 0.875rem;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-navy-charcoal, #0F3D2E);
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-flag:hover {
+            background: var(--color-navy-primary, #1F6B4F);
+            color: #ffffff;
+        }
+    </style>
 </head>
 
-
-<body class="font-sans text-gray-700 antialiased bg-white">
+<body class="font-body text-navyCharcoal bg-white antialiased selection:bg-gold/30 selection:text-navyDarkest">
 
     <!-- Header -->
     <div id="header"></div>
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-brand-dark overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="img/galeri/foto-googlestreet.jpeg" alt="Background" class="w-full h-full object-cover opacity-30">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
-        </div>
 
-        <!-- Decorative Honeycomb -->
-
-
-        <div class="container mx-auto px-4 relative z-20 text-center">
-            <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">Profil
-                Perusahaan</span>
-            <h1 class="text-4xl md:text-6xl font-serif text-white font-bold mb-6 leading-tight">
-                Integritas & Kepercayaan <br> Adalah Prioritas Kami
-            </h1>
-            <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-8 font-light">
-                Notaris & PPAT Havis Akbar berkomitmen memberikan pelayanan hukum terbaik, cepat, dan transparan untuk
-                segala kebutuhan legalitas Anda.
-            </p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-16 md:py-24 bg-white relative">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- Image Grid -->
-                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="img/galeri/plang-kantor.jpeg" alt="Meeting"
-                        class="w-full h-64 object-cover rounded-lg shadow-lg transform translate-y-4">
-                    <img src="img/galeri/ruang-kantor-notaris-ppat-havis-akbar.webp" alt="Office"
-                        class="w-full h-64 object-cover rounded-lg shadow-lg transform -translate-y-4">
+    <main class="overflow-x-hidden bg-white">
+        <!-- ============================================================
+             1. HERO SECTION
+        ============================================================ -->
+        <section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-40 md:pb-28 bg-navyDarkest overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="img/galeri/foto-googlestreet.jpeg" alt="Background Kantor Notaris &amp; PPAT Havis Akbar"
+                    class="w-full h-full object-cover opacity-25">
+                <div class="absolute inset-0 bg-gradient-to-t from-navyDarkest via-navyDarkest/75 to-navyDarkest/45">
                 </div>
+            </div>
 
-                <!-- Text Content -->
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 relative">
-                        Tentang Kami
-                        <span class="absolute bottom-0 left-0 w-20 h-1 bg-brand-gold transform translate-y-2"></span>
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6 relative z-20 text-center">
+
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-display text-white font-light mb-6 leading-tight">
+                    Integritas &amp; Kepercayaan <br class="hidden sm:inline"> Adalah Prioritas Kami
+                </h1>
+                <p
+                    class="text-navyTint/90 max-w-2xl mx-auto text-sm sm:text-base md:text-lg mb-4 font-light leading-relaxed">
+                    Notaris &amp; PPAT Havis Akbar berkomitmen memberikan pelayanan hukum terbaik, cepat, dan transparan
+                    untuk
+                    segala kebutuhan legalitas Anda.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             2. ABOUT SECTION ("Tentang Kami")
+        ============================================================ -->
+        <section class="py-14 sm:py-20 md:py-24 bg-white relative">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12">
+                    <!-- Image Grid -->
+                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                        <img src="img/galeri/plang-kantor.jpeg" alt="Plang Kantor Notaris &amp; PPAT"
+                            class="w-full h-60 sm:h-64 object-cover rounded-lg shadow-md transform translate-y-3 sm:translate-y-4">
+                        <img src="img/galeri/ruang-kantor-notaris-ppat-havis-akbar.webp" alt="Ruang Kerja Kantor"
+                            class="w-full h-60 sm:h-64 object-cover rounded-lg shadow-md transform -translate-y-3 sm:-translate-y-4">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="w-full md:w-1/2">
+                        <h2
+                            class="text-2xl sm:text-3xl md:text-4xl font-display font-light text-navyCharcoal mb-6 relative pb-3">
+                            Tentang Kami
+                            <span class="absolute bottom-0 left-0 w-16 h-1 bg-gold"></span>
+                        </h2>
+                        <p class="text-navyCharcoal/80 text-[14px] sm:text-[15px] mb-5 leading-relaxed">
+                            Kami adalah kantor Notaris &amp; PPAT yang berdedikasi untuk memberikan solusi hukum yang
+                            tepat dan
+                            akurat bagi perseorangan maupun badan usaha. Dengan pengalaman yang luas dan tim yang
+                            profesional, kami siap membantu Anda dalam pembuatan akta, pengurusan izin, hingga
+                            konsultasi
+                            hukum pertanahan.
+                        </p>
+                        <p class="text-navyCharcoal/80 text-[14px] sm:text-[15px] mb-8 leading-relaxed">
+                            Kantor kami didukung oleh sistem manajemen modern yang memungkinkan proses pengerjaan lebih
+                            efisien tanpa mengurangi ketelitian. Kenyamanan klien dan kepastian hukum adalah fokus utama
+                            layanan kami.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 sm:py-20 bg-white">
+            <div class="pb-12 bg-white relative overflow-hidden border-y border-white">
+                <div class="max-w-[480px] mx-auto">
+                    <div class="bg-navyDarkest p-6 sm:p-8 flex flex-col items-center gap-4 sm:gap-8 group shadow-sm">
+                        <div
+                            class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 aspect-square flex-shrink-0 overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/pak-havis-akbar-2026.jpg" loading="lazy"
+                                alt="Havis Akbar, S.H., M.Kn., M.M."
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex-1 leading-tight text-center">
+                            <h3 class="font-display font-semibold text-[20px] sm:text-[28px] text-white">
+                                Havis Akbar, S.H., M.Kn.
+                            </h3>
+                            <p class="eyebrow text-white">Notaris &amp; PPAT</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="font-display font-light text-[32px] sm:text-[38px] text-gold mb-3">Tim Profesional :
                     </h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Kami adalah kantor Notaris & PPAT yang berdedikasi untuk memberikan solusi hukum yang tepat dan
-                        akurat bagi perseorangan maupun badan usaha. Dengan pengalaman yang luas dan tim yang
-                        profesional, kami siap membantu Anda dalam pembuatan akta, pengurusan izin, hingga konsultasi
-                        hukum pertanahan.
+                    <p class="text-[14px] leading-relaxed text-navyCharcoal/80 max-w-xl mx-auto">
+                        Didukung oleh staf yang kompeten, ramah, dan berpengalaman dalam menangani berbagai dokumen
+                        kenotariatan.
                     </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">
-                        Kantor kami didukung oleh sistem manajemen modern yang memungkinkan proses pengerjaan lebih
-                        efisien tanpa mengurangi ketelitian. Kenyamanan klien dan kepastian hukum adalah fokus utama
-                        layanan kami.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="border-l-4 border-brand-gold pl-4">
-                            <span class="block text-2xl font-bold text-brand-dark">2+</span>
-                            <span class="text-sm text-gray-500">Tahun Pengalaman</span>
-                        </div>
-                        <div class="border-l-4 border-brand-gold pl-4">
-                            <span class="block text-2xl font-bold text-brand-dark">1000+</span>
-                            <span class="text-sm text-gray-500">Klien Terpercaya</span>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Pimpinan Section -->
-    <section class="py-16 bg-brand-gray relative overflow-hidden">
-
-
-        <div class="container mx-auto px-4">
-            <div
-                class="mb-10 sm:mb-12 bg-gradient-to-r from-[#0d1f3c] to-[#18396F] text-white rounded-2xl overflow-hidden shadow-xl border border-[#C5A059]/30">
-                <div class="flex flex-col sm:flex-row md:grid md:grid-cols-12 items-center p-5 sm:p-6 md:p-0">
-                    <div class="w-36 sm:w-44 md:w-full md:col-span-4 lg:col-span-3 flex-shrink-0">
-                        <img src="img/anggota/pak-havis-akbar-2026.jpg" alt="Havis Akbar, S.H., M.Kn., M.M."
-                            loading="lazy"
-                            class="w-36 h-36 sm:w-44 sm:h-44 md:w-full md:h-full aspect-square md:aspect-[4/5] object-cover object-top rounded-xl md:rounded-none shadow-md md:shadow-none mx-auto border-2 border-[#C5A059]/40 md:border-0">
-                    </div>
-                    <div
-                        class="pt-4 sm:pt-0 sm:pl-6 md:p-8 lg:p-10 md:col-span-8 lg:col-span-9 flex flex-col justify-center text-center sm:text-left">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A059]/20 text-[#C5A059] border border-[#C5A059]/40 text-xs font-semibold uppercase tracking-wider w-fit mb-2 sm:mb-3 mx-auto sm:mx-0">
-                            Pimpinan Kantor
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-8">
+                    <!-- Team Member 1 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/foto-mirza-alby-assidiqie.jpg" alt="Mirza Alby Assidiqie"
+                                loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
-                        <h3 class="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-white">
-                            Havis Akbar, S.H., M.Kn., M.M.
-                        </h3>
-                        <p class="text-sm sm:text-base text-[#C5A059] font-medium mt-1 mb-2 sm:mb-4">
-                            Notaris &amp; PPAT Kabupaten Garut
-                        </p>
-                        <p class="text-xs sm:text-sm text-[#c9d3e6] max-w-2xl leading-relaxed hidden lg:block">
-                            Berkomitmen mendampingi masyarakat dan pelaku usaha dalam mewujudkan kepastian hukum
-                            atas akta otentik serta administrasi pertanahan dengan pelayanan yang bersahabat, cepat,
-                            dan akuntabel.
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">IT Officer</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Mirza Alby Assidiqie
                         </p>
                     </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/foto-dini-kartini.jpg" alt="Kartini Dini" loading="lazy"
+                                class="w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Senior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Kartini Dini</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/foto-nepi-meinti.webp" alt="Nepi Meinti" loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Senior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Nepi Meinti</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/Aulia Novani.jpg" alt="Aulia Noviani" loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Junior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Aulia Noviani</p>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/Muhammad Rizieq Alghani Taufik.png" alt="M. Rizieq Alghani Taufik"
+                                loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Junior Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">M. Rizieq Alghani
+                            Taufik</p>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/Neli Zakiyatun Nufus.jpg" alt="Neli Zakiyatun Nufus" loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Staff Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Neli Zakiyatun Nufus
+                        </p>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/foto-cyntia-yuni.jpg" alt="Cyntia Yuni" loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">Staff Admin</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Cyntia Yuni</p>
+                    </div>
+
+                    <!-- Team Member 8 -->
+                    <div class="group">
+                        <div class="aspect-square overflow-hidden bg-navyDarkest rounded-lg">
+                            <img src="img/anggota/foto-andi-kuntoro.jpg" alt="Andi Kuntoro" loading="lazy"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-wide text-gold font-semibold">General Affair</p>
+                        <p class="mt-1 text-[15px] font-semibold leading-snug text-navyCharcoal">Andi Kuntoro</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Team Section -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Tim Profesional Kami</h2>
-                <p class="text-gray-500 max-w-xl mx-auto">Didukung oleh staf yang kompeten, ramah, dan berpengalaman
-                    dalam menangani berbagai dokumen kenotariatan.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                <!-- Team Member 1 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/foto-mirza-alby-assidiqie.jpg" alt="Mirza Alby Assidiqie"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Mirza Alby Assidiqie</h4>
-                    <p class="text-brand-gold text-sm font-medium">IT Officer</p>
+        <!-- ============================================================
+             5. WHY CHOOSE US / NILAI KEUNGGULAN
+        ============================================================ -->
+        <section class="py-16 sm:py-20 bg-navyDarkest text-white relative">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6 relative z-10">
+                <div class="text-center mb-12">
+                    <span
+                        class="text-gold tracking-widest uppercase text-xs sm:text-sm font-semibold mb-2 block">Keunggulan
+                        Layanan</span>
+                    <h2 class="font-display font-light text-[30px] sm:text-[36px] text-white">Mengapa Memilih Kami?</h2>
                 </div>
-
-                <!-- Team Member 2 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/foto-dini-kartini.jpg" alt="Kartini Dini"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Kartini Dini</h4>
-                    <p class="text-brand-gold text-sm font-medium">Senior Admin</p>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/foto-nepi-meinti.webp" alt="Nepi Meinti"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Nepi Meinti</h4>
-                    <p class="text-brand-gold text-sm font-medium">Senior Admin</p>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/Aulia Novani.jpg" alt="Aulia Noviani"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Aulia Noviani</h4>
-                    <p class="text-brand-gold text-sm font-medium">Junior Admin</p>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/Muhammad Rizieq Alghani Taufik.png" alt="M. Rizieq Alghani Taufik"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">M. Rizieq Alghani Taufik</h4>
-                    <p class="text-brand-gold text-sm font-medium">Junior Admin</p>
-                </div>
-
-                <!-- Team Member 6 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/Neli Zakiyatun Nufus.jpg" alt="Neli Zakiyatun Nufus"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Neli Zakiyatun Nufus</h4>
-                    <p class="text-brand-gold text-sm font-medium">Staff Admin</p>
-                </div>
-
-                <!-- Team Member 7 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/foto-cyntia-yuni.jpg" alt="Cyntia Yuni"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Cyntia Yuni</h4>
-                    <p class="text-brand-gold text-sm font-medium">Staff Admin</p>
-                </div>
-
-                <!-- Team Member 8 -->
-                <div class="group text-center">
-                    <div class="relative overflow-hidden rounded-xl mb-4 shadow-lg aspect-square">
-                        <img src="img/anggota/foto-andi-kuntoro.jpg" alt="Andi Kuntoro"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300">
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900">Andi Kuntoro</h4>
-                    <p class="text-brand-gold text-sm font-medium">General Affair</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us / Values -->
-    <section class="py-16 bg-brand-dark text-white relative">
-
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div
-                        class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
-                        <i class="fas fa-gavel"></i>
+                        class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-gold/40 transition-colors duration-300">
+                        <div
+                            class="w-14 h-14 bg-navyPrimary/30 border border-gold/40 text-accentLight rounded-full flex items-center justify-center mx-auto mb-5 text-xl shadow-lg">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 class="text-lg font-display font-semibold text-white mb-2">Legalitas Terjamin</h3>
+                        <p class="text-navyTint/80 text-[13.5px] leading-relaxed">
+                            Setiap dokumen diproses sesuai dengan peraturan perundang-undangan yang berlaku secara
+                            cermat.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Legalitas Terjamin</h3>
-                    <p class="text-gray-400 text-sm">Setiap dokumen diproses sesuai dengan peraturan perundang-undangan
-                        yang berlaku.</p>
-                </div>
-                <div class="p-6">
                     <div
-                        class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
-                        <i class="fas fa-clock"></i>
+                        class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-gold/40 transition-colors duration-300">
+                        <div
+                            class="w-14 h-14 bg-navyPrimary/30 border border-gold/40 text-accentLight rounded-full flex items-center justify-center mx-auto mb-5 text-xl shadow-lg">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-lg font-display font-semibold text-white mb-2">Proses Cepat</h3>
+                        <p class="text-navyTint/80 text-[13.5px] leading-relaxed">
+                            Kami menghargai waktu Anda. Layanan kami dirancang untuk efisiensi maksimal tanpa mengurangi
+                            ketelitian.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Proses Cepat</h3>
-                    <p class="text-gray-400 text-sm">Kami menghargai waktu Anda. Layanan kami dirancang untuk efisiensi
-                        maksimal.</p>
-                </div>
-                <div class="p-6">
                     <div
-                        class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white shadow-lg shadow-yellow-600/20">
-                        <i class="fas fa-hand-holding-heart"></i>
+                        class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-gold/40 transition-colors duration-300">
+                        <div
+                            class="w-14 h-14 bg-navyPrimary/30 border border-gold/40 text-accentLight rounded-full flex items-center justify-center mx-auto mb-5 text-xl shadow-lg">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-lg font-display font-semibold text-white mb-2">Pelayanan Prima</h3>
+                        <p class="text-navyTint/80 text-[13.5px] leading-relaxed">
+                            Konsultasi yang bersahabat, komunikatif, dan solusi yang terarah bagi kebutuhan legal Anda.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Pelayanan Prima</h3>
-                    <p class="text-gray-400 text-sm">Konsultasi yang ramah dan solusi yang berorientasi pada kebutuhan
-                        klien.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Office Gallery Mini -->
-    <section class="py-16 bg-brand-gray">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-10">Fasilitas Kantor</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="img/galeri/depan-kantor.jpeg" alt="Depan Kantor"
-                    class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
-                <img src="img/galeri/resepsionis.jpeg" alt="Resepsionis"
-                    class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
-                <img src="img/galeri/ruang-1.png" alt="Ruang Kerja"
-                    class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
-                <img src="img/galeri/ruang-2.png" alt="Ruang Meeting"
-                    class="rounded-lg h-48 w-full object-cover hover:opacity-90 transition cursor-pointer">
+        <!-- ============================================================
+             6. FASILITAS KANTOR (MINI GALLERY)
+        ============================================================ -->
+        <section class="py-14 sm:py-18 bg-[#EEF4F0] border-t border-white">
+            <div class="max-w-[920px] mx-auto px-5 sm:px-6">
+                <div class="text-center mb-10">
+                    <span
+                        class="text-gold tracking-widest uppercase text-xs sm:text-sm font-semibold mb-2 block">Kenyamanan
+                        Klien</span>
+                    <h2 class="font-display font-light text-[28px] sm:text-[34px] text-navyCharcoal">Fasilitas Kantor
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg shadow-sm border border-navyPrimary/10 group">
+                        <img src="img/galeri/depan-kantor.jpeg" alt="Depan Kantor" loading="lazy"
+                            class="rounded-lg h-44 sm:h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm border border-navyPrimary/10 group">
+                        <img src="img/galeri/resepsionis.jpeg" alt="Resepsionis" loading="lazy"
+                            class="rounded-lg h-44 sm:h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm border border-navyPrimary/10 group">
+                        <img src="img/galeri/ruang-1.png" alt="Ruang Kerja" loading="lazy"
+                            class="rounded-lg h-44 sm:h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm border border-navyPrimary/10 group">
+                        <img src="img/galeri/ruang-2.png" alt="Ruang Meeting" loading="lazy"
+                            class="rounded-lg h-44 sm:h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="galery.html"
+                        class="inline-block border border-navyPrimary bg-white text-navyCharcoal px-7 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-navyPrimary hover:text-white transition-colors duration-200">
+                        Lihat Galeri Lengkap
+                    </a>
+                </div>
             </div>
-            <div class="text-center mt-8">
-                <a href="galery.html"
-                    class="inline-block border border-brand-dark text-brand-dark px-8 py-3 rounded hover:bg-brand-dark hover:text-white transition duration-300 uppercase text-sm tracking-widest">Lihat
-                    Galeri Lengkap</a>
+        </section>
+
+        <!-- ============================================================
+             7. LOKASI KANTOR
+        ============================================================ -->
+        <section class="bg-navyDarkest text-white py-14 sm:py-18 px-5 sm:px-6">
+            <div class="max-w-[920px] mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
+                    <div>
+                        <span
+                            class="text-gold tracking-widest uppercase text-xs sm:text-sm font-semibold mb-1 block">Akses
+                            &amp; Lokasi</span>
+                        <h2 class="font-display font-light text-[28px] sm:text-[34px] text-white">Lokasi Kantor</h2>
+                    </div>
+                    <p class="text-navyMuted text-xs sm:text-sm">
+                        Jl. Jendral Sudirman No.31, Sukamentri, Garut Kota
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-xl border-2 border-gold/40">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15833.491460279838!2d107.9132053!3d-7.1982291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b10032408009%3A0xea372280ee728aec!2sKantor%20Notaris%20%26%20PPAT%20Havis%20Akbar%2C%20S.H.%2C%20M.Kn.%2C%20M.M!5e0!3m2!1sid!2sid!4v1724660068429!5m2!1sid!2sid"
+                        width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Peta Lokasi Kantor Notaris Havis Akbar Garut"></iframe>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- Lokasi -->
-    <section class="bg-[#1C2331] text-white py-16 px-6 md:px-10">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-semibold mb-6 text-white">Lokasi Kantor</h2>
-            <div class="rounded-lg overflow-hidden shadow-lg border-4 border-white">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15833.491460279838!2d107.9132053!3d-7.1982291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b10032408009%3A0xea372280ee728aec!2sKantor%20Notaris%20%26%20PPAT%20Havis%20Akbar%2C%20S.H.%2C%20M.Kn.%2C%20M.M!5e0!3m2!1sid!2sid!4v1724660068429!5m2!1sid!2sid"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <div id="footer"></div>

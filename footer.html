@@ -1,82 +1,113 @@
-<style>
-    /* Wadah utama untuk semua tombol */
-    .whatsapp-container {
-        position: fixed;
-        /* Tetap di posisi yang sama saat di-scroll */
-        bottom: 8px;
-        /* Jarak dari bawah */
-        right: 8px;
-        /* Jarak dari kanan */
-        display: flex;
-        flex-direction: column;
-        /* Menyusun tombol secara vertikal */
-        gap: 5px;
-        /* Jarak antar tombol */
-        z-index: 1000;
-        /* Memastikan tombol tampil di atas konten lain */
-    }
-
-    /* Gaya untuk setiap tombol WhatsApp */
-    .whatsapp-button {
-        display: flex;
-        align-items: center;
-        /* Menyelaraskan teks dan ikon secara vertikal */
-        text-decoration: none;
-        /* Menghilangkan garis bawah pada link */
-        transition: transform 0.2s ease-in-out;
-        /* Animasi saat disentuh mouse */
-    }
-
-    .whatsapp-button:hover {
-        transform: scale(1.05);
-        /* Sedikit membesar saat disentuh mouse */
-    }
-
-    /* Gaya untuk label teks (CS 1, CS 2) */
-    .whatsapp-button .text-label {
-        background-color: #4A4A4A;
-        /* Warna latar belakang abu-abu tua */
-        color: white;
-        /* Warna teks putih */
-        padding: 7px 18px;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-        /* Bayangan halus */
-    }
-
-    /* Gaya untuk ikon WhatsApp */
-    .whatsapp-button .whatsapp-icon {
-        width: 50px;
-        /* Ukuran ikon */
-        height: 50px;
-        margin-left: -5px;
-        /* Sedikit tumpang tindih dengan label untuk efek menyatu */
-    }
-</style>
-
-<div class="whatsapp-container">
-    <a href="https://wa.me/6287736688999?text=Halo%20Notaris%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20layanan%20kantor%20anda"
-        class="whatsapp-button" target="_blank">
-        <span class="text-label">Hubungi Kami</span>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/428/326/small/3d-social-media-icons-whatsapp-free-png.png"
-            alt="WhatsApp CS 1" class="whatsapp-icon">
+<!-- Floating WhatsApp Button -->
+<div class="floating-whatsapp-wrap">
+    <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan"
+        class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi via WhatsApp">
+        <div class="whatsapp-btn-pulse"></div>
+        <i class="fa-brands fa-whatsapp fa fa-whatsapp whatsapp-btn-icon" aria-hidden="true"></i>
+        <span class="whatsapp-btn-text">Konsultasi WhatsApp</span>
     </a>
-
 </div>
 
-<footer class="footer" id="footer">
-    <div class="container">
-        <p>&copy; 2024 Notaris & PPAT Havis Akbar</p>
-        <span class="block font-normal italic text-sm sm:text-md md:text-lg text-[#C5A059]">
-            &ldquo;We Properly Understand Your Purpose&rdquo;
-        </span>
-        <p><a
-                href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z/data=!4m2!3m1!1s0x0:0xea372280ee728aec?sa=X&ved=1t:2428&ictx=111">
-                Jl. Jendral Sudirman No.31, Sukamentri, Kec. Garut Kota, Kabupaten Garut, Jawa Barat 44116</a></p>
+<!-- Main Footer -->
+<footer class="site-footer">
+    <div class="site-footer-topline"></div>
+
+    <div class="site-footer-container">
+        <div class="site-footer-grid">
+
+            <!-- Kolom 1: Profil & Brand -->
+            <div class="footer-col footer-col-brand">
+                <a href="index.html" class="footer-brand" aria-label="Beranda Notaris &amp; PPAT Havis Akbar">
+                    <img src="img/logo/logo_hakbar2.webp" alt="Logo Notaris &amp; PPAT Havis Akbar Garut"
+                        class="footer-logo-img">
+                    <div class="footer-brand-text">
+                        <span class="footer-brand-title">Havis Akbar, S.H., M.Kn.</span>
+                        <span class="footer-brand-subtitle">Notaris &amp; PPAT Garut</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Kantor Notaris dan Pejabat Pembuat Akta Tanah (PPAT) resmi Kabupaten Garut. Berkomitmen memberikan
+                    kepastian hukum, transparansi, dan pelayanan prima dalam pengurusan akta otentik serta administrasi
+                    pertanahan.
+                </p>
+                <!-- Social Media Links -->
+                <div class="footer-socials">
+
+                    <a href="https://wa.me/6287736688999" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp Notaris Havis Akbar" class="footer-social-link">
+                        <i class="fa-brands fa-whatsapp fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Navigasi Cepat -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Tentang Kami</a></li>
+                    <li><a href="profnot.html">Profil Notaris &amp; PPAT</a></li>
+                    <li><a href="jasa_layanan.html">Layanan Kenotariatan</a></li>
+                    <li><a href="artikel.html">Informasi &amp; Edukasi</a></li>
+                    <li><a href="galery.html">Galeri Kantor</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Layanan Populer -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Layanan Utama</h4>
+                <ul class="footer-links">
+                    <li><a href="jasa_layanan.html#tabel-ppat">Akta Jual Beli (AJB)</a></li>
+                    <li><a href="jasa_layanan.html#tabel-notaris">Pendirian PT &amp; PT Perorangan</a></li>
+                    <li><a href="jasa_layanan.html#tabel-notaris">Pendirian CV &amp; Badan Usaha</a></li>
+                    <li><a href="jasa_layanan.html#tabel-ppat">Balik Nama Sertifikat Tanah</a></li>
+                    <li><a href="jasa_layanan.html#tabel-ppat">Akta Hibah &amp; APHB</a></li>
+                    <li><a href="jasa_layanan.html#tabel-ppat">Hak Tanggungan (APHT &amp; Roya)</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Kontak & Jam Operasional -->
+            <div class="footer-col footer-col-contact">
+                <h4 class="footer-col-title">Kontak &amp; Kantor</h4>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot fa fa-map-marker footer-contact-icon" aria-hidden="true"></i>
+                        <span>
+                            <a href="https://www.google.com/maps/place/Kantor+Notaris+%26+PPAT+Havis+Akbar,+S.H.,+M.Kn.,+M.M/@-7.1982291,107.9132053,15z"
+                                target="_blank" rel="noopener noreferrer">
+                                Jl. Jendral Sudirman No.31, Sukamentri, Kec. Garut Kota, Kab. Garut, Jawa Barat 44116
+                            </a>
+                        </span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <i class="fa-solid fa-phone fa fa-phone footer-contact-icon" aria-hidden="true"></i>
+                        <span>
+                            <a href="tel:+6287736688999">+62 877-3668-8999</a>
+                        </span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <i class="fa-solid fa-clock fa fa-clock-o footer-contact-icon" aria-hidden="true"></i>
+                        <div>
+                            <p class="footer-hours-label">Jam Operasional:</p>
+                            <p class="footer-hours-text">Senin &ndash; Sabtu: 08.00 &ndash; 17.00 WIB</p>
+                            <p class="footer-hours-sub">Minggu &amp; Libur Nasional: Tutup</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer Bar -->
+        <div class="site-footer-bottom">
+            <div class="footer-bottom-flex">
+                <p class="footer-copyright">
+                    &copy; 2026 Kantor Notaris &amp; PPAT Havis Akbar, S.H., M.Kn. Hak cipta dilindungi.
+                </p>
+                <p class="footer-legal-tag">
+                    Pelayanan Kenotariatan &amp; Pertanahan Resmi Kabupaten Garut
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <button id="back-to-top" class="back-to-top">▲</button> -->
-<script src="script.js"></script>
