@@ -1,619 +1,1058 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
-  <title>Notaris & PPAT Havis Akbar</title>
+  <title>Layanan Kenotariatan &amp; PPAT - Notaris &amp; PPAT Havis Akbar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/logo/logo-main.png">
   <link rel="apple-touch-icon" href="img/logo/logo-main.png">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts: Newsreader (display/serif) & Figtree (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons 6 & 4.7 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Project Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: {
+              50: '#FDFCF7',
+              100: '#FAF8F5',
+              200: '#F5EFEB',
+              300: '#EFE6DC',
+              400: '#E2D5C3',
+              500: '#CDBCA7',
+            },
+            cream: {
+              light: '#FAF6EE',
+              DEFAULT: '#F5EFEB',
+              dark: '#EBDDC9',
+              border: '#E8DFD3',
+            },
+            brandDark: '#0F3D2E',
+            brandGreen: '#1F6B4F',
+            brandGold: '#C5A059'
+          },
+          fontFamily: {
+            display: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Figtree', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Penyesuaian tema Ivory & Krem */
+    body {
+      background-color: #FAF8F5 !important;
+      color: #2D2926;
+      font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+    }
+
+    .services-section {
+      margin: 0 0 3.5rem 0 !important;
+      background-color: transparent !important;
+      border-radius: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    .tabel-layanan {
+      background-color: transparent !important;
+      padding: 0 !important;
+    }
+
+    .search {
+      position: static !important;
+      width: 100% !important;
+      background-color: transparent !important;
+      padding: 0 !important;
+      color: inherit !important;
+      z-index: auto !important;
+    }
+
+    .item {
+      padding: 0 !important;
+      text-align: left !important;
+    }
+
+    .item p {
+      text-align: left !important;
+      padding-top: 0 !important;
+    }
+
+    #searchInput {
+      background-color: #FFFFFF !important;
+      border: 1.5px solid #DDD3C2 !important;
+      color: #1C2622 !important;
+      border-radius: 0.875rem !important;
+      padding: 0.875rem 1.25rem 0.875rem 2.85rem !important;
+      font-size: 0.95rem !important;
+      height: auto !important;
+      width: 100% !important;
+      box-shadow: 0 2px 8px rgba(15, 61, 46, 0.04) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    #searchInput:focus {
+      outline: none !important;
+      border-color: #1F6B4F !important;
+      box-shadow: 0 0 0 3px rgba(31, 107, 79, 0.15) !important;
+    }
+
+    #searchInput::placeholder {
+      color: #968D80 !important;
+    }
+
+    .dropdown-body {
+      display: block;
+    }
+
+    .dropdown-body.hidden {
+      display: none !important;
+    }
+
+    /* Transisi rotasi chevron dropdown */
+    .dropdown-icon {
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-[#FAF8F5] font-sans antialiased selection:bg-[#C5A059]/20 selection:text-[#0F3D2E]">
+  <!-- Header / Navigation -->
   <div id="header"></div>
 
+  <!-- Header Banner & Pencarian (Tema Ivory & Krem) -->
+  <section class="bg-gradient-to-b from-[#F5EFEB] to-[#FAF8F5] pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-[#EAE1D2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span
+        class="inline-block text-[11px] font-semibold tracking-widest text-[#1F6B4F] uppercase bg-[#E8F0EB] px-3.5 py-1 rounded-full mb-3 border border-[#D0DFD6]">
+        Katalog Layanan Hukum
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3D2E] mb-3">
+        Jasa &amp; Layanan Kantor
+      </h1>
+      <p class="text-sm sm:text-base text-[#615B53] max-w-2xl mx-auto mb-7 font-light leading-relaxed">
+        Pilihan lengkap layanan kenotariatan, pertanahan (PPAT), serta administrasi perizinan dan perpajakan resmi di
+        Kabupaten Garut.
+      </p>
 
-  <div class="search">
-    <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Cari layanan...">
-  </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <!-- JASA NOTARIS  -->
-    <section class="services-section mb-12 pt-14">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Layanan Notaris</h2>
-      <div class="judul-layanan"></div>
+      <!-- Input Pencarian Terpadu -->
+      <div class="max-w-xl mx-auto relative search">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#8C8275]">
+          <i class="fa fa-search text-base"></i>
+        </div>
+        <input type="text" id="searchInput" onkeyup="searchServices()"
+          placeholder="Cari layanan (contoh: AJB, PT, SKMHT, Roya)...">
+      </div>
+    </div>
+  </section>
 
-      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-notaris">
+  <!-- Konten Utama Daftar Layanan -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- ============================================================
+         1. JASA NOTARIS
+    ============================================================ -->
+    <section class="services-section mb-14" id="notaris">
+      <div class="flex items-center gap-3 mb-6 pb-2.5 border-b border-[#EAE1D2]">
+        <div class="w-1.5 h-6 sm:h-7 bg-[#1F6B4F] rounded-full"></div>
+        <h2 class="text-2xl sm:text-3xl font-display font-semibold text-[#0F3D2E]">Layanan Notaris</h2>
+        <span class="text-xs text-[#8C8275] ml-auto hidden sm:inline">Klik kartu untuk melihat rincian</span>
+      </div>
+
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="tabel-notaris">
         <!-- Waarmerking/Register -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Waarmerking/Register</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="waarmarking" onclick="toggleDropdown('waarmarking', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Waarmerking / Register
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="waarmarking" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Waarmerking atau Register adalah proses notaris untuk mengesahkan
-              dan mencatat dokumen tertentu agar memiliki kekuatan hukum. Biasanya, dokumen yang didaftarkan termasuk
-              surat pernyataan atau akta yang memerlukan pengesahan.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="waarmarking" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Waarmerking atau Register adalah proses notaris
+              untuk mengesahkan dan mencatat dokumen tertentu agar memiliki kekuatan hukum. Biasanya dokumen yang
+              didaftarkan termasuk surat pernyataan atau akta di bawah tangan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Hubungi kami via WhatsApp untuk konsultasi syarat &amp; tarif.</span>
+            </p>
           </div>
         </div>
 
         <!-- Legalisasi -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="legalisasi" onclick="toggleDropdown('legalisasi')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Legalisasi</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="legalisasi" onclick="toggleDropdown('legalisasi', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Legalisasi Dokumen
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="legalisasi" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Legalisasi adalah proses pengesahan tanda tangan di hadapan notaris
-              untuk dokumen yang dibuat di bawah tangan. Ini memberikan dokumen tersebut kekuatan hukum yang sah.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="legalisasi" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Legalisasi adalah proses pengesahan tanda tangan di
+              hadapan notaris untuk dokumen yang dibuat di bawah tangan, memastikan kepastian waktu dan kebenaran tanda
+              tangan para pihak.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Hubungi kami via WhatsApp untuk jadwal penandatanganan legalisasi.</span>
+            </p>
           </div>
         </div>
 
         <!-- Perjanjian Kredit -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="perjanjianKredit" onclick="toggleDropdown('perjanjianKredit')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kredit</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="perjanjianKredit" onclick="toggleDropdown('perjanjianKredit', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Perjanjian Kredit
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="perjanjianKredit" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Perjanjian Kredit adalah dokumen yang mengatur ketentuan pinjaman
-              antara bank dan peminjam. Ada perbedaan antara perjanjian kredit di bawah tangan dan yang dibuat sebagai
-              akta notaris.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="perjanjianKredit" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Dokumen yang mengatur ketentuan pinjaman antara bank /
+              lembaga keuangan dan peminjam, baik berupa akta pengakuan hutang maupun perjanjian kredit berkekuatan hukum
+              eksekutorial.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Melayani kemitraan perbankan &amp; pembiayaan.</span>
+            </p>
           </div>
         </div>
 
         <!-- Pembuatan Akta Kuasa -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaKuasa" onclick="toggleDropdown('aktaKuasa')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pembuatan Akta Kuasa</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaKuasa" onclick="toggleDropdown('aktaKuasa', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pembuatan Akta Kuasa
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaKuasa" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Kuasa adalah dokumen yang memberikan wewenang kepada seseorang
-              untuk bertindak atas nama orang lain dalam urusan hukum atau administratif. Ini termasuk pembuatan surat
-              kuasa yang sah secara hukum.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="aktaKuasa" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta otentik pemberian wewenang kepada pihak lain
+              untuk bertindak mewakili pemberi kuasa dalam pengurusan kepentingan hukum, bisnis, perizinan, atau perbankan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Tersedia kuasa umum maupun kuasa khusus.</span>
+            </p>
           </div>
         </div>
 
         <!-- Surat Kuasa Antar Para Pihak -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="suratKuasa" onclick="toggleDropdown('suratKuasa')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Surat Kuasa Antar Para Pihak</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="suratKuasa" onclick="toggleDropdown('suratKuasa', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Surat Kuasa Antar Para Pihak
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="suratKuasa" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Surat Kuasa Antar Para Pihak memberikan hak kepada seseorang untuk
-              mewakili pihak lain dalam urusan tertentu. Dokumen ini penting untuk keperluan hukum dan administratif.
+          <div id="suratKuasa" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Memberikan hak kepada seseorang untuk mewakili pihak
+              lain dalam urusan tertentu dengan klausul yang disepakati secara spesifik untuk mencegah sengketa di masa depan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Hubungi kami via WhatsApp untuk draft klausul.</span>
             </p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
           </div>
         </div>
 
         <!-- Perjanjian Akta Perikatan -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="perjanjianAkta" onclick="toggleDropdown('perjanjianAkta')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Akta Perikatan</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="perjanjianAkta" onclick="toggleDropdown('perjanjianAkta', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Perjanjian Pengikatan Jual Beli (PPJB)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="perjanjianAkta" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Perjanjian Akta Perikatan adalah dokumen yang mencakup kesepakatan
-              dan kewajiban antara pihak-pihak dalam suatu perikatan. Ini mencakup kesepakatan, kecakapan, pokok
-              persoalan, dan sebab yang sah.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="perjanjianAkta" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta perikatan yang mengikat para pihak dalam proses
+              transaksi sebelum penandatanganan AJB definitif, termasuk skema termin pembayaran dan pemenuhan syarat.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Melindungi hak pembeli dan penjual secara seimbang.</span>
+            </p>
           </div>
         </div>
 
         <!-- Perjanjian Kerjasama Antar Perusahaan -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="kerjasamaPerusahaan" onclick="toggleDropdown('kerjasamaPerusahaan')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Perjanjian Kerjasama Antar Perusahaan</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="kerjasamaPerusahaan" onclick="toggleDropdown('kerjasamaPerusahaan', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Perjanjian Kerjasama Perusahaan
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="kerjasamaPerusahaan" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Perjanjian Kerjasama Antar Perusahaan adalah dokumen yang mengatur
-              syarat dan ketentuan kerjasama antara perusahaan. Ini mencakup kesepakatan dan ketentuan hukum terkait
-              kerjasama.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="kerjasamaPerusahaan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Dokumen legalitas kemitraan bisnis, MoU, joint venture,
+              atau kontrak operasional antar badan usaha yang mencakup hak, kewajiban, serta mitigasi risiko hukum.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Penyusunan draft akta &amp; telaah klausul kerjasama.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Akta PT Umum -->
+        <!-- Akta PT Umum (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianPT" onclick="toggleDropdown('pendirianPT')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Umum</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianPT" onclick="toggleDropdown('pendirianPT', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ Layanan Populer
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Akta PT Umum (Perseroan Terbatas)</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="pendirianPT" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Perusahaan Terbuka diperlukan untuk pendirian perusahaan yang
-              terdaftar secara resmi dengan saham yang dapat diperdagangkan di publik. Ini melibatkan berbagai dokumen
-              dan informasi terkait pendiri dan struktur perusahaan.</p>
-            <!-- <button onclick="window.location.href='order_pt.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="pendirianPT" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendirian badan hukum Perseroan Terbatas resmi,
+              termasuk pengecekan &amp; pemesanan nama, akta pendirian notaris, SK Kemenkumham, NPWP, hingga NIB OSS RBA.</p>
+            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20konsultasi%20pendirian%20PT%20Umum"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-2 px-3.5 py-2 rounded-lg bg-[#1F6B4F] text-white text-xs font-semibold hover:bg-[#0F3D2E] transition-colors">
+              <i class="fa fa-whatsapp"></i>
+              <span>Konsultasi Pendirian PT</span>
+            </a>
           </div>
         </div>
 
-        <!-- Akta PT Perorangan -->
+        <!-- Akta PT Perorangan (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianPTPERO" onclick="toggleDropdown('pendirianPTPERO')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta PT Perorangan</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianPTPERO" onclick="toggleDropdown('pendirianPTPERO', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ UMKM
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Akta PT Perorangan</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="pendirianPTPERO" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Perseroan Perorangan (PT Perorangan) adalah bentuk badan hukum yang
-              bisa didirikan oleh hanya 1 (satu) orang tanpa besaran modal minimal dan memenuhi kriteria Usaha Mikro
-              Kecil Menengah (UMKM).</p>
-            <!-- <button onclick="window.location.href='order_pt_pero.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="pendirianPTPERO" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Badan hukum modern khusus pelaku usaha mikro &amp; kecil
+              yang dapat didirikan oleh 1 (satu) orang tanpa modal minimum, lengkap dengan sertifikat pendaftaran Kemenkumham.</p>
+            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20konsultasi%20PT%20Perorangan"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-2 px-3.5 py-2 rounded-lg bg-[#1F6B4F] text-white text-xs font-semibold hover:bg-[#0F3D2E] transition-colors">
+              <i class="fa fa-whatsapp"></i>
+              <span>Konsultasi PT Perorangan</span>
+            </a>
           </div>
         </div>
 
         <!-- Pendirian PT PMA -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianPTPMA" onclick="toggleDropdown('pendirianPTPMA')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pendirian PT PMA (Penanaman Modal Asing)</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianPTPMA" onclick="toggleDropdown('pendirianPTPMA', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pendirian PT PMA (Modal Asing)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pendirianPTPMA" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Pendirian PT PMA adalah proses untuk mendirikan perusahaan dengan
-              penanaman modal asing. Dokumen ini mencakup identitas pemegang saham dan struktur perusahaan sesuai
-              ketentuan hukum.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="pendirianPTPMA" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendirian perseroan dengan kepemilikan modal asing
+              sesuai regulasi BKPM/Kemeninvestasi, ketentuan DNI, dan perizinan terpadu OSS RBA.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Tersedia konsultasi regulasi kepemilikan saham asing.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Pendirian Yayasan -->
+        <!-- Pendirian Yayasan (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianYayasan" onclick="toggleDropdown('pendirianYayasan')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Yayasan</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianYayasan" onclick="toggleDropdown('pendirianYayasan', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ Sosial &amp; Edukasi
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Pendirian Yayasan</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="pendirianYayasan" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Pendirian Yayasan memerlukan dokumen untuk mendirikan organisasi
-              non-profit. Ini termasuk pilihan nama, identitas pendiri, alamat, dan informasi kekayaan yayasan.</p>
-            <!-- <button onclick="window.location.href='order_yayasan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="pendirianYayasan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pembuatan akta pendirian yayasan berbadan hukum untuk
+              bidang sosial, keagamaan, dan kemanusiaan dengan pengesahan dari Kementerian Hukum dan HAM.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pengurusan AD/ART dan pendaftaran SK Menkumham.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Pendirian CV -->
+        <!-- Pendirian CV (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianCV" onclick="toggleDropdown('pendirianCV')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian CV</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianCV" onclick="toggleDropdown('pendirianCV', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ Usaha Bersama
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Pendirian CV (Persekutuan Komanditer)</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="pendirianCV" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Pendirian CV adalah proses mendirikan commanditaire vennootschap
-              (CV), bentuk perusahaan yang melibatkan dokumen identitas pendiri, alamat kantor, dan struktur modal serta
-              saham.</p>
-            <!-- <button onclick="window.location.href='order_cv.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="pendirianCV" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendirian Commanditaire Vennootschap (CV) melalui
+              Sistem Administrasi Badan Usaha (SABU) Kemenkumham, penentuan sekutu aktif dan pasif, serta kelengkapan NIB.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Proses cepat, transparan, dan berbadan usaha resmi.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Pendirian Firma -->
+        <!-- Pendirian Firma (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pendirianFirma" onclick="toggleDropdown('pendirianFirma')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Pendirian Firma</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pendirianFirma" onclick="toggleDropdown('pendirianFirma', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ Kemitraan
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Pendirian Firma</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="pendirianFirma" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Pendirian Firma adalah sebuah bentuk persekutuan antara dua
-              perusahaan atau lebih untuk menjalankan usaha dengan memakai nama bersama.</p>
-            <!-- <button onclick="window.location.href='order_firma.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="pendirianFirma" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta pendirian firma sebagai bentuk persekutuan antara
+              dua orang atau lebih untuk menjalankan kegiatan usaha bersama dengan memakai nama bersama secara resmi.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pendaftaran resmi ke Kemenkumham RI.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Koperasi -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaKoperasi" onclick="toggleDropdown('aktaKoperasi')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Koperasi</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaKoperasi" onclick="toggleDropdown('aktaKoperasi', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Pendirian Koperasi (NPAK)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaKoperasi" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Koperasi adalah dokumen yang mengatur pendirian koperasi,
-              termasuk nama pendiri, tujuan, keanggotaan, dan ketentuan lainnya.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="aktaKoperasi" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pelayanan pembuatan akta pendirian dan perubahan anggaran
+              dasar koperasi oleh Notaris Pembuat Akta Koperasi (NPAK) bersertifikasi resmi.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Melayani koperasi primer &amp; sekunder.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Akta Perkumpulan -->
+        <!-- Akta Perkumpulan (Highlight / Order) -->
         <div
-          class="item highlight bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaPerkumpulan" onclick="toggleDropdown('aktaPerkumpulan')">
-          <div class="p-5 border-b border-blue-200 relative">
-            <span class="badge absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full">⚡
-              Order</span>
-            <h3 class="text-lg font-semibold text-gray-800 mt-4">Akta Perkumpulan</h3>
+          class="item highlight bg-gradient-to-br from-[#FFFDF8] via-[#FAF3E8] to-[#F5EADB] rounded-xl border-2 border-[#E5D2BA] shadow-sm hover:shadow-md hover:border-[#D4BC9B] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaPerkumpulan" onclick="toggleDropdown('aktaPerkumpulan', event)">
+          <div class="p-5 border-b border-[#EBDDC9] relative flex justify-between items-start">
+            <div>
+              <span
+                class="badge inline-block bg-[#C5A059] text-white text-[10.5px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                ⚡ Organisasi
+              </span>
+              <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E]">Akta Perkumpulan / Asosiasi</h3>
+            </div>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon mt-2 ml-2"></i>
           </div>
-          <div id="aktaPerkumpulan" class="hidden p-5 bg-blue-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Perkumpulan adalah dokumen pendirian perkumpulan yang mencakup
-              anggota, program kerja, dan dokumen pendukung seperti NPWP dan surat pernyataan.</p>
-            <!-- <button onclick="window.location.href='order_perkumpulan.html'" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">Pesan Sekarang</button> -->
+          <div id="aktaPerkumpulan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#F6ECE0] border-t border-[#EBDDC9]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Dokumen legalitas pembentukan perkumpulan atau organisasi
+              non-profit berbasis keanggotaan untuk memperoleh status badan hukum Kemenkumham RI.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pengesahan anggaran dasar dan struktur pengurus.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Perjanjian Sewa Menyewa -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaSewa" onclick="toggleDropdown('aktaSewa')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Perjanjian Sewa Menyewa</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaSewa" onclick="toggleDropdown('aktaSewa', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Sewa Menyewa
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaSewa" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Perjanjian Sewa Menyewa adalah dokumen hukum yang mencatat
-              perjanjian sewa antara pihak-pihak terkait. Dokumen ini penting untuk memastikan hak dan kewajiban dalam
-              perjanjian sewa.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="aktaSewa" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta otentik yang mengatur kesepakatan sewa tanah,
+              bangunan, ruko, atau properti komersial untuk memastikan hak dan kewajiban kedua belah pihak terlindungi hukum.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Mitigasi risiko default atau pengosongan tempat.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Jaminan Fidusia -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaFidusia" onclick="toggleDropdown('aktaFidusia')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Jaminan Fidusia</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaFidusia" onclick="toggleDropdown('aktaFidusia', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Jaminan Fidusia
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaFidusia" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Akta Jaminan Fidusia adalah dokumen yang mengatur pengalihan hak
-              kepemilikan suatu benda sebagai jaminan utang, meskipun hak kepemilikan masih dipegang oleh pemilik benda
-              tersebut.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut tentang syarat dan harga, silakan hubungi kami
-              melalui WhatsApp.</p>
+          <div id="aktaFidusia" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta pengalihan hak kepemilikan benda bergerak sebagai
+              agunan utang dan pendaftaran sertifikat jaminan fidusia secara elektronik di Kemenkumham RI.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Penerbitan sertifikat fidusia berkekuatan hukum tetap.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Notaris Lainnya -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktanlainnya" onclick="toggleDropdown('aktanlainnya')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Notaris Lainnya</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktanlainnya" onclick="toggleDropdown('aktanlainnya', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Notaris Lainnya
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktanlainnya" class="hidden p-5 bg-gray-50">
-            <p class="text-gray-700">Untuk informasi tentang akta Notaris lainnya, hubungi kami melalui WhatsApp.</p>
+          <div id="aktanlainnya" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Melayani berbagai akta otentik lainnya seperti akta
+              wasiat, akta pemisahan harta perkawinan, akta pembubaran badan usaha, risalah RUPS, dan berita acara.</p>
+            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20konsultasi%20akta%20notaris%20lainnya"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-2 px-3.5 py-2 rounded-lg bg-[#1F6B4F] text-white text-xs font-semibold hover:bg-[#0F3D2E] transition-colors">
+              <i class="fa fa-whatsapp"></i>
+              <span>Konsultasikan via WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- JASA PPAT -->
-    <section class="services-section mb-12" id="ppat">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Layanan PPAT</h2>
+    <!-- ============================================================
+         2. JASA PPAT (Pejabat Pembuat Akta Tanah)
+    ============================================================ -->
+    <section class="services-section mb-14" id="ppat">
+      <div class="flex items-center gap-3 mb-6 pb-2.5 border-b border-[#EAE1D2]">
+        <div class="w-1.5 h-6 sm:h-7 bg-[#C5A059] rounded-full"></div>
+        <h2 class="text-2xl sm:text-3xl font-display font-semibold text-[#0F3D2E]">Layanan PPAT</h2>
+        <span class="text-xs text-[#8C8275] ml-auto hidden sm:inline">Pertanahan Kabupaten Garut</span>
+      </div>
 
-      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-ppat">
-        <!-- Akta Jual Beli -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaJualBeli" onclick="toggleDropdown('aktaJualBeli')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Jual Beli (AJB)</h3>
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="tabel-ppat">
+        <!-- Akta Jual Beli (AJB) -->
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaJualBeli" onclick="toggleDropdown('aktaJualBeli', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Jual Beli (AJB)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaJualBeli" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan akta jual beli untuk transaksi tanah atau
-              properti, yang mencakup pembuatan dokumen resmi yang mengesahkan perubahan kepemilikan.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="aktaJualBeli" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta otentik peralihan hak atas tanah dan bangunan
+              karena transaksi jual beli, dilengkapi validasi pajak (PPH &amp; BPHTB) dan pengecekan keabsahan di Kantor Pertanahan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Syarat: KTP, KK, Sertifikat Asli, Bukti Bayar PBB, PPh, BPHTB.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Hibah -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaHibah" onclick="toggleDropdown('aktaHibah')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Hibah</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaHibah" onclick="toggleDropdown('aktaHibah', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Hibah Tanah &amp; Bangunan
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaHibah" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan akta hibah untuk mentransfer hak atas tanah atau
-              properti sebagai hadiah, yang secara sah mencatat pemberian tersebut.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="aktaHibah" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta resmi peralihan hak atas tanah secara sukarela
+              tanpa imbalan (biasanya dari orang tua ke anak atau antar kerabat) yang sah secara hukum.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Memerlukan persetujuan keluarga atau ahli waris terkait.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Waris -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktaWaris" onclick="toggleDropdown('aktaWaris')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Waris</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktaWaris" onclick="toggleDropdown('aktaWaris', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Keterangan Hak Mewaris
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktaWaris" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan akta waris untuk mendokumentasikan pembagian hak
-              atas tanah atau properti di antara ahli waris sesuai dengan hukum waris.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="aktaWaris" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Penyusunan akta keterangan waris untuk menetapkan hak
+              dan bagian para ahli waris atas aset tanah/properti peninggalan pewaris sesuai ketentuan hukum.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Dasar peralihan hak waris (turun waris) di BPN.</span>
+            </p>
           </div>
         </div>
 
         <!-- SKMHT -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="skmht" onclick="toggleDropdown('skmht')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">SKMHT</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="skmht" onclick="toggleDropdown('skmht', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              SKMHT (Kuasa Hak Tanggungan)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="skmht" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan Surat Kuasa Membebankan Hak Tanggungan (SKMHT)
-              yang mengizinkan pembebanan hak tanggungan atas tanah atau properti sebagai jaminan utang.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="skmht" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Surat Kuasa Membebankan Hak Tanggungan (SKMHT) untuk
+              memberi kuasa kepada pihak perbankan/kreditur membebankan jaminan hak tanggungan atas tanah debitur.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Berlaku terbatas waktu sesuai undang-undang hak tanggungan.</span>
+            </p>
           </div>
         </div>
 
         <!-- APHT -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="apht" onclick="toggleDropdown('apht')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">APHT</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="apht" onclick="toggleDropdown('apht', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              APHT (Akta Pemberian Hak Tanggungan)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="apht" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan Akta Pemberian Hak Tanggungan (APHT) yang
-              menetapkan hak tanggungan atas tanah atau properti sebagai jaminan utang dan hak kreditur atas objek
-              tersebut.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="apht" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta otentik penetapan jaminan atas tanah/properti untuk
+              pelunasan pinjaman, didaftarkan ke BPN untuk penerbitan Sertifikat Hak Tanggungan Elektronik (HT-el).</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Terintegrasi dengan sistem pertanahan elektronik BPN.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Pembagian Hak Bersama -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="hakBersama" onclick="toggleDropdown('hakBersama')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Pembagian Hak Bersama</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="hakBersama" onclick="toggleDropdown('hakBersama', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Pembagian Hak Bersama (APHB)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="hakBersama" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan akta pembagian hak bersama untuk mencatat
-              pembagian kepemilikan tanah atau properti antara beberapa pihak yang memiliki hak bersama.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="hakBersama" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta kesepakatan pembagian kepemilikan tanah bersama
+              (antara ahli waris atau mitra pemilik) menjadi bagian masing-masing pihak secara mandiri dan sah.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Mempermudah penerbitan sertifikat pecahan terpisah.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta Tukar - Menukar -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="tukarMenukar" onclick="toggleDropdown('tukarMenukar')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta Tukar - Menukar</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="tukarMenukar" onclick="toggleDropdown('tukarMenukar', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta Tukar Menukar Tanah
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="tukarMenukar" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses pembuatan akta tukar-menukar untuk mendokumentasikan
-              pertukaran tanah atau properti antara dua pihak secara sah.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="tukarMenukar" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta otentik pendokumentasian transaksi pertukaran hak
+              atas tanah antara dua pihak, termasuk penyesuaian nilai kompensasi bila terdapat selisih harga tanah.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Meliputi proses balik nama kedua objek tanah di BPN.</span>
+            </p>
           </div>
         </div>
 
         <!-- Akta PPAT Lainnya -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="aktalainnya" onclick="toggleDropdown('aktalainnya')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Akta PPAT Lainnya</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="aktalainnya" onclick="toggleDropdown('aktalainnya', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Akta PPAT Lainnya
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="aktalainnya" class="hidden p-5 bg-gray-50">
-            <p class="text-gray-700">Untuk informasi tentang akta PPAT lainnya yang mungkin Anda butuhkan, hubungi kami
-              melalui WhatsApp.</p>
+          <div id="aktalainnya" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Akta pemasukan ke dalam perusahaan (inbreng), pemberian
+              hak guna bangunan / hak pakai di atas tanah hak milik, dan akta pertanahan khusus lainnya.</p>
+            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20konsultasi%20akta%20PPAT%20lainnya"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-2 px-3.5 py-2 rounded-lg bg-[#1F6B4F] text-white text-xs font-semibold hover:bg-[#0F3D2E] transition-colors">
+              <i class="fa fa-whatsapp"></i>
+              <span>Konsultasikan via WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- JASA LAINNYA  -->
-    <section class="services-section mb-12" id="lainnya">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Layanan Lainnya</h2>
+    <!-- ============================================================
+         3. JASA LAINNYA (Administrasi & Sertifikat)
+    ============================================================ -->
+    <section class="services-section mb-14" id="lainnya">
+      <div class="flex items-center gap-3 mb-6 pb-2.5 border-b border-[#EAE1D2]">
+        <div class="w-1.5 h-6 sm:h-7 bg-[#17543F] rounded-full"></div>
+        <h2 class="text-2xl sm:text-3xl font-display font-semibold text-[#0F3D2E]">Layanan Lainnya</h2>
+        <span class="text-xs text-[#8C8275] ml-auto hidden sm:inline">Perizinan &amp; Pengurusan BPN</span>
+      </div>
 
-      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tabel-lainnya">
+      <div class="tabel-layanan grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="tabel-lainnya">
         <!-- Pengecekan Sertifikat -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pengecekanSertifikat" onclick="toggleDropdown('pengecekanSertifikat')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pengecekan Sertifikat</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pengecekanSertifikat" onclick="toggleDropdown('pengecekanSertifikat', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pengecekan Sertifikat BPN
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pengecekanSertifikat" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Memverifikasi keaslian sertifikat tanah atau properti. Pastikan
-              sertifikat sah dan tidak dipalsukan.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="pengecekanSertifikat" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Verifikasi keaslian dan status hukum sertifikat di Kantor
+              Pertanahan (BPN) guna memastikan bebas sengketa, bebas sita, dan tidak diblokir sebelum transaksi.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pengecekan resmi secara elektronik (online BPN).</span>
+            </p>
           </div>
         </div>
 
         <!-- Roya -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="roya" onclick="toggleDropdown('roya')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Roya</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="roya" onclick="toggleDropdown('roya', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Roya (Pencoretan Hak Tanggungan)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="roya" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Penghapusan hak tanggungan dari sertifikat tanah. Diperlukan untuk
-              memastikan sertifikat bebas dari klaim pihak ketiga.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="roya" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Penghapusan catatan beban hak tanggungan pada buku tanah
+              dan sertifikat setelah pelunasan kredit bank (KPR / pinjaman usaha) agar sertifikat kembali bersih.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Syarat: Surat lunas bank, sertifikat asli, sertifikat HT.</span>
+            </p>
           </div>
         </div>
 
         <!-- Balik Nama Sertifikat -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="balikNama" onclick="toggleDropdown('balikNama')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Balik Nama Sertifikat</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="balikNama" onclick="toggleDropdown('balikNama', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Balik Nama Sertifikat
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="balikNama" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Proses mengubah nama pemilik di sertifikat tanah setelah transaksi.
+          <div id="balikNama" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pengurusan pendaftaran peralihan nama pemegang hak pada
+              sertifikat di BPN setelah proses AJB, hibah, waris, atau lelang selesai ditandatangani.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pendampingan berkas lengkap hingga sertifikat jadi.</span>
             </p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
           </div>
         </div>
 
         <!-- Pemecahan Sertifikat -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pemecahanSertifikat" onclick="toggleDropdown('pemecahanSertifikat')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pemecahan Sertifikat</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pemecahanSertifikat" onclick="toggleDropdown('pemecahanSertifikat', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pemecahan &amp; Penggabungan Sertifikat
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pemecahanSertifikat" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Membagi sertifikat tanah menjadi beberapa sertifikat baru. Ideal
-              untuk pembagian atau penjualan sebagian tanah.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="pemecahanSertifikat" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pengurusan pemecahan satu bidang tanah menjadi beberapa
+              sertifikat baru (kavling/waris) atau penggabungan beberapa sertifikat berdampingan menjadi satu sertifikat induk.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Melibatkan proses pengukuran dan surat ukur baru BPN.</span>
+            </p>
           </div>
         </div>
 
         <!-- Perpanjangan Sertifikat -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="perpanjanganSertifikat" onclick="toggleDropdown('perpanjanganSertifikat')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Perpanjangan Sertifikat</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="perpanjanganSertifikat" onclick="toggleDropdown('perpanjanganSertifikat', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Perpanjangan Hak (HGB / Hak Pakai)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="perpanjanganSertifikat" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Memperpanjang masa berlaku sertifikat dengan pembaruan dokumen.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="perpanjanganSertifikat" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pengurusan perpanjangan atau pembaruan jangka waktu
+              Hak Guna Bangunan (HGB) dan Hak Pakai sebelum masa berlaku berakhir agar tidak gugur menjadi tanah negara.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Konsultasi waktu perpanjangan optimal.</span>
+            </p>
           </div>
         </div>
 
         <!-- Pembuatan Perijinan Perusahaan -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="perijinanPerusahaan" onclick="toggleDropdown('perijinanPerusahaan')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pembuatan Perijinan Perusahaan</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="perijinanPerusahaan" onclick="toggleDropdown('perijinanPerusahaan', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Perizinan Usaha Terpadu (OSS RBA)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="perijinanPerusahaan" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Pengurusan izin untuk mendirikan dan menjalankan perusahaan,
-              termasuk izin usaha dan NPWP.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="perijinanPerusahaan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pengurusan Nomor Induk Berusaha (NIB), penentuan KBLI,
+              sertifikat standar, persetujuan lingkungan, dan izin operasional komersial melalui sistem OSS RBA BKPM.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Memastikan kesesuaian izin dengan sektor kegiatan usaha.</span>
+            </p>
           </div>
         </div>
 
         <!-- Penggantian Sertifikat Hilang -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="penggantianSertifikatHilang" onclick="toggleDropdown('penggantianSertifikatHilang')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Penggantian Sertifikat Hilang</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="penggantianSertifikatHilang" onclick="toggleDropdown('penggantianSertifikatHilang', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Penerbitan Sertifikat Pengganti (Hilang/Rusak)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="penggantianSertifikatHilang" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Penggantian sertifikat yang hilang atau rusak dengan proses
-              verifikasi dan penerbitan sertifikat pengganti.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="penggantianSertifikatHilang" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendampingan pengurusan penerbitan sertifikat baru karena
+              sertifikat lama hilang atau rusak, meliputi pembuatan laporan polisi, sumpah di BPN, dan pengumuman di surat kabar.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Tahapan tertib sesuai SOP Kantor Pertanahan.</span>
+            </p>
           </div>
         </div>
 
         <!-- Pensertifikatan Tanah Adat -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pensertifikatanTanahAdat" onclick="toggleDropdown('pensertifikatanTanahAdat')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Adat</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pensertifikatanTanahAdat" onclick="toggleDropdown('pensertifikatanTanahAdat', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pensertifikatan Tanah Adat (Girik / Letter C)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pensertifikatanTanahAdat" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Sertifikasi tanah yang diakui secara adat untuk memberikan status
-              hukum resmi.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="pensertifikatanTanahAdat" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendaftaran tanah pertama kali dari tanah adat (letter C,
+              girik, ketitir, atau petuk) menjadi Sertifikat Hak Milik (SHM) resmi yang berkekuatan hukum otentik.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Kelengkapan riwayat tanah dari desa / kelurahan.</span>
+            </p>
           </div>
         </div>
 
         <!-- Pensertifikatan Tanah Negara -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pensertifikatanTanahNegara" onclick="toggleDropdown('pensertifikatanTanahNegara')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pensertifikatan Tanah Negara</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pensertifikatanTanahNegara" onclick="toggleDropdown('pensertifikatanTanahNegara', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Permohonan Hak Atas Tanah Negara
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pensertifikatanTanahNegara" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Sertifikasi untuk tanah negara agar memiliki status hukum yang sah.
+          <div id="pensertifikatanTanahNegara" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendampingan permohonan pemberian hak baru atas tanah
+              yang dikuasai langsung oleh negara untuk diterbitkan SK Hak dan sertifikat kepemilikan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Pemeriksaan lapangan dan sidang panitia pertanahan.</span>
             </p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
           </div>
         </div>
 
         <!-- Pengurusan Perpajakan -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="pengurusanPerpajakan" onclick="toggleDropdown('pengurusanPerpajakan')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perpajakan</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="pengurusanPerpajakan" onclick="toggleDropdown('pengurusanPerpajakan', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Pengurusan Pajak Properti (PPH &amp; BPHTB)
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="pengurusanPerpajakan" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Administrasi terkait pajak, termasuk pendaftaran, pelaporan, dan
-              pemenuhan kewajiban perpajakan.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="pengurusanPerpajakan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Bantuan perhitungan, penyetoran, dan validasi Surat
+              Setoran Pajak (SSP PPh final) di KPP Pratama serta validasi BPHTB di Bapenda/BPKAD sebelum penandatanganan akta.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Memastikan kepatuhan fiskal bebas kendala validasi.</span>
+            </p>
           </div>
         </div>
 
         <!-- Pengurusan Perijinan Pengadilan Negeri -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="perijinanPengadilan" onclick="toggleDropdown('perijinanPengadilan')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Pengurusan Perijinan Pengadilan Negeri</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="perijinanPengadilan" onclick="toggleDropdown('perijinanPengadilan', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Penetapan Pengadilan Negeri
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="perijinanPengadilan" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Pengurusan izin yang dikeluarkan oleh pengadilan negeri untuk
-              keperluan hukum atau administratif.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="perijinanPengadilan" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pendampingan permohonan izin penetapan pengadilan negeri
+              yang disyaratkan untuk transaksi properti anak di bawah umur, perwalian, atau pengampuan.</p>
+            <p class="text-xs sm:text-sm text-[#7D756B] flex items-center gap-1.5">
+              <i class="fa fa-info-circle text-[#1F6B4F]"></i>
+              <span>Syarat wajib transaksi properti demi perlindungan hak anak.</span>
+            </p>
           </div>
         </div>
 
         <!-- Dan Jasa Pengurusan Perijinan Lainnya -->
-        <div class="item bg-white rounded-lg shadow-md overflow-hidden  transition-shadow cursor-pointer"
-          data-dropdown="jasaPerijinanLainnya" onclick="toggleDropdown('jasaPerijinanLainnya')">
-          <div class="p-5 border-b border-gray-100">
-            <h3 class="text-lg font-semibold text-gray-800">Dan Jasa Pengurusan Perijinan Lainnya</h3>
+        <div
+          class="item bg-[#FFFDF9] rounded-xl border border-[#ECE3D4] shadow-sm hover:shadow-md hover:border-[#DFCBB2] transition-all duration-200 cursor-pointer overflow-hidden"
+          data-dropdown="jasaPerijinanLainnya" onclick="toggleDropdown('jasaPerijinanLainnya', event)">
+          <div class="p-5 border-b border-[#F2ECE1] flex justify-between items-center group">
+            <h3 class="text-base sm:text-lg font-semibold text-[#0F3D2E] group-hover:text-[#1F6B4F] transition-colors">
+              Konsultasi &amp; Administrasi Khusus
+            </h3>
+            <i class="fa fa-chevron-down text-xs text-[#A89E8F] dropdown-icon ml-2"></i>
           </div>
-          <div id="jasaPerijinanLainnya" class="hidden p-5 bg-gray-50">
-            <p class="list-disc  mb-3 text-gray-700">Berbagai layanan tambahan untuk pengurusan perijinan khusus
-              lainnya.</p>
-            <p class="text-sm text-gray-600">Untuk informasi lebih lanjut mengenai syarat dan biaya, hubungi WhatsApp
-              kami.</p>
+          <div id="jasaPerijinanLainnya" onclick="event.stopPropagation()" class="dropdown-body hidden p-5 bg-[#FAF4EB] border-t border-[#F2ECE1]">
+            <p class="mb-3 text-[#4A443E] leading-relaxed text-sm">Pelayanan terpadu pendampingan hukum kenotariatan,
+              audit berkas legalitas tanah, serta koordinasi lintas instansi teknis di wilayah Jawa Barat.</p>
+            <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20layanan%20khusus"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-2 px-3.5 py-2 rounded-lg bg-[#1F6B4F] text-white text-xs font-semibold hover:bg-[#0F3D2E] transition-colors">
+              <i class="fa fa-whatsapp"></i>
+              <span>Hubungi Kami via WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- WhatsApp Floating Button -->
+    <!-- Kartu Bantuan Konsultasi (Tema Krem & Ivory) -->
+    <section class="mt-8 mb-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#F5EFEB] via-[#FAF4EB] to-[#F5EFEB] border border-[#E2D5C3] text-center shadow-sm">
+      <div class="max-w-2xl mx-auto">
+        <h3 class="text-xl sm:text-2xl font-display font-semibold text-[#0F3D2E] mb-2">
+          Butuh Bantuan Memilih Layanan yang Tepat?
+        </h3>
+        <p class="text-sm sm:text-base text-[#6B6359] mb-5 leading-relaxed">
+          Konsultasikan kebutuhan pembuatan akta, legalitas perusahaan, atau kepengurusan sertifikat tanah Anda langsung bersama tim Notaris &amp; PPAT Havis Akbar.
+        </p>
+        <a href="https://wa.me/6287736688999?text=Halo%20Notaris%20Havis%20Akbar%2C%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20kantor"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#1F6B4F] hover:bg-[#0F3D2E] text-white font-semibold text-sm sm:text-base shadow-sm transition-all duration-200">
+          <i class="fa fa-whatsapp text-lg"></i>
+          <span>Konsultasi Gratis via WhatsApp</span>
+        </a>
+      </div>
+    </section>
 
+  </main>
 
+  <!-- Footer -->
   <div id="footer"></div>
+
+  <!-- Script Navigation & Dropdown -->
   <script src="script.js"></script>
   <script>
-    function toggleDropdown(id) {
+    function toggleDropdown(id, event) {
+      if (event && event.target && event.target.closest('a, button, input')) {
+        return;
+      }
       const dropdown = document.getElementById(id);
-      if (dropdown.classList.contains('hidden')) {
-        // Close all other dropdowns first
-        document.querySelectorAll('.dropdown-content').forEach(el => {
-          if (!el.classList.contains('hidden')) {
-            el.classList.add('hidden');
-          }
-        });
-        // Open this dropdown
+      if (!dropdown) return;
+
+      const isCurrentlyHidden = dropdown.classList.contains('hidden');
+
+      // Tutup semua dropdown terbuka terlebih dahulu
+      document.querySelectorAll('.dropdown-body').forEach(el => {
+        el.classList.add('hidden');
+        const icon = el.parentElement.querySelector('.dropdown-icon');
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      // Buka dropdown yang diklik jika sebelumnya tersembunyi
+      if (isCurrentlyHidden) {
         dropdown.classList.remove('hidden');
-      } else {
-        dropdown.classList.add('hidden');
+        const icon = dropdown.parentElement.querySelector('.dropdown-icon');
+        if (icon) {
+          icon.style.transform = 'rotate(180deg)';
+        }
       }
     }
   </script>
